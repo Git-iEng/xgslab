@@ -1,0 +1,124 @@
+/* ---------- Hero (reuse your services.css hero logic) ---------- */
+:root {
+  --hero-height: clamp(380px, 70vh, 760px);
+  --hero-maxw: 1100px;
+  --nes-text: #fff;
+}
+
+/* Uses a product banner image */
+.neplan-electricity-slide{
+  position: relative;
+  min-height: var(--hero-height);
+  background-image: url('../images/product.avif');
+  background-size: cover;
+  background-position: center;
+  color: var(--nes-text);
+}
+.neplan-electricity-slide::before{
+  content:""; position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.45));
+  pointer-events:none;
+}
+.nes-viewport{
+  position: relative; min-height: var(--hero-height);
+  width: 100%; margin: 0; padding-inline: clamp(16px, 3vw, 28px);
+}
+.nsv-hero{
+  position: relative; z-index: 1; min-height: var(--hero-height);
+  max-width: var(--hero-maxw); margin-inline: auto;
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap: clamp(10px, 1.6vw, 14px); text-align:center;
+}
+.nsv-kicker{ font-weight:800; padding:.4rem .8rem; border-radius:999px; background: rgba(255,255,255,.18); backdrop-filter: blur(2px); }
+.nsv-title{ margin:0; font-weight:900; line-height:1.1; letter-spacing:.2px; font-size: clamp(1.6rem, 4.6vw, 2.6rem); color:#fff; }
+.nsv-sub{ margin:0; color:#e8eef6; max-width:72ch; }
+
+/* ---------- Product grid ---------- */
+.neplan-products-cards{
+  --bg:#fff; --soft:#f6f8fb; --text:#0e1b2b; --muted:#5b6472;
+  --primary:#0f766e; --primary-2:#155e75;
+  --shadow: 0 14px 30px rgba(2,8,23,.10), 0 3px 8px rgba(2,8,23,.06);
+  color: var(--text); background:var(--bg);
+  padding: clamp(28px, 5vw, 60px) clamp(16px, 6vw, 70px);
+}
+.neplan-products-cards .npc-wrap{ max-width:1200px; margin:0 auto; }
+.neplan-products-cards .npc-head{ text-align:center; margin:0 auto clamp(20px,4vw,40px); max-width:850px; }
+.neplan-products-cards .npc-head h2{ margin:0 0 .4rem; font-weight:1200; font-size: clamp(1.6rem, 3.6vw, 2.2rem); }
+.neplan-products-cards .npc-sub{ color:var(--muted); margin:0; }
+
+.neplan-products-cards .npc-grid{
+  display:grid; gap:18px; grid-template-columns: repeat(4, minmax(0,1fr));
+}
+@media (max-width:1100px){ .neplan-products-cards .npc-grid{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .neplan-products-cards .npc-grid{ grid-template-columns:1fr; } }
+
+.npc-card{
+  position:relative; overflow:hidden; border-radius:18px; background:var(--soft);
+  box-shadow:var(--shadow); padding:20px 18px 18px; isolation:isolate;
+  transform: translateY(0); transition: transform .25s ease, box-shadow .25s ease;
+}
+.npc-card:hover{ transform: translateY(-4px); box-shadow: 0 20px 38px rgba(2,8,23,.12), 0 4px 10px rgba(2,8,23,.08); }
+
+.npc-card__bg{ position:absolute; inset:0; z-index:-1; opacity:.75; }
+.npc-card__icon{ width:48px; height:48px; display:grid; place-items:center; color:#0f766e; background:#fff; border-radius:12px; box-shadow:var(--shadow); }
+.npc-card__icon svg{ width:26px; height:26px; }
+.npc-card__title{ margin:.9rem 0 .35rem; font-size:1.1rem; }
+.npc-card__text{ color:var(--muted); margin:0 0 .9rem; min-height:46px; }
+.npc-card__cta{ display:flex; gap:.5rem; align-items:center; }
+
+.npc-btn{ --h:40px; display:inline-flex; align-items:center; justify-content:center; height:var(--h); padding:0 14px; border-radius:999px; font-weight:800; text-decoration:none; border:1px solid transparent; transition: all .2s ease; }
+.npc-btn--primary{ background: linear-gradient(90deg, var(--primary), var(--primary-2)); color:#fff; box-shadow: 0 8px 22px rgba(15,118,110,.25); }
+.npc-btn--primary:hover{ filter: brightness(1.06); transform: translateY(-1px); }
+
+/* Reveal on scroll */
+.neplan-products-cards [data-reveal]{ opacity:0; transform: translateY(24px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1); transition-delay: var(--d, 0s); }
+.neplan-products-cards [data-reveal].is-visible{ opacity:1; transform:none; }
+
+/* ---------- Per-product accent backgrounds ---------- */
+.npc-card__bg--gsa{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(34,197,94,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(6,182,212,.16), transparent 60%);
+}
+.npc-card__bg--gsafd{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(59,130,246,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(16,185,129,.16), transparent 60%);
+}
+.npc-card__bg--xgsafd{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(20,184,166,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(59,130,246,.16), transparent 60%);
+}
+.npc-card__bg--xgsatd{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(245,158,11,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(6,182,212,.16), transparent 60%);
+}
+.npc-card__bg--nets{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(168,85,247,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(34,197,94,.16), transparent 60%);
+}
+.npc-card__bg--shield{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(239,68,68,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(14,165,233,.16), transparent 60%);
+}
+.npc-card__bg--shielda{
+  background:
+    radial-gradient(1100px 200px at -12% -10%, rgba(99,102,241,.18), transparent 60%),
+    radial-gradient(900px 160px at 120% 100%, rgba(16,185,129,.16), transparent 60%);
+}
+
+/* Page padding fix for sticky header */
+body{ margin-top: 5.5rem; }
+
+/* Small tweaks */
+@media (max-width: 900px){
+  :root{ --hero-maxw: 900px; }
+  .nsv-sub{ max-width: 60ch; }
+}
+@media (max-width: 640px){
+  :root{ --hero-height: clamp(340px, 60vh, 520px); }
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XGSLab</title>
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+  <!-- Fix hidden sections + ensure readability -->
+  
+
+  
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- =======================
+       HERO
+       ======================= -->
+  <section class="section-neplan-home">
+    <div class="hero-card-neplan-home">
+      <div class="inner-neplan-home">
+        <div class="content-neplan-home">
+          <h1 class="title-neplan-home">
+            XGSLab
+            <br>
+          </h1>
+          <h2 class="title-neplan-home2">Advanced Simulation for Grounding, EMF/Interference & Lightning</h2>
+          <p class="subtitle-neplan-home">
+            A professional suite for earthing system analysis, electromagnetic fields & interference, and lightning protection design.
+            Validate safety, optimize performance, and document compliance to IEC/EN and IEEE criteria.
+          </p>
+
+          <div class="cta-row-neplan-home">
+            <a href="#" class="btn-neplan-home js-open-demo">Request Demo <span class="arrow">→</span></a>
+            <a href="/product/" class="btn-neplan-home">Explore products <span class="arrow">→</span></a>
+          </div>
+        </div>
+
+        <!-- Optional device PNG; remove if not needed -->
+        <figure class="device-neplan-home" aria-hidden="true">
+          <img src="../static/images/xgs/xgslogo.png" alt="XGSLab Modules">
+          <img src="../static/images/xgs/home_image.png" alt="XGSLab Modules">
+        </figure>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================
+       What is XGSLab & Why It Matters
+       ======================= -->
+  <section class="section-neplan-description" aria-labelledby="why-title-xgslab-description">
+    <div class="container-neplan-description">
+      <header class="head-neplan-description reveal-mobility">
+        <h3 id="why-title-xgslab-description" class="reveal-mobility">What is XGSLab &amp; Why It Matters</h3>
+        <p class="reveal-mobility">
+          XGSLab is a modular electromagnetic simulation environment for power and industrial facilities. It covers
+          grounding/earthing safety, electromagnetic fields & interference on nearby systems, and 3D lightning protection,
+          helping engineers design safe, efficient, and standards-compliant installations.
+        </p>
+      </header>
+
+      <h4 class="subhead-neplan-description reveal-mobility">Core Benefits</h4>
+
+      <!-- Feature table -->
+      <div class="tablewrap-neplan-description">
+        <table class="table-neplan-description">
+          <thead>
+            <tr>
+              <th>Benefit</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-neplan-description">
+              <th scope="row">Modular Suite</th>
+              <td data-label="Description">
+                Choose only what you need: GSA / GSA_FD for grounding, XGSA_FD / XGSA_TD for EMF & interference (freq/time),
+                NETS for multi-conductor networks, and SHIELD/SHIELD_A for lightning shielding.
+              </td>
+            </tr>
+            <tr class="row-neplan-description">
+              <th scope="row">Soil Modelling Tools</th>
+              <td data-label="Description">
+                Integrated SRA/SSA utilities to derive multilayer soil models from resistivity tests and seasonal conditions,
+                improving accuracy of touch/step voltage and GPR calculations.
+              </td>
+            </tr>
+            <tr class="row-neplan-description">
+              <th scope="row">Deep Technical Coverage</th>
+              <td data-label="Description">
+                Frequency- and time-domain solvers for buried/overhead conductors, pipelines, cables, rails, transformers, and complex meshes.
+              </td>
+            </tr>
+            <tr class="row-neplan-description">
+              <th scope="row">Compliance &amp; Safety</th>
+              <td data-label="Description">
+                Support for IEC/EN and IEEE criteria in grounding safety checks (touch/step), EMF limits, and lightning protection methodologies.
+              </td>
+            </tr>
+            <tr class="row-neplan-description">
+              <th scope="row">Interoperability</th>
+              <td data-label="Description">
+                CAD-friendly workflows and export options; ideal for substations, plants, renewables, rail, utilities, and industrial sites.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================
+       Key Highlights + CTA
+       ======================= -->
+  <section class="section-neplan-cta-buttons" aria-labelledby="cta-title">
+    <div class="container-neplan-cta-buttons">
+      <div class="intro-neplan-cta-buttons reveal-mobility">
+        <p class="eyebrow-neplan-cta-buttons reveal-mobility">Key Highlights</p>
+        <h2 id="cta-title" class="title-neplan-cta-buttons reveal-mobility">
+          What XGSLab offers at a glance
+        </h2>
+
+        <ul class="highlights-neplan-cta-buttons reveal-mobility">
+          <li>Grounding safety (touch/step voltage, GPR) with multilayer soil models</li>
+          <li>EMF/EMI analysis in frequency &amp; time domains for above/below ground conductors</li>
+          <li>3D lightning shielding using Rolling Sphere &amp; Eriksson methods</li>
+        </ul>
+      </div>
+
+      <div class="actions-neplan-cta-buttons">
+        <a href="#" class="btn-neplan-cta-buttons js-open-demo reveal-mobility">Request a Demo</a>
+        <a href="/product/" class="btn-neplan-cta-buttons reveal-mobility">Explore Products</a>
+        <a href="/contact/" class="btn-neplan-cta-buttons reveal-mobility">Talk to an Engineer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================
+       Key Product Areas / Applications
+       ======================= -->
+  <section class="section-key-areas">
+    <div class="container-key-areas">
+      <p  class="eyebrow-neplan-cta-buttons reveal-mobility">Key Product Areas / Applications</p>
+      <h2 class="heading-key-areas reveal-mobility">
+        Quick access points for what <span class="brand-key-areas reveal-mobility">XGSLab</span> offers
+      </h2>
+    </div>
+  </section>
+
+  <section class="section-neplan-cards">
+    <div class="container-neplan-cards">
+      <ul class="grid-neplan-cards">
+        <!-- Card 1 -->
+        <li class="card-neplan-cards">
+          <div class="iconwrap-neplan-cards" aria-hidden="true">
+            <!-- cube -->
+            <svg viewBox="0 0 24 24" width="28" height="28">
+              <path d="M12 2l8 4v12l-8 4-8-4V6l8-4zm0 2.2L6 6.7v10.6l6 3.1 6-3.1V6.7L12 4.2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="title-neplan-cards">Grounding / Earthing (GSA, GSA_FD)</h3>
+          <p class="desc-neplan-cards">
+            Model buried grids and electrodes, evaluate GPR, and verify touch/step voltage safety against standards.
+            Includes multilayer soil estimation from field measurements.
+          </p>
+          <ul class="list-neplan-cards">
+            <li>Touch/Step Safety</li>
+            <li>GPR &amp; Current Distribution</li>
+            <li>Soil Tools (SRA/SSA)</li>
+          </ul>
+        </li>
+
+        <!-- Card 2 -->
+        <li class="card-neplan-cards">
+          <div class="iconwrap-neplan-cards" aria-hidden="true">
+            <!-- atom -->
+            <svg viewBox="0 0 24 24" width="28" height="28">
+              <path d="M12 3a2 2 0 110 4 2 2 0 010-4zm0 5c3.9 0 7 1.6 7 3.5S15.9 15 12 15 5 13.4 5 11.5 8.1 8 12 8zm0 1.8c-2.9 0-5.2.8-5.2 1.7S9.1 13.2 12 13.2s5.2-.8 5.2-1.7S14.9 9.8 12 9.8z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="title-neplan-cards">EMF &amp; Interference (XGSA_FD / XGSA_TD)</h3>
+          <p class="desc-neplan-cards">
+            Simulate electromagnetic fields and coupling for overhead/underground conductors, rails, pipelines, and cables
+            in frequency or time domain to mitigate interference.
+          </p>
+          <ul class="list-neplan-cards">
+            <li>Frequency &amp; Time Domain</li>
+            <li>Coupling &amp; Induced Voltages</li>
+            <li>Compliance Checks</li>
+          </ul>
+        </li>
+
+        <!-- Card 3 -->
+        <li class="card-neplan-cards">
+          <div class="iconwrap-neplan-cards" aria-hidden="true">
+            <!-- calendar -->
+            <svg viewBox="0 0 24 24" width="28" height="28">
+              <path d="M7 3h2v2h6V3h2v2h3v16H4V5h3V3zm12 6H5v10h14V9z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="title-neplan-cards">Network Solver (NETS)</h3>
+          <p class="desc-neplan-cards">
+            Solve multi-conductor, multi-phase networks across overhead lines and underground cables. Analyze interference,
+            coupling, and return paths in complex installations.
+          </p>
+          <ul class="list-neplan-cards">
+            <li>n-Phase/Asymmetrical Systems</li>
+            <li>Transformers &amp; Long Lines</li>
+            <li>Pipelines &amp; Rails</li>
+          </ul>
+        </li>
+
+        <!-- Card 4 -->
+        <li class="card-neplan-cards">
+          <div class="iconwrap-neplan-cards" aria-hidden="true">
+            <!-- shield -->
+            <svg viewBox="0 0 24 24" width="28" height="28">
+              <path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6l8-4z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="title-neplan-cards">Lightning Shielding (SHIELD / SHIELD_A)</h3>
+          <p class="desc-neplan-cards">
+            Design 3D lightning protection using Electro-Geometric Models (Rolling Sphere, Eriksson). Evaluate protected volumes
+            for buildings, substations, and critical equipment.
+          </p>
+          <ul class="list-neplan-cards">
+            <li>3D Protected Zones</li>
+            <li>Rolling Sphere &amp; Eriksson</li>
+            <li>Structure Coverage</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =======================
+       (Optional) Process + CTA block
+       ======================= -->
+  <section class="section-neplan-last-part">
+    <div class="container-neplan-last-part">
+      <div class="panel-neplan-last-part">
+        <h3 class="title-neplan-last-part">How It Works</h3>
+        <ol class="steps-neplan-last-part">
+          <li class="step-neplan-last-part">
+            <span class="num-neplan-last-part">1</span>
+            <div class="body-neplan-last-part">
+              <span class="label-neplan-last-part">Data &amp; Geometry</span> – Import site layout, conductor routes, soil measurements, and constraints.
+            </div>
+          </li>
+          <li class="step-neplan-last-part">
+            <span class="num-neplan-last-part">2</span>
+            <div class="body-neplan-last-part">
+              <span class="label-neplan-last-part">Model Setup</span> – Select the right module (GSA/GSA_FD, XGSA_FD/TD, NETS, SHIELD) and define scenarios.
+            </div>
+          </li>
+          <li class="step-neplan-last-part">
+            <span class="num-neplan-last-part">3</span>
+            <div class="body-neplan-last-part">
+              <span class="label-neplan-last-part">Simulation</span> – Run grounding safety, EMF/interference, or lightning coverage studies.
+            </div>
+          </li>
+          <li class="step-neplan-last-part">
+            <span class="num-neplan-last-part">4</span>
+            <div class="body-neplan-last-part">
+              <span class="label-neplan-last-part">Reporting</span> – Generate engineering-grade plots and compliance summaries for submission.
+            </div>
+          </li>
+        </ol>
+
+        <div class="actions-neplan-last-part">
+          <div class="group-neplan-last-part">
+            <div class="btn-row-neplan-last-part">
+              <a href="#" class="btn-neplan-last-part js-open-demo">Request a Demo</a>
+            </div>
+          </div>
+          <div class="group-neplan-last-part">
+            <div class="btn-row-neplan-last-part">
+              <a href="/contact/" class="btn-ghost-neplan-last-part">Contact Sales</a>
+              <a href="/product/" class="btn-ghost-neplan-last-part">Explore Products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+
+  <!-- Keep animation feel by forcing visible state on load -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.reveal-mobility').forEach(function (el) {
+        el.classList.add('is-visible'); // if your CSS uses this hook
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    });
+  </script>
+</body>
+</html>

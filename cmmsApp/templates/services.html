@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services</title>
+
+  <!-- Shared -->
+  <link rel="stylesheet" href="{% static 'css/consult-block.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+</head>
+
+<body>
+  {% include 'header.html' %}
+
+  <!-- HERO -->
+  <section class="neplan-electricity-slide" aria-label="XGSLab services hero">
+    <div class="nes-viewport">
+      <header class="nsv-hero">
+        <p class="nsv-kicker">Services</p>
+        <h1 class="nsv-title">Earthing Studies, Lightning Protection & EMI Analysis</h1>
+        <p class="nsv-sub">
+          Practical, standards-aligned studies delivered by engineers who use XGSLab every day. We help you
+          design safer grounding systems, mitigate lightning and surges, and control electromagnetic interference
+          across utility, rail, pipeline and industrial sites.
+        </p>
+        <div class="cta-buttons">
+          <a href="/contact/" class="btn btn-primary">Request a Proposal</a>
+          <a href="https://ieng.tech/earthing-studies-analysis/" class="btn btn-secondary">Explore XGSLab</a>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="neplan-services">
+
+    <!-- Earthing / Grounding Studies -->
+    <section id="earthing" class="nsv-block nsv-block--split">
+      <div class="nsv-block__media" data-reveal="left">
+        <div class="nsv-badge">Earthing &amp; Grounding Studies</div>
+        <img src="../static/images/xgs/serice_safe.avif" alt="XGSLab earthing and grounding study visuals" loading="lazy" />
+      </div>
+
+      <div class="nsv-block__content" data-reveal="right">
+        <h2>Safe, economical earthing systems for substations, plants & large sites.</h2>
+
+        <h3 class="nsv-eyebrow">What we deliver</h3>
+        <ul class="nsv-list nsv-list--check">
+          <li><strong>Soil model development:</strong> Wenner/Schlumberger data processing, multi-layer soil fitting.</li>
+          <li><strong>Grid design &amp; optimization:</strong> Mesh/rod layout, conductor sizing, fault current splits.</li>
+          <li><strong>Touch/step voltage assessment:</strong> Compliance against IEEE/IEC/EN safety limits.</li>
+          <li><strong>Surface layers &amp; mitigation:</strong> Crushed rock, gradient control, potential grading.</li>
+          <li><strong>Interface studies:</strong> Transfer potentials to bonded/adjacent sites, pipelines & rails.</li>
+        </ul>
+
+        <h3 class="nsv-eyebrow">Applicable standards</h3>
+        <p class="nsv-muted">
+          Typical references include IEEE Std 80 / 665, IEC/EN 50522, IEC 60479 and local utility guidelines.
+        </p>
+
+        <div class="nsv-cta">
+          <a href="/contact/" class="nsv-btn nsv-btn--primary">Share site drawings / soil data</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightning & Surge Protection -->
+    <section id="lightning" class="nsv-block nsv-block--split nsv-block--invert">
+      <div class="nsv-block__media" data-reveal="right">
+        <div class="nsv-badge">Lightning &amp; Surge Protection</div>
+        <img src="../static/images/xgs/service_assess.avif" alt="Lightning protection and surge risk assessment" loading="lazy" />
+      </div>
+
+      <div class="nsv-block__content" data-reveal="left">
+        <h2>Assess risk, define protection levels and specify coordinated surge measures.</h2>
+        <p class="nsv-lead">
+          We model direct/indirect strikes, coupling paths and surge exposure to size down-conductors, air-termination
+          systems and SPDs that work as a coordinated set.
+        </p>
+
+        <h3 class="nsv-eyebrow">Scope</h3>
+        <ul class="nsv-list nsv-list--dot">
+          <li>Lightning risk assessment & LPS class selection (IEC 62305 methodology).</li>
+          <li>Rolling-sphere & protective angle verification for air-termination coverage.</li>
+          <li>Down-conductor bonding, equipotentialization and earthing integration.</li>
+          <li>Surge protective device (SPD) selection & coordination for LV/MV/I&C.</li>
+          <li>Transient studies for sensitive loads and control systems.</li>
+        </ul>
+
+        <div class="nsv-cta">
+          <a href="/contact/" class="nsv-btn nsv-btn--primary">Discuss your lightning scope</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMI / Interference -->
+    <section id="emi" class="nsv-block nsv-block--split">
+      <div class="nsv-block__media" data-reveal="left">
+        <div class="nsv-badge">EMI / Interference</div>
+        <img src="../static/images/xgs/service_predict.avif" alt="EMI, coupling and interference analysis with XGSLab" loading="lazy" />
+      </div>
+
+      <div class="nsv-block__content" data-reveal="right">
+        <h2>Predict and mitigate interference into rails, pipelines, telecoms and controls.</h2>
+
+        <h3 class="nsv-eyebrow">Study areas</h3>
+        <div class="nsv-grid nsv-grid--two">
+          <ul class="nsv-list nsv-list--check">
+            <li><strong>Inductive &amp; conductive coupling:</strong> HV lines → third-party utilities.</li>
+            <li><strong>Cathodic protection interactions:</strong> Co-located pipelines and earthing systems.</li>
+            <li><strong>Rail traction effects:</strong> Return current paths, touch/step on platforms & fences.</li>
+          </ul>
+          <ul class="nsv-list nsv-list--check">
+            <li><strong>Telecoms &amp; signalling immunity:</strong> Field levels vs equipment limits.</li>
+            <li><strong>Mitigations:</strong> Separation, bonding, cable shields, decouplers, gradient control mats.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data, Workflow & Deliverables -->
+    <section class="nsv-block nsv-block--split">
+      <div class="nsv-block__media" data-reveal="left">
+        <h3 class="nsv-eyebrow">Data & workflow</h3>
+        <ul class="nsv-list nsv-list--dot">
+          <li>Intake: single-line, site layout, soil/boring logs, fault levels, CP/rail data if applicable.</li>
+          <li>Model build in XGSLab with quality checks and sensitivity runs.</li>
+          <li>Review workshop to agree mitigations before finalization.</li>
+        </ul>
+      </div>
+
+      <div class="nsv-block__content" data-reveal="right">
+        <h3 class="nsv-eyebrow">Deliverables</h3>
+        <ul class="nsv-list nsv-list--dot">
+          <li>Engineering report with assumptions, results, compliance checks and recommendations.</li>
+          <li>XGSLab project files, soil model fits, and result plots (touch/step, potentials, fields).</li>
+          <li>Construction drawings/details for grid layout, bonds, SPDs and mitigation hardware.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why XGSLab Services -->
+    <!-- <section class="nsv-why" data-reveal="up">
+      <h2>Why XGSLab Services</h2>
+      <div class="nsv-cards nsv-cards--wide">
+        <article class="nsv-card nsv-card--accent">
+          <h4>Tool-driven accuracy</h4>
+          <p>Modern solvers, layered soils and realistic return paths yield practical, defendable designs.</p>
+        </article>
+        <article class="nsv-card nsv-card--accent">
+          <h4>Utility & industrial experience</h4>
+          <p>Substations, plants, rail and pipeline interfaces—built to pass real-world reviews.</p>
+        </article>
+        <article class="nsv-card nsv-card--accent">
+          <h4>From study to build</h4>
+          <p>We translate results into drawings, BOQs and specs you can take to site.</p>
+        </article>
+      </div>
+
+      <div id="talk" class="nsv-cta nsv-cta--center">
+        <a href="/contact/" class="nsv-btn nsv-btn--primary nsv-btn--xl">Talk to an XGSLab engineer</a>
+      </div>
+    </section> -->
+    
+    <!-- duplicate -->
+     <!-- Why XGSLab Services -->
+    <section class="nsv-why" data-reveal="up">
+      <h2>Why iEngineering</h2>
+      <div class="nsv-cards nsv-cards--wide">
+        <article class="nsv-card nsv-card--accent">
+          <h4>Authorized XGSLab partner</h4>
+          <p>Deep product knowledge, best-practice workflows, and direct access to the vendor team.</p>
+        </article>
+        <article class="nsv-card nsv-card--accent">
+          <h4>Local, responsive support</h4>
+          <p>Regional engineers who understand utility, rail, pipeline and industrial requirements.</p>
+        </article>
+        <article class="nsv-card nsv-card--accent">
+          <h4>Proven field results</h4>
+          <p>Designs aligned to IEEE/IEC/EN that withstand review and translate cleanly to construction.</p>
+        </article>
+      </div>
+
+      <div id="talk" class="nsv-cta nsv-cta--center">
+        <a href="/contact/" class="nsv-btn nsv-btn--primary nsv-btn--xl">Talk to iEngineering about your project</a>
+      </div>
+    </section>
+
+  </section>
+
+
+
+  {% include 'footer.html' %}
+
+  <!-- Reveal on scroll -->
+  <script>
+    (function () {
+      const els = document.querySelectorAll('.neplan-services [data-reveal], .nsv-why, .nsv-card');
+      if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('is-visible')); return; }
+
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: .18 });
+
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>

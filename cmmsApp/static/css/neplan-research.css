@@ -1,0 +1,554 @@
+
+/* Left–center the hero slide text */
+#nesSlider .nes-content{
+  /* kill the bottom anchoring */
+  bottom: auto;
+
+  /* place it in the vertical middle, aligned left */
+  top: 50%;
+  left: clamp(16px, 5vw, 64px);
+  right: auto;
+  transform: translateY(-50%);
+
+  max-width: min(780px, 80%);
+  text-align: left;
+}
+
+/* Small screens: keep it centered and give it more width */
+@media (max-width: 640px){
+  #nesSlider .nes-content{
+    left: 5%;
+    right: 5%;
+    max-width: 90%;
+  }
+}
+
+.eyebrow-neplan-what-we-bring {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 0 .5rem;
+    font-weight: 800;
+    font-size: .92rem;
+    opacity: .85;
+    z-index: 200;
+}
+
+
+.eyebrow-neplan-what-we-bring::before {
+    content: "";
+    width: 28px;
+    height: 3px;
+    z-index: 1000;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--wwb-primary), var(--wwb-primary2));
+}
+
+/* ================================
+   NEPLAN – Electricity: Slideshow
+   ================================ */
+:root{
+  --nes-primary:#0f766e;
+  --nes-primary-2:#155e75;
+  --nes-text:#ffffff;
+  --nes-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+body{
+    margin-top: 5.5rem;
+}
+
+.neplan-electricity-slide{
+  --nes-height: clamp(380px, 70vh, 760px);
+  background:#0b0f14;
+  color:var(--nes-text);
+  padding: 0;
+}
+
+.nes-viewport{
+  position:relative;
+  width:min(100%, 1400px);
+  margin-inline:auto;
+  height:var(--nes-height);
+  overflow:hidden;
+  border-radius: 18px;
+  box-shadow: var(--nes-shadow);
+}
+
+/* Track + Slides */
+.nes-track{
+  height:100%;
+  display:flex;
+  width: 300%;                 /* 3 slides */
+  transform: translateX(0%);
+  transition: transform .7s cubic-bezier(.22,1,.36,1);
+}
+
+.nes-slide{
+  position:relative;
+  flex: 0 0 100%;
+  height:100%;
+  background:
+      linear-gradient(#0000,#0000),
+      var(--bg, none);
+  background-size: cover;
+  background-position: center;
+}
+.nes-slide.nes-noimg{
+  /* fallback if no image present */
+  background: radial-gradient(1200px 700px at 10% 25%, rgba(0,0,0,.45), rgba(0,0,0,.85));
+}
+
+/* dark overlay for legibility (also provides L→R gradient accent) */
+.nes-overlay{
+  position:absolute; inset:0;
+  background:
+      linear-gradient(90deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.35) 32%, rgba(0,0,0,.10) 60%, rgba(0,0,0,0) 85%);
+}
+
+/* Slide content */
+.nes-content{
+  position:absolute; inset:auto auto 8% 5%;
+  max-width: min(780px, 80%);
+  inset: auto auto 8% 5%; 
+}
+.nes-title{
+  margin:0 0 .8rem;
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing:.5px;
+  font-size: clamp(2.2rem, 8.5vw, 4rem);
+  text-transform: uppercase;
+}
+.nes-sub{
+  position:relative;
+  margin: 0 0 1.1rem;
+  padding-left: clamp(44px, 5vw, 64px);
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  line-height: 1.6;
+  opacity:.92;
+}
+.nes-sub::before{
+  content:"";
+  position:absolute; left:0; top:50%;
+  width: clamp(40px, 4.5vw, 64px); height:2px;
+  background: linear-gradient(90deg,var(--nes-primary),var(--nes-primary-2));
+  transform: translateY(-50%);
+  border-radius:2px;
+}
+.nes-cta{
+  display:inline-flex; align-items:center; gap:.55rem;
+  padding:.85rem 1.15rem;
+  border-radius: 999px;
+  color:#0b1720;
+  font-weight: 800;
+  background:#fff;
+  text-decoration: none;
+  border:2px solid transparent;
+  transition: transform .2s ease, filter .2s ease, border-color .2s ease;
+}
+.nes-cta span{ display:inline-block; transform: translateY(1px); }
+.nes-cta:hover{ transform: translateY(-2px); border-color:#fff; filter: brightness(1.05); }
+
+/* Right vertical dots */
+.nes-dots{
+  position:absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  display:flex; flex-direction:column; gap:12px;
+  z-index:2;
+}
+.nes-dot{
+  width: 14px; height:14px; border-radius:999px;
+  background: rgba(255,255,255,.55);
+  border:2px solid rgba(255,255,255,.6);
+  display:block; cursor:pointer;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.nes-dot:hover{ transform: scale(1.15); }
+.nes-dot.is-active{
+  background: linear-gradient(180deg, var(--nes-primary), var(--nes-primary-2));
+  border-color:#fff;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.25);
+}
+
+/* Responsiveness */
+@media (max-width: 820px){
+  .nes-content{ inset:auto auto 7% 4%; max-width: 86%; }
+  .nes-dots{ right: 10px; }
+}
+@media (max-width: 520px){
+  .nes-content{ inset:auto auto 7% 5%; max-width: 92%; }
+  .nes-sub{ padding-left: 44px; }
+  .nes-dots{ right: 8px; gap:10px; }
+}
+
+
+
+/* ================================
+   NEPLAN — Overview (with image)
+   ================================ */
+:root{
+  --ov-primary:#0f766e;
+  --ov-primary-2:#155e75;
+  --ov-text:#0e1b2b;
+  --ov-muted:#5b6472;
+  --ov-ring:rgba(14,27,43,.12);
+  --ov-soft:#f6f8fb;
+  --ov-shadow:0 18px 44px rgba(2,8,23,.10);
+}
+
+.section-neplan-overview{
+  padding: clamp(28px,4vw,32px) 16px;
+  background:#fff; color:var(--ov-text);
+}
+.container-neplan-overview{
+  width:min(100%, 1200px);
+  margin-inline:auto;
+}
+
+/* Header */
+.eyebrow-neplan-overview{
+  display:inline-flex; align-items:center; gap:.5rem;
+  margin:0 0 .4rem; font-weight:800; font-size:.92rem; opacity:.95;
+}
+.eyebrow-neplan-overview::before{
+  content:""; width:28px; height:3px; border-radius:2px;
+  background:linear-gradient(90deg,var(--ov-primary),var(--ov-primary-2));
+}
+.title-neplan-overview{
+  margin:0 0 .5rem;
+  font-weight:900; letter-spacing:.2px;
+  font-size: clamp(1.6rem,4.8vw,2.5rem);
+}
+.lead-neplan-overview{
+  margin:0 0 1.2rem; line-height:1.7; color:var(--ov-muted);
+}
+
+/* Grid */
+.grid-neplan-overview{
+  display:grid; gap: clamp(16px,2.4vw,24px);
+  grid-template-columns: 1.25fr .85fr;
+}
+@media (max-width: 980px){
+  .grid-neplan-overview{ grid-template-columns: 1fr; }
+}
+
+/* Strength items */
+.list-neplan-overview{ list-style:none; padding:0; margin:0; display:grid; gap:14px; }
+.ov-item-neplan-overview{
+  display:grid; grid-template-columns: 44px 1fr; gap:12px;
+  padding: clamp(12px,2vw,16px);
+  background: linear-gradient(180deg,#fff,var(--ov-soft));
+  border:1px solid var(--ov-ring);
+  border-radius:14px;
+  box-shadow: var(--ov-shadow);
+}
+.ov-icon-neplan-overview{
+  width:44px; height:44px; border-radius:12px;
+  display:grid; place-items:center; color:#fff;
+  background: linear-gradient(135deg,var(--ov-primary),var(--ov-primary-2));
+  box-shadow: inset 0 0 0 4px rgba(255,255,255,.55);
+}
+.ov-icon-neplan-overview svg{ width:22px; height:22px; fill:currentColor; }
+.ov-body-neplan-overview h3{
+  margin:.15rem 0 .25rem; font-weight:900;
+  font-size: clamp(1.02rem,1.6vw,1.18rem);
+}
+.ov-body-neplan-overview p{ margin:0; color:var(--ov-muted); line-height:1.65; }
+.ov-body-neplan-overview a{
+  color:var(--ov-primary-2); font-weight:700; text-decoration:none;
+  border-bottom:1px solid rgba(21,94,117,.28);
+}
+.ov-body-neplan-overview a:hover{ border-color:transparent; text-decoration:underline; }
+
+/* Right card */
+.card-neplan-overview{
+  position:relative; overflow:hidden;
+  background:#fff; border:1px solid var(--ov-ring); border-radius:16px;
+  box-shadow: var(--ov-shadow);
+  padding: clamp(16px,2.4vw,22px);
+  display:flex; flex-direction:column; gap:.7rem;
+}
+.card-neplan-overview::before{
+  content:""; position:absolute; inset:0;
+  background: radial-gradient(850px 420px at 15% 10%, rgba(21,94,117,.10), transparent 60%);
+  pointer-events:none;
+}
+.card-chip-neplan-overview{
+  align-self:flex-start;
+  padding:.35rem .6rem; border-radius:999px;
+  font-weight:800; font-size:.8rem; color:#0c2430;
+  background:linear-gradient(90deg, #e6fbf7, #e7f2f9);
+  border:1px solid rgba(14,27,43,.08);
+}
+.card-title-neplan-overview{
+  margin:.1rem 0; font-weight:900; line-height:1.3;
+  font-size: clamp(1.05rem,1.8vw,1.3rem);
+}
+.card-text-neplan-overview{ margin:0; color:var(--ov-muted); line-height:1.65; }
+
+.card-link-neplan-overview{
+  margin:.2rem 0 0;
+  align-self:flex-start;
+  display:inline-flex; gap:.45rem; align-items:center;
+  padding:.6rem .9rem; border-radius:999px; text-decoration:none;
+  color:#fff; font-weight:800;
+  background:linear-gradient(90deg,var(--ov-primary),var(--ov-primary-2));
+  border:2px solid transparent;
+  transition: transform .22s ease, filter .22s ease, border-color .22s ease;
+}
+.card-link-neplan-overview:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+
+/* NEW: illustration area below CTA */
+.card-illustration-neplan-overview{
+  margin-top: .6rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border:1px solid var(--ov-ring);
+  background: linear-gradient(180deg,#f7fafc,#eef5fb);
+  aspect-ratio: 16 / 9;       /* keeps a nice proportion */
+}
+.card-illustration-neplan-overview img{
+  width:100%; height:100%; object-fit: cover; display:block;
+}
+
+/* -----------------------------
+   Scroll reveal (moderate speed)
+   ----------------------------- */
+.ov-reveal-up,
+.ov-reveal-left,
+.ov-reveal-right{
+  opacity:0;
+  will-change: transform, opacity;
+  transition: transform .7s cubic-bezier(.22,1,.36,1), opacity .7s ease;
+}
+.ov-reveal-up   { transform: translateY(18px); }
+.ov-reveal-left { transform: translateX(-22px); }
+.ov-reveal-right{ transform: translateX(22px); }
+
+.in-view{
+  opacity:1;
+  transform: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .ov-reveal-up, .ov-reveal-left, .ov-reveal-right{
+    opacity:1; transform:none; transition:none;
+  }
+}
+/* ===============================
+   NEPLAN — Key Features (cards)
+   =============================== */
+:root{
+  --nkf-primary:#0f766e;
+  --nkf-primary-2:#155e75;
+  --nkf-text:#0e1b2b;
+  --nkf-muted:#5b6472;
+  --nkf-ring:rgba(14,27,43,.12);
+  --nkf-soft:#f6f8fb;
+  --nkf-shadow:0 18px 44px rgba(2,8,23,.10);
+}
+
+.section-neplan-key-features{
+  padding: clamp(28px,1vw,26px) 16px;
+  background:#fff; color:var(--nkf-text);
+}
+.container-neplan-key-features{
+  width:min(100%, 1200px);
+  margin-inline:auto;
+}
+
+/* Header */
+.nkf-eyebrow{
+  display:inline-flex; align-items:center; gap:.5rem;
+  margin:0 0 .4rem; font-weight:800; font-size:.92rem; opacity:.95;
+}
+.nkf-eyebrow::before{
+  content:""; width:28px; height:3px; border-radius:2px;
+  background:linear-gradient(90deg,var(--nkf-primary),var(--nkf-primary-2));
+}
+.nkf-title{
+  margin:0 0 .45rem; font-weight:900;
+  font-size: clamp(1.45rem,4.6vw,2.2rem);
+}
+.nkf-lead{ margin:0 0 1rem; color:var(--nkf-muted); }
+
+/* Grid */
+.nkf-grid{
+  list-style:none; padding:0; margin:0;
+  display:grid; gap: clamp(14px,2.2vw,20px);
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+@media (max-width: 760px){
+  .nkf-grid{ grid-template-columns: 1fr; }
+}
+
+/* Card */
+.nkf-card{
+  background:linear-gradient(180deg,#fff,var(--nkf-soft));
+  border:1px solid var(--nkf-ring);
+  border-radius:14px;
+  box-shadow: var(--nkf-shadow);
+  padding: clamp(14px,2.2vw,18px);
+  position:relative; overflow:hidden;
+}
+.nkf-card::before{
+  content:"";
+  position:absolute; left:0; right:0; top:0; height:3px;
+  background:linear-gradient(90deg,var(--nkf-primary),var(--nkf-primary-2));
+}
+
+/* Card head */
+.nkf-card-head{ display:flex; align-items:center; gap:12px; margin-bottom:.35rem; }
+.nkf-icon{
+  width:42px; height:42px; border-radius:12px; color:#fff;
+  display:grid; place-items:center; flex:0 0 auto;
+  background: linear-gradient(135deg,var(--nkf-primary),var(--nkf-primary-2));
+  box-shadow: inset 0 0 0 4px rgba(255,255,255,.55);
+}
+.nkf-icon svg{ width:20px; height:20px; fill:currentColor; }
+.nkf-card-title{
+  margin:0; font-weight:900; letter-spacing:.2px;
+  font-size: clamp(1.02rem,1.6vw,1.18rem);
+}
+
+/* Body */
+.nkf-card-text{
+  margin:0; color:var(--nkf-muted); line-height:1.65;
+}
+.nkf-card-text a{
+  color:var(--nkf-primary-2); font-weight:700; text-decoration:none;
+  border-bottom:1px solid rgba(21,94,117,.28);
+}
+.nkf-card-text a:hover{ border-color:transparent; text-decoration:underline; }
+
+/* Use the same reveal utility (from your existing JS/CSS) */
+.ov-reveal-up,
+.ov-reveal-left,
+.ov-reveal-right{
+  opacity:0;
+  will-change: transform, opacity;
+  transition: transform .7s cubic-bezier(.22,1,.36,1), opacity .7s ease;
+}
+.ov-reveal-up   { transform: translateY(18px); }
+.ov-reveal-left { transform: translateX(-22px); }
+.ov-reveal-right{ transform: translateX(22px); }
+.in-view{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion: reduce){
+  .ov-reveal-up, .ov-reveal-left, .ov-reveal-right{
+    opacity:1; transform:none; transition:none;
+  }
+}
+
+/* =========================================
+   NEPLAN — simple bullet points (no cards)
+   Root: .neplan-li-ul-points
+   Variant: .neplan-li-ul-points--engineering
+   ========================================= */
+:root{
+  --nlup-text:#0e1b2b;
+  --nlup-muted:#5b6472;
+
+  /* default accent (NEPLAN Electricity) */
+  --nlup-accent:#0f766e;   /* teal-700   */
+  --nlup-accent2:#155e75;  /* cyan-800   */
+
+  /* engineering variant accent */
+  --nlup-eng-1:#2563eb;    /* blue-600   */
+  --nlup-eng-2:#22c55e;    /* green-500  */
+}
+
+/* Wrapper */
+.neplan-li-ul-points{
+  color:var(--nlup-text);
+  padding: clamp(20px, 5vw, 48px) 16px;
+  /* no background, no borders (per request) */
+}
+
+.neplan-li-ul-points__inner{
+  width:min(100%, 1100px);
+  margin-inline:auto;
+}
+
+/* Title */
+.neplan-li-ul-points__title{
+  margin:0 0 .65rem;
+  font-weight:900;
+  letter-spacing:.2px;
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  display:flex; align-items:center; gap:.6rem;
+}
+.neplan-li-ul-points__title::before{
+  content:"";
+  width:28px; height:3px; border-radius:2px;
+  background:linear-gradient(90deg,var(--nlup-accent),var(--nlup-accent2));
+}
+
+/* Bulleted list */
+.neplan-li-ul-points__list{
+  list-style:none;          /* custom bullets */
+  margin:.25rem 0 0;
+  padding:0;
+  display:grid;
+  gap: clamp(.45rem, 1.2vw, .8rem);
+  line-height:1.65;
+  font-size: clamp(.95rem, 1.8vw, 1.05rem);
+  color: var(--nlup-muted);
+}
+
+/* Bullet item */
+.neplan-li-ul-points__list li{
+  position:relative;
+  padding-left: clamp(34px, 4.5vw, 40px);
+}
+
+/* Gradient bullet (circle) */
+.neplan-li-ul-points__list li::before{
+  content:"";
+  position:absolute;
+  left:0; top:.32em;
+  width: clamp(18px, 2.9vw, 20px);
+  height: clamp(18px, 2.9vw, 20px);
+  border-radius:50%;
+  background: linear-gradient(135deg, var(--nlup-accent), var(--nlup-accent2));
+  box-shadow: 0 6px 14px color-mix(in oklab, var(--nlup-accent) 35%, transparent);
+}
+
+/* White check mark inside the bullet */
+.neplan-li-ul-points__list li::after{
+  content:"";
+  position:absolute;
+  left: clamp(4px, .9vw, 5px);
+  top: calc(.32em + clamp(3px, .8vw, 4px));
+  width: clamp(9px, 1.9vw, 10px);
+  height: clamp(9px, 1.9vw, 10px);
+  background:#fff;
+  /* mask draws a check; keeps color white */
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="%23000" d="M4.6 9.2 1.7 6.3 0.6 7.4l4 4 6.8-6.8-1.1-1.1z"/></svg>') no-repeat center/contain;
+          mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><path fill="%23000" d="M4.6 9.2 1.7 6.3 0.6 7.4l4 4 6.8-6.8-1.1-1.1z"/></svg>') no-repeat center/contain;
+}
+
+/* =========================
+   Engineering variant
+   ========================= */
+.neplan-li-ul-points--engineering .neplan-li-ul-points__title::before{
+  background:linear-gradient(90deg,var(--nlup-eng-1),var(--nlup-eng-2));
+}
+
+/* Brighter dual-tone diamond bullet */
+.neplan-li-ul-points--engineering .neplan-li-ul-points__list li::before{
+  border-radius:12%; /* diamond-ish when rotated */
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--nlup-eng-1), var(--nlup-eng-2));
+  box-shadow: 0 8px 18px color-mix(in oklab, var(--nlup-eng-1) 35%, transparent);
+}
+
+/* Align the check back upright */
+.neplan-li-ul-points--engineering .neplan-li-ul-points__list li::after{
+  transform: rotate(-45deg);
+}
+
+/* Tight layout on very small screens */
+@media (max-width: 420px){
+  .neplan-li-ul-points__list{ gap:.55rem; }
+}

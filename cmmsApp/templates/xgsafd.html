@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – XGSA FD (Interference & Fields · Frequency Domain)</title>
+
+  <!-- shared assets (unchanged) -->
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- page-scoped tweaks just for this XGSA FD page -->
+  <style>
+    .gsa-hero.gxsa-hero{
+      background: #08121c url("{% static 'images/xgs/xgsa-fd-hero.avif' %}") center/cover no-repeat;
+    }
+    .gsa-hero.gxsa-hero::before{
+      background: linear-gradient(180deg, rgba(0,0,0,.68), rgba(0,0,0,.35));
+    }
+    .gsa-card__icon--xgsa{
+      color:#7c3aed;
+      background:linear-gradient(180deg,#f6f1fe,#efeafd);
+      border-color:rgba(124,58,237,.28);
+    }
+    /* Optional: a slimmer stat row under hero text */
+    .gxsa-stats{
+      display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 4px; padding:0; list-style:none;
+      opacity:.95;
+    }
+    .gxsa-stats li{
+      display:inline-flex; align-items:center; gap:.45rem;
+      padding:.35rem .6rem; border-radius:999px; font-weight:700; font-size:.9rem;
+      border:1.5px solid rgba(255,255,255,.45); color:#fff; background:rgba(255,255,255,.08);
+    }
+    .gxsa-stats i{ font-size:.95rem; }
+  </style>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- ======================= HERO ======================= -->
+  <section class="gsa-hero gxsa-hero">
+    <div class="gsa-wrap gsa-hero__inner">
+      <div>
+        <span class="ctrl-kicker">XGSA FD · Interference & Electromagnetic Fields</span>
+        <h1>Analyze EM Fields & Coupling in the Frequency Domain</h1>
+        <p>
+          XGSA FD models electromagnetic fields and coupling between overhead and buried conductors, rails,
+          pipelines and cables across frequency. Evaluate induced voltages/currents, magnetic field compliance,
+          and mitigation effectiveness with realistic soil and return paths.
+        </p>
+
+        <ul class="gxsa-stats">
+          <li><i class="fa-solid fa-diagram-project"></i> Conductive &amp; inductive coupling</li>
+          <li><i class="fa-solid fa-wave-square"></i> Wideband field evaluation</li>
+          <li><i class="fa-solid fa-user-shield"></i> ICNIRP/EN compliance checks</li>
+        </ul>
+
+        <div class="cta">
+          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
+          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+        </div>
+      </div>
+
+      <figure class="gsa-hero__art" aria-hidden="true">
+        <img src="{% static 'images/xgs/home_image.png' %}" alt="XGSA FD visual">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============= KEY HIGHLIGHTS (3 cards) ============= -->
+  <section class="gsa-cards">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-head--rich">
+        <span class="gsa-eyebrow">Frequency-Domain Capabilities</span>
+        <h2>What you can do with XGSA FD</h2>
+        <p>Quantify interference, induced effects and EM exposure to inform safe routing and bonding.</p>
+      </header>
+
+      <div class="gsa-grid gsa-grid--enhanced">
+        <!-- 01 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon gsa-card__icon--xgsa" aria-hidden="true">
+            <i class="fa-solid fa-magnet"></i>
+          </div>
+          <h3 class="gsa-card__title">EM Fields & Exposure</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Magnetic/ electric field assessment above/below ground</li>
+            <li>Profiles and maps for substations, plants &amp; rail corridors</li>
+            <li>Comparison with ICNIRP / EN exposure limits</li>
+          </ul>
+        </article>
+
+        <!-- 02 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon gsa-card__icon--xgsa" aria-hidden="true">
+            <i class="fa-solid fa-plug-circle-bolt"></i>
+          </div>
+          <h3 class="gsa-card__title">Coupling & Interference</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Induced voltages/currents in pipelines, rails &amp; telecoms</li>
+            <li>Conductive, inductive and capacitive coupling paths</li>
+            <li>Effect of bonding, shields, return conductors &amp; spacing</li>
+          </ul>
+        </article>
+
+        <!-- 03 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon gsa-card__icon--xgsa" aria-hidden="true">
+            <i class="fa-solid fa-diagram-next"></i>
+          </div>
+          <h3 class="gsa-card__title">Mitigation & Reporting</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Shielding, rerouting, additional bonds and returns</li>
+            <li>Compliance summaries with worst-case scenarios</li>
+            <li>Engineering plots for documentation &amp; approvals</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="gsa-cards__cta">
+        <a href="/contact/" class="gsa-btn gsa-btn--ghost">Talk to an Engineer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== SPEC / SCOPE TABLE ================== -->
+  <section class="gsa-spec" aria-labelledby="xgsa-fd-scope">
+    <div class="gsa-wrap">
+      <h2 id="xgsa-fd-scope" class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
+      <table class="gsa-table">
+        <thead>
+          <tr><th>Area</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Modelling</th>
+            <td>
+              Frequency-domain solution with ground-return; mutual coupling among overhead lines,
+              underground cables, rails, pipelines; realistic bonds, screens and terminations.
+            </td>
+          </tr>
+          <tr>
+            <th>Use Cases</th>
+            <td>
+              Rail electrification &amp; stray currents, pipeline interference, corridor co-location,
+              plant EM exposure, HV/OHL–cable interactions, telecom co-routing.
+            </td>
+          </tr>
+          <tr>
+            <th>Inputs</th>
+            <td>
+              Conductor geometry &amp; routing, multilayer soil, load spectra or operating cases,
+              bonding schemes, separation/clearances, shielding strategies.
+            </td>
+          </tr>
+          <tr>
+            <th>Outputs</th>
+            <td>
+              EM field maps/profiles, induced V/I, transfer potentials, screening effectiveness,
+              and compliance indicators versus ICNIRP/EN limits.
+            </td>
+          </tr>
+          <tr>
+            <th>Integration</th>
+            <td>
+              Complements GSA/GSA_FD for earthing, XGSA_TD for time-domain studies, and NETS
+              for multi-conductor networks to deliver end-to-end assessments.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="gsa-note">Need time-domain transients? See <strong>XGSA_TD</strong>. For grounding safety focus, see <strong>GSA / GSA_FD</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ======================= GALLERY (2×2) ======================= -->
+  <section class="gsa-gallery">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-gallery-head">
+        <h2>Gallery</h2>
+      </header>
+      <div class="gsa-gallery__grid">
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Magnetic field profile"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Magnetic field profile"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Magnetic field profile"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Shielding and bonding layout"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS STEPS ===================== -->
+  <section class="gsa-process" aria-labelledby="xgsa-fd-process">
+    <div class="gsa-wrap">
+      <header class="gsa-head">
+        <h2 id="xgsa-fd-process">Typical Interference Study Workflow</h2>
+        <p>Define routes and bonds, evaluate exposure/induced effects, optimize mitigation.</p>
+      </header>
+      <ol class="gsa-steps">
+        <li class="gsa-step"><h4>01 · Inputs</h4><p>Geometry, soil, bonds, load cases/spectra, separation and corridor data.</p></li>
+        <li class="gsa-step"><h4>02 · Model</h4><p>Coupling paths, return currents, shields/screens and termination schemes.</p></li>
+        <li class="gsa-step"><h4>03 · Results</h4><p>Field profiles/maps, induced V/I, transfer potentials, compliance margins.</p></li>
+        <li class="gsa-step"><h4>04 · Mitigation</h4><p>Rerouting, extra bonds/returns, shielding and separation optimization.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========================= CTA ========================= -->
+  <section class="gsa-cta">
+    <div class="gsa-wrap gsa-cta__inner">
+      <div>
+        <h3>Planning an interference/EMF study?</h3>
+        <p>Share your route geometry and operating scenarios—get a defendable XGSA FD assessment and mitigation options.</p>
+      </div>
+      <a href="#" class="js-open-demo">Request a Demo</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- scripts (unchanged) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+</body>
+</html>

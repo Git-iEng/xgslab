@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – SHIELD (Lightning Protection Module)</title>
+
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/shield.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- ================= HERO ================= -->
+  <section class="gsa-hero shield-hero">
+    <div class="gsa-wrap gsa-hero__inner">
+      <div>
+        <span class="ctrl-kicker">SHIELD · Lightning Protection & Transients</span>
+        <h1>Advanced 3D Lightning Protection Design</h1>
+        <p>
+          SHIELD calculates lightning protection zones using the Rolling Sphere and Eriksson methods,
+          verifying that buildings, substations, and exposed assets are fully protected. Generate
+          3D coverage maps and validate compliance with IEC/EN 62305.
+        </p>
+        <div class="cta">
+          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
+          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+        </div>
+      </div>
+      <figure class="gsa-hero__art" aria-hidden="true">
+        <img src="{% static 'images/xgs/shield-hero.avif' %}" alt="SHIELD lightning visualization">
+      </figure>
+    </div>
+  </section>
+
+  <!-- =============== CAPABILITIES =============== -->
+  <section class="gsa-cards">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-head--rich">
+        <span class="gsa-eyebrow">Capabilities</span>
+        <h2>What You Can Do with SHIELD</h2>
+        <p>Simulate lightning strikes and protection zones in real-world 3D environments.</p>
+      </header>
+
+      <div class="gsa-grid gsa-grid--enhanced">
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="gsa-card__title">Rolling Sphere & Eriksson Models</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Determine protected zones and strike points</li>
+            <li>Supports LPL I–IV with automatic sphere radius adjustment</li>
+            <li>3D visualization of lightning interception zones</li>
+          </ul>
+        </article>
+
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <h3 class="gsa-card__title">Protected Volume Analysis</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Verify shielding of buildings, equipment & outdoor assets</li>
+            <li>Calculate clearance and unprotected areas</li>
+            <li>3D export of volume intersections and profiles</li>
+          </ul>
+        </article>
+
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-clipboard-check"></i>
+          </div>
+          <h3 class="gsa-card__title">Compliance & Documentation</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>IEC 62305 compliant protection validation</li>
+            <li>Generate coverage reports and visual proof</li>
+            <li>Integrate with GSA / NETS for complete risk assessment</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SCOPE TABLE =============== -->
+  <section class="gsa-spec">
+    <div class="gsa-wrap">
+      <h2 class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
+      <table class="gsa-table">
+        <thead><tr><th>Area</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>Methodology</th>
+            <td>Rolling Sphere and Eriksson models for lightning interception probability and protected zone determination.</td>
+          </tr>
+          <tr>
+            <th>Geometry</th>
+            <td>Supports structures, air-terminations, masts, down-conductors, and bonded metallic networks.</td>
+          </tr>
+          <tr>
+            <th>Results</th>
+            <td>3D maps showing protected/unprotected regions, coverage validation, and clearance verification.</td>
+          </tr>
+          <tr>
+            <th>Integration</th>
+            <td>Fully interoperable with GSA for grounding studies and NETS for interference coupling.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- =============== GALLERY =============== -->
+  <section class="gsa-gallery">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-gallery-head">
+        <h2>Gallery</h2>
+      </header>
+      <div class="gsa-gallery__grid">
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shield1.avif' %}" alt="3D protection zone"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shield2.avif' %}" alt="Lightning interception path"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shield3.avif' %}" alt="Protected building"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shield4.avif' %}" alt="Rolling sphere coverage view"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PROCESS =============== -->
+  <section class="gsa-process">
+    <div class="gsa-wrap">
+      <header class="gsa-head">
+        <h2>Typical SHIELD Workflow</h2>
+        <p>Define geometry → Select LPS class → Compute zones → Validate → Export visuals</p>
+      </header>
+      <ol class="gsa-steps">
+        <li class="gsa-step"><h4>01 · Setup Geometry</h4><p>Import site models, assign air-terminations & down conductors.</p></li>
+        <li class="gsa-step"><h4>02 · Define Parameters</h4><p>Choose protection level (LPL) & sphere radius.</p></li>
+        <li class="gsa-step"><h4>03 · Compute Coverage</h4><p>Generate protected volumes and verify compliance.</p></li>
+        <li class="gsa-step"><h4>04 · Export Results</h4><p>Produce 3D maps, reports, and compliance visuals.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =============== CTA =============== -->
+  <section class="gsa-cta">
+    <div class="gsa-wrap gsa-cta__inner">
+      <div>
+        <h3>Need lightning protection design validation?</h3>
+        <p>Upload your site layout—SHIELD will compute lightning protected zones and IEC-compliant results.</p>
+      </div>
+      <a href="#" class="js-open-demo">Request a Demo</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – GSA (Grounding System Analysis)</title>
+
+  <!-- keep shared assets exactly as-is -->
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Page-scoped CSS: hero + cards + table + gallery + process + cta -->
+  
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- ======================= HERO ======================= -->
+  <section class="gsa-hero">
+    <div class="gsa-wrap gsa-hero__inner">
+      <div>
+        <span class="ctrl-kicker">GSA · Grounding System Analysis</span>
+        <h1>Design & Validate Safe Earthing Systems</h1>
+        <p>
+          GSA is the XGSLab module dedicated to earthing/grounding systems in low-frequency conditions.
+          Model grids and electrodes, compute touch/step voltages, and verify compliance to IEEE/IEC/EN
+          using multilayer soil models and realistic return paths.
+        </p>
+        <div class="cta">
+          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
+          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+        </div>
+      </div>
+
+      <figure class="gsa-hero__art" aria-hidden="true">
+        <img src="{% static 'images/xgs/home_image.png' %}" alt="GSA visual">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============= KEY HIGHLIGHTS (3 cards) ============= -->
+  <section class="gsa-cards">
+  <div class="gsa-wrap">
+    <header class="gsa-head gsa-head--rich">
+      <span class="gsa-eyebrow">Capabilities</span>
+      <h2>What you can do with GSA</h2>
+      <p>Fast, defendable grounding studies for substations, plants, renewables and rail.</p>
+    </header>
+
+    <div class="gsa-grid gsa-grid--enhanced">
+      <!-- 01 -->
+      <article class="gsa-card gsa-card--lift">
+        <div class="gsa-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="gsa-card__title">Grid &amp; Electrode Modelling</h3>
+        <ul class="gsa-ul gsa-ul--checks">
+          <li>Buried meshes, rods, rings, foundations &amp; earth plates</li>
+          <li>Touch/step voltages, GPR, current distribution</li>
+          <li>Bonding, transfer potentials &amp; interface checks</li>
+        </ul>
+      </article>
+
+      <!-- 02 -->
+      <article class="gsa-card gsa-card--lift">
+        <div class="gsa-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h3 class="gsa-card__title">Multilayer Soil &amp; Measurements</h3>
+        <ul class="gsa-ul gsa-ul--checks">
+          <li>SRA/SSA tools to fit 1–n layer soil models</li>
+          <li>Seasonal/resistivity variations and what-if cases</li>
+          <li>Improved accuracy for safety criteria</li>
+        </ul>
+      </article>
+
+      <!-- 03 -->
+      <article class="gsa-card gsa-card--lift">
+        <div class="gsa-card__icon" aria-hidden="true">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+        <h3 class="gsa-card__title">Standards &amp; Reporting</h3>
+        <ul class="gsa-ul gsa-ul--checks">
+          <li>IEEE Std 80, IEC/EN 50522, IEC 60479 checks</li>
+          <li>Mitigation (surface layers, gradient control)</li>
+          <li>Engineering-grade plots &amp; compliance summaries</li>
+        </ul>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ================== SPEC / SCOPE TABLE ================== -->
+  <section class="gsa-spec" aria-labelledby="gsa-scope">
+    <div class="gsa-wrap">
+      <h2 id="gsa-scope" class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
+      <table class="gsa-table">
+        <thead>
+          <tr><th>Area</th><th>Details</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Geometry</th>
+            <td>Arbitrary meshes, interconnected grids, rods, plates, foundations, rings, shields, and connections to structures or third-party systems.</td>
+          </tr>
+          <tr>
+            <th>Soil Model</th>
+            <td>Uniform or multilayer soils derived from Wenner/Schlumberger tests; seasonal/resistivity scenarios; automated curve fitting.</td>
+          </tr>
+          <tr>
+            <th>Results</th>
+            <td>GPR, touch/step voltages, current density, conductor currents, surface potential maps, dangerous points and transfer potentials.</td>
+          </tr>
+          <tr>
+            <th>Compliance</th>
+            <td>Safety evaluation against IEEE Std 80 / IEC-EN 50522 / IEC 60479 with mitigation aids (surface layer, additional bonds, gradient control).</td>
+          </tr>
+          <tr>
+            <th>Integration</th>
+            <td>CAD-friendly import/export; consistent workflow with GSA_FD, XGSA_FD/TD, NETS and SHIELD for end-to-end studies.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="gsa-note">Need frequency-dependent behaviour? Use <strong>GSA_FD</strong> with the same modelling approach.</p>
+    </div>
+  </section>
+
+  <!-- ======================= GALLERY (2×2) ======================= -->
+  <section class="gsa-gallery">
+  <div class="gsa-wrap">
+    <header class="gsa-head gsa-gallery-head">
+      <h2> Gallery</h2>
+    </header>
+    <br>
+    <div class="gsa-gallery__grid">
+      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Gallery 1"></div>
+      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa2.avif' %}" alt="Gallery 2"></div>
+      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa3.avif' %}" alt="Gallery 3"></div>
+      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa4.avif' %}" alt="Gallery 4"></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===================== PROCESS STEPS ===================== -->
+  <section class="gsa-process" aria-labelledby="gsa-process-title">
+    <div class="gsa-wrap">
+      <header class="gsa-head">
+        <h2 id="gsa-process-title">Typical Study Workflow</h2>
+        <p>Clear stages with reviews and deliverables.</p>
+      </header>
+      <ol class="gsa-steps">
+        <li class="gsa-step"><h4>01 · Inputs</h4><p>Site layout, fault data, soil tests, bonding/adjacent systems.</p></li>
+        <li class="gsa-step"><h4>02 · Model</h4><p>Grid &amp; electrode geometry, soil fitting, scenarios &amp; constraints.</p></li>
+        <li class="gsa-step"><h4>03 · Results</h4><p>GPR, touch/step, current distribution, transfer potentials.</p></li>
+        <li class="gsa-step"><h4>04 · Mitigation</h4><p>Surface layers, bonds, gradient control &amp; compliance report.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ========================= CTA ========================= -->
+  <section class="gsa-cta">
+    <div class="gsa-wrap gsa-cta__inner">
+      <div>
+        <h3>Planning a grounding study?</h3>
+        <p>Send us your layout and soil measurements — we’ll help you validate safety and compliance with GSA.</p>
+      </div>
+      <a href="#" class="js-open-demo">Request a Demo</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- scripts (unchanged) -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+</body>
+</html>

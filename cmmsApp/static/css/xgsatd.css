@@ -1,0 +1,54 @@
+/* ===========================================
+   XGSLab › XGSA_TD (Time-Domain) style overrides
+   =========================================== */
+
+:root {
+  --td-accent: #d946ef;
+  --td-accent-grad: linear-gradient(90deg, #d946ef, #9333ea);
+}
+
+/* HERO */
+.gsa-hero.td-hero {
+  background: #0c1220 url('../images/xgs/xgsa-td-hero.avif') center/cover no-repeat;
+}
+.gsa-hero.td-hero::before {
+  background: linear-gradient(180deg, rgba(0,0,0,.68), rgba(0,0,0,.35));
+}
+
+/* stat pills */
+.td-stats {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0;
+}
+.td-stats li {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .35rem .6rem; border-radius: 999px;
+  font-weight: 700; font-size: .9rem;
+  border: 1.5px solid rgba(255,255,255,.4);
+  color: #fff; background: rgba(255,255,255,.08);
+}
+
+/* Card icon accent */
+.td-icon {
+  color: var(--td-accent);
+  background: linear-gradient(180deg, #fce8fd, #f6eafd);
+  border-color: rgba(217,70,239,.25);
+}
+
+/* Button override */
+.gsa-btn--primary {
+  background: var(--td-accent-grad);
+}
+.gsa-btn--primary:hover {
+  filter: brightness(1.08);
+}
+
+/* GALLERY & SHOTS - keep square corners, full image view */
+.gsa-shot {
+  border-radius: 0;
+  box-shadow: none;
+}
+.gsa-shot img {
+  object-fit: contain;
+}
+
+/* other sections can inherit from gsa.css, so this file only needs override bits */

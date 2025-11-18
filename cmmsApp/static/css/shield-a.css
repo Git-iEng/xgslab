@@ -1,0 +1,68 @@
+/* ======================================
+   XGSLab › SHIELD_A
+   Uses the same teal theme as other pages
+   ====================================== */
+
+:root{
+  --shielda-accent:#0f766e;
+  --shielda-accent-2:#155e75;
+  --shielda-grad: linear-gradient(90deg,#0f766e,#155e75);
+}
+
+/* HERO — keep same structure, new art */
+.gsa-hero.shielda-hero{
+  background:#0b1720 url('../images/xgs/shielda-hero.avif') center/cover no-repeat;
+}
+.gsa-hero.shielda-hero::before{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.35));
+}
+/* primary button in hero keeps teal */
+.gsa-hero.shielda-hero .gsa-btn--primary{
+  background:var(--shielda-grad) !important;
+}
+
+/* Cards keep shared styles from gsa.css; only icon tint here */
+.gsa-card__icon{
+  color:var(--shielda-accent);
+  background:linear-gradient(180deg,#f3faf9,#eef6f7);
+  border:1px solid rgba(15,118,110,.25);
+}
+
+/* Gallery — 2x2 web / 1x4 mobile; full image visible */
+.gsa-gallery{
+  background:#fff;
+  padding: clamp(32px, 6vw, 72px) 0;
+}
+.gsa-gallery-head{
+  text-align:center; margin-bottom: clamp(20px, 3vw, 32px);
+}
+.gsa-gallery-head h2{
+  margin:0; font-weight:800; color:#0b3b3f; font-size:clamp(1.6rem,3vw,2.2rem);
+}
+.gsa-gallery-head h2::after{
+  content:""; display:block; height:3px; width:84px; margin:10px auto 0;
+  background:var(--shielda-grad); border-radius:4px;
+}
+
+.gsa-gallery__grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  max-width:1100px; margin:0 auto;
+}
+.gsa-shot{
+  overflow:hidden; border:none; border-radius:0; background:transparent;
+}
+.gsa-shot img{
+  width:100%; height:auto; object-fit:contain; border-radius:0;
+}
+
+/* Mobile stack */
+@media (max-width:640px){
+  .gsa-gallery__grid{
+    grid-template-columns:1fr; gap:18px; padding:0 16px;
+  }
+}
+
+/* Keep process, table, CTA styles from shared gsa.css */

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – NETS (Network Solver Module)</title>
+
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nets.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- HERO -->
+  <section class="gsa-hero nets-hero">
+    <div class="gsa-wrap gsa-hero__inner">
+      <div>
+        <span class="ctrl-kicker">NETS · Network Solver & EM Interference</span>
+        <h1>Multi-Conductor Network & Interference Solver</h1>
+        <p>
+          NETS solves full-meshed multi-conductor / multi-phase networks including neutral and earth path
+          interactions, enabling interference and fault current distribution analysis for cables, rails,
+          pipelines, and power systems.  
+        </p>
+        <div class="cta">
+          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
+          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+        </div>
+      </div>
+      <figure class="gsa-hero__art" aria-hidden="true">
+        <img src="{% static 'images/xgs/nets-hero.avif' %}" alt="NETS network solver visual">
+      </figure>
+    </div>
+  </section>
+
+  <!-- CAPABILITIES CARDS -->
+  <section class="gsa-cards">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-head--rich">
+        <span class="gsa-eyebrow">Solver Capabilities</span>
+        <h2>NETS Module Highlights</h2>
+        <p>Analyze faults, interference, current split & network behavior in complex conductor systems.</p>
+      </header>
+
+      <div class="gsa-grid gsa-grid--enhanced">
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon nets-icon" aria-hidden="true">
+            <i class="fa-solid fa-sitemap"></i>
+          </div>
+          <h3 class="gsa-card__title">Network Solver</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Full meshed multi-conductor / multi-phase analysis</li>
+            <li>Neutral paths & earth return coupling</li>
+            <li>Supports asymmetrical & unbalanced systems</li>
+          </ul>
+        </article>
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon nets-icon" aria-hidden="true">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <h3 class="gsa-card__title">Fault & Steady State</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Fault current distribution & split factor tool</li>
+            <li>Overhead lines, cables, transformer coupling</li>
+          </ul>
+        </article>
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon nets-icon" aria-hidden="true">
+            <i class="fa-solid fa-waves-left-right"></i>
+          </div>
+          <h3 class="gsa-card__title">Interference Analysis</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Evaluate interference between power lines, pipelines, rails at power frequency</li>
+            <li>EM coupling in networks with multiple earth returns</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE / FEATURES TABLE -->
+  <section class="gsa-spec" aria-labelledby="nets-scope">
+    <div class="gsa-wrap">
+      <h2 id="nets-scope" class="gsa-head" style="text-align:left;">Scope & Key Features</h2>
+      <table class="gsa-table">
+        <thead>
+          <tr><th>Capability</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Network Modelling</th>
+            <td>
+              Represent lines, cables, transformers, loads, switches, multi‐port elements. Build arbitrary topology with multiple earth connections.
+            </td>
+          </tr>
+          <tr>
+            <th>Fault & Load Analysis</th>
+            <td>
+              Compute port currents, line currents, earth currents under normal and fault conditions. Includes split factor utility.
+            </td>
+          </tr>
+          <tr>
+            <th>EM Interference</th>
+            <td>
+              Assess coupling/interference among adjacent networks, pipelines, rails due to power frequency current distribution.  
+            </td>
+          </tr>
+          <tr>
+            <th>Compatibility</th>
+            <td>
+              Integrates with grounding modules (GSA, GSA_FD) for shared earth networks and supporting EM path modeling.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gsa-gallery">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-gallery-head">
+        <h2>Gallery</h2>
+      </header>
+      <div class="gsa-gallery__grid">
+        <div class="gsa-shot"><img src="{% static 'images/xgs/nets1.avif' %}" alt="Network diagram"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/nets2.avif' %}" alt="Fault distribution map"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/nets3.avif' %}" alt="EM coupling route"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/nets4.avif' %}" alt="Network solver UI"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS / WORKFLOW -->
+  <section class="gsa-process" aria-labelledby="nets-process">
+    <div class="gsa-wrap">
+      <header class="gsa-head">
+        <h2 id="nets-process">Typical NETS Workflow</h2>
+        <p>Construct network, inject sources or faults, solve currents/voltages, evaluate interference, refine design.</p>
+      </header>
+      <ol class="gsa-steps">
+        <li class="gsa-step"><h4>01 · Define Topology</h4><p>Nodes, branches, earth returns, multi-port cells.</p></li>
+        <li class="gsa-step"><h4>02 · Assign Elements</h4><p>Lines, cables, transformers, loads, switches, connections.</p></li>
+        <li class="gsa-step"><h4>03 · Solve</h4><p>Steady state / fault current distributions, coupling currents.</p></li>
+        <li class="gsa-step"><h4>04 · Analyze & Mitigate</h4><p>Interference evaluation, design improvement, re-run as needed.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="gsa-cta">
+    <div class="gsa-wrap gsa-cta__inner">
+      <div>
+        <h3>Need network & interference analysis?</h3>
+        <p>Provide your network layout—let NETS analyze currents, coupling, faults, and interference paths.</p>
+      </div>
+      <a href="#" class="js-open-demo">Request a Demo</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+</body>
+</html>

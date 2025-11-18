@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – SHIELD_A (Automated Lightning Protection)</title>
+
+  <!-- keep shared assets and theme -->
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/shielda.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+  {% load static %}
+
+  <!-- ================= HERO ================= -->
+  <section class="gsa-hero shielda-hero">
+    <div class="gsa-wrap gsa-hero__inner">
+      <div>
+        <span class="ctrl-kicker">SHIELD A · Lightning Protection Automation</span>
+        <h1>Auto-Design of Lightning Protection Systems</h1>
+        <p>
+          SHIELD A automates the placement and sizing of air-terminations and down-conductors to achieve
+          IEC/EN 62305 coverage. Define constraints and targets—SHIELD A searches feasible solutions,
+          validates protected volumes, and delivers build-ready layouts with reports and visuals.
+        </p>
+        <div class="cta">
+          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
+          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+        </div>
+      </div>
+
+      <figure class="gsa-hero__art" aria-hidden="true">
+        <img src="{% static 'images/xgs/shielda-hero.avif' %}" alt="SHIELD_A automated lightning protection visualization">
+      </figure>
+    </div>
+  </section>
+
+  <!-- =============== CAPABILITIES =============== -->
+  <section class="gsa-cards">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-head--rich">
+        <span class="gsa-eyebrow">Capabilities</span>
+        <h2>What You Can Do with SHIELD A</h2>
+        <p>From manual trial-and-error to automated, standards-driven lightning protection layouts.</p>
+      </header>
+
+      <div class="gsa-grid gsa-grid--enhanced">
+        <!-- 01 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="gsa-card__title">Automatic Layout Search</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Optimizes number, height, and position of air-terminations</li>
+            <li>Respects keep-out, roof zones, and height/spacing limits</li>
+            <li>Targets full coverage with minimal hardware</li>
+          </ul>
+        </article>
+
+        <!-- 02 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <h3 class="gsa-card__title">Standards & Methods</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Rolling Sphere & Eriksson methods for zone validation</li>
+            <li>Supports LPS Classes I–IV (IEC/EN 62305)</li>
+            <li>Instant coverage metrics and unprotected area checks</li>
+          </ul>
+        </article>
+
+        <!-- 03 -->
+        <article class="gsa-card gsa-card--lift">
+          <div class="gsa-card__icon" aria-hidden="true">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <h3 class="gsa-card__title">Scenarios & Deliverables</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Batch scenarios by LPS class, mast height, and constraints</li>
+            <li>3D visuals of protected volumes and strike interception</li>
+            <li>Bill-of-materials and layout drawings for implementation</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SCOPE TABLE =============== -->
+  <section class="gsa-spec">
+    <div class="gsa-wrap">
+      <h2 class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
+      <table class="gsa-table">
+        <thead><tr><th>Area</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr>
+            <th>Automation</th>
+            <td>Automatic placement of masts/air-terminations under geometric and regulatory constraints with cost/quantity targets.</td>
+          </tr>
+          <tr>
+            <th>Methodology</th>
+            <td>Protected volumes verified with Rolling Sphere and Eriksson models; LPS Class I–IV radius handling.</td>
+          </tr>
+          <tr>
+            <th>Geometry</th>
+            <td>Roofs, platforms, racks, equipment blocks, keep-out regions, down-conductor routing and bonding points.</td>
+          </tr>
+          <tr>
+            <th>Results</th>
+            <td>Coverage maps, unprotected pockets, clearance distances, strike interception points, and optimization summary.</td>
+          </tr>
+          <tr>
+            <th>Deliverables</th>
+            <td>3D views, layout drawings, BOM, and compliance report with key parameters and assumptions.</td>
+          </tr>
+          <tr>
+            <th>Integration</th>
+            <td>Works with SHIELD for manual refinement; integrates with GSA / NETS for earthing and interference checks.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- =============== GALLERY =============== -->
+  <section class="gsa-gallery">
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-gallery-head">
+        <h2>Gallery</h2>
+      </header>
+      <div class="gsa-gallery__grid">
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shielda1.avif' %}" alt="Automated mast placement"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shielda2.avif' %}" alt="Protected volumes 3D view"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shielda3.avif' %}" alt="Coverage heat overlay"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/shielda4.avif' %}" alt="Layout and BOM summary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PROCESS =============== -->
+  <section class="gsa-process">
+    <div class="gsa-wrap">
+      <header class="gsa-head">
+        <h2>Typical SHIELD A Workflow</h2>
+        <p>Define constraints → Auto-search → Validate zones → Export build package</p>
+      </header>
+      <ol class="gsa-steps">
+        <li class="gsa-step"><h4>01 · Inputs</h4><p>Import site geometry, set LPS class, mast limits, and keep-out areas.</p></li>
+        <li class="gsa-step"><h4>02 · Auto-Search</h4><p>Compute feasible layouts minimizing masts or cost while achieving coverage.</p></li>
+        <li class="gsa-step"><h4>03 · Validate</h4><p>Check protected volumes, clearances, and unprotected pockets.</p></li>
+        <li class="gsa-step"><h4>04 · Deliver</h4><p>Export drawings, BOM, and compliance report for implementation.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =============== CTA =============== -->
+  <section class="gsa-cta">
+    <div class="gsa-wrap gsa-cta__inner">
+      <div>
+        <h3>Automate your lightning protection layouts</h3>
+        <p>Send your roof plan and constraints. SHIELD A will find a compliant solution and generate documentation.</p>
+      </div>
+      <a href="#" class="js-open-demo">Request a Demo</a>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+  <script defer src="{% static 'js/main.js' %}"></script>
+  <script defer src="{% static 'js/neplan.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* ================================
+   XGSLab › SHIELD (Lightning)
+   Consistent teal theme
+   ================================ */
+
+:root {
+  --shield-accent: #0f766e;
+  --shield-accent-2: #155e75;
+  --shield-grad: linear-gradient(90deg, #0f766e, #155e75);
+}
+
+/* HERO (same colors as others) */
+.gsa-hero.shield-hero {
+  background: #0b1720 url('../images/xgs/shield-hero.avif') center/cover no-repeat;
+}
+.gsa-hero.shield-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.35));
+}
+
+/* Button color same teal */
+.gsa-hero.shield-hero .gsa-btn--primary {
+  background: var(--shield-grad) !important;
+}
+
+/* Icon chip styling consistent */
+.gsa-card__icon {
+  color: var(--shield-accent);
+  background: linear-gradient(180deg, #f3faf9, #eef6f7);
+  border: 1px solid rgba(15, 118, 110, .25);
+}
+
+/* Gallery layout – 2x2 web / 1x4 mobile */
+.gsa-gallery {
+  background: #fff;
+  padding: clamp(32px, 6vw, 72px) 0;
+}
+
+.gsa-gallery-head {
+  text-align: center;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+.gsa-gallery-head h2 {
+  margin: 0;
+  font-weight: 800;
+  color: #0b3b3f;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.gsa-gallery-head h2::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 84px;
+  margin: 10px auto 0;
+  background: var(--shield-grad);
+  border-radius: 4px;
+}
+
+/* Full image display */
+.gsa-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.gsa-shot {
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+.gsa-shot img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Mobile stack */
+@media (max-width: 640px) {
+  .gsa-gallery__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 16px;
+  }
+}

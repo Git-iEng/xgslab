@@ -1,0 +1,42 @@
+/* ====================================
+   XGSLab › NETS module styling
+   ==================================== */
+
+:root {
+  --nets-accent: #059669; /* greenish accent for network theme */
+  --nets-accent-grad: linear-gradient(90deg, #059669, #10b981);
+}
+
+/* Hero override */
+.gsa-hero.nets-hero {
+  background: #0a1c20 url('../images/xgs/nets-hero.avif') center/cover no-repeat;
+}
+.gsa-hero.nets-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.25));
+}
+
+/* Card icon styling */
+.nets-icon {
+  color: var(--nets-accent);
+  background: linear-gradient(180deg, #e9faf2, #def7f1);
+  border: 1px solid rgba(5, 150, 105, .2);
+}
+
+/* Primary button for this page */
+.gsa-btn--primary {
+  background: var(--nets-accent-grad) !important;
+}
+.gsa-btn--primary:hover {
+  filter: brightness(1.08);
+}
+
+/* Gallery: full image, no border radius override if needed */
+.gsa-shot img {
+  border-radius: 0 !important;
+  object-fit: contain;
+}
+
+/* Other styles largely inherited from gsa.css */

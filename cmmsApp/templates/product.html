@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XGSLab – Products</title>
+
+  <!-- Base styles already used across pages -->
+  <link rel="stylesheet" href="{% static 'css/services.css' %}">
+  <link rel="stylesheet" href="{% static 'css/product.css' %}">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  {% include 'header.html' %}
+  {% include 'request_demo_modal.html' %}
+
+  <!-- HERO -->
+  <section class="neplan-electricity-slide" aria-label="XGSLab products hero">
+    <div class="nes-viewport">
+      <header class="nsv-hero">
+        <p class="nsv-kicker">Products</p>
+        <h1 class="nsv-title">
+          Model, verify, and protect your installations<br>
+          with <span style="color:#ff3b30;">XGSLab</span>
+        </h1>
+        <p class="nsv-sub">
+          XGSLab is a best-in-class platform for <strong>earthing/grounding</strong>,
+          <strong>lightning</strong>, and <strong>electromagnetic interference</strong> studies.
+          Explore the suite below—each module focuses on a specific analysis domain and integrates with the rest.
+        </p>
+        <div class="cta-buttons">
+          <a href="/contact/" class="btn btn-primary js-open-demo">Request a Demo</a>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- PRODUCTS GRID -->
+  <section class="neplan-products-cards" aria-labelledby="npc-title">
+    <div class="npc-wrap">
+      <header class="npc-head" data-reveal="up">
+        <h2 id="npc-title">Explore the <span style="color:#ff3b30;">XGSLab</span> Suite</h2>
+        <p class="npc-sub">Choose a module to learn more. Each card links to the relevant product page.</p>
+      </header>
+
+      <div class="npc-grid">
+        <!-- GSA -->
+        <article class="npc-card" data-reveal="up" style="--d:.05s">
+          <div class="npc-card__bg npc-card__bg--gsa"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 12-14h-7l2-6Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">GSA</h3>
+          <p class="npc-card__text">Grounding System Analysis (power-frequency earthing design & safety checks).</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/gsa/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- GSA FD -->
+        <article class="npc-card" data-reveal="up" style="--d:.1s">
+          <div class="npc-card__bg npc-card__bg--gsafd"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2S5 10 5 14a7 7 0 1 0 14 0C19 10 12 2 12 2Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">GSA FD</h3>
+          <p class="npc-card__text">Frequency-domain earthing: soil/return currents, transfer functions, touch/step vs. f.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/gsafd/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- XGSA FD -->
+        <article class="npc-card" data-reveal="up" style="--d:.15s">
+          <div class="npc-card__bg npc-card__bg--xgsafd"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 2h10v2h-1v5.1l-5 7.9-5-7.9V4H7V2Zm3 4v3l2 3.2L14 9V6h-4Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">XGSA FD</h3>
+          <p class="npc-card__text">Conductors & complex structures in the frequency domain, multi-layer soil models.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/xgsafd/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- XGSA TD -->
+        <article class="npc-card" data-reveal="up" style="--d:.2s">
+          <div class="npc-card__bg npc-card__bg--xgsatd"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 1 0-.7-7.94A6 6 0 0 0 5 11a4 4 0 0 0 2 7Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">XGSA TD</h3>
+          <p class="npc-card__text">Time-domain transients: lightning currents, surge waveforms, and fast front effects.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/xgsatd/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- NETS -->
+        <article class="npc-card" data-reveal="up" style="--d:.25s">
+          <div class="npc-card__bg npc-card__bg--nets"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 11h16v2H4z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">NETS</h3>
+          <p class="npc-card__text">Interference on third-party systems (pipelines, rails, telecom) from power networks.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/nets/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- SHIELD -->
+        <article class="npc-card" data-reveal="up" style="--d:.3s">
+          <div class="npc-card__bg npc-card__bg--shield"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 3 7v6c0 5 4.1 7.8 9 9 4.9-1.2 9-4 9-9V7l-9-5Z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">SHIELD</h3>
+          <p class="npc-card__text">Lightning shielding verification for substations/lines: exposure, interception, coverage.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/sheild/">Learn more</a>
+          </div>
+        </article>
+
+        <!-- SHIELD A -->
+        <article class="npc-card" data-reveal="up" style="--d:.35s">
+          <div class="npc-card__bg npc-card__bg--shielda"></div>
+          <div class="npc-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h12v4H6zM4 9h16v2H4zm0 4h16v2H4zm2 4h12v2H6z" fill="currentColor"/></svg>
+          </div>
+          <h3 class="npc-card__title">SHIELD A</h3>
+          <p class="npc-card__text">Advanced lightning performance analysis: striking distance, risk &amp; failure rate KPIs.</p>
+          <div class="npc-card__cta">
+            <a class="npc-btn npc-btn--primary" href="/sheilda/">Learn more</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- Reveal on scroll -->
+  <script>
+  (function(){
+    const els = document.querySelectorAll('.neplan-products-cards [data-reveal]');
+    if(!('IntersectionObserver' in window)){ els.forEach(e=>e.classList.add('is-visible')); return; }
+    const io = new IntersectionObserver((entries, obs)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting){
+          en.target.classList.add('is-visible');
+          obs.unobserve(en.target);
+        }
+      });
+    }, {root:null, rootMargin:'0px 0px -8% 0px', threshold:.15});
+    els.forEach(el=>io.observe(el));
+  })();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="{% static 'js/header.js'%}"></script>
+  <script defer src="{% static 'js/demo_form.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="{% static 'css/demo_form.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+
+
+</head>
+
+<body>
+    {% include 'request_demo_modal.html' %}
+    <!--=============== HEADER ===============-->
+
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__data">
+                <a href="/" class="nav__logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Company Logo" class="logo-img">
+                </a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__burger"></i>
+                    <i class="ri-close-line nav__close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <!-- Solutions Dropdown -->
+
+                    <!-- <li><a href="#" class="nav__link">Services</a></li> -->
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">
+                        <a href="/product/" class="nav__link">
+                            Products<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </a>
+
+                        <ul class="dropdown__menu">
+                            <li>
+                                <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)
+                                    <!-- <i class="ri-pie-chart-line"></i> -->
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/gsafd/" class="dropdown__link">GSA FD (Grounding System Analysis in the
+                                    Frequency Domain)
+                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/xgsafd/" class="dropdown__link">XGSA FD
+                                    <!-- <i class="ri-pie-chart-line"></i> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/xgsatd/" class="dropdown__link">XGSA TD
+                                    <!-- <i class="ri-pie-chart-line"></i> -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/nets/" class="dropdown__link">NETS
+                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sheild/" class="dropdown__link">SHEILD
+                                    <!-- <i class="ri-pie-chart-line"></i> -->
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/sheilda/" class="dropdown__link">SHEILD A
+                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
+                                </a>
+                            </li>
+
+
+                            <!--=============== DROPDOWN SUBMENU ===============-->
+                            <!-- <li class="dropdown__subitem">
+                                <div class="dropdown__link">
+                                    <i class="ri-bar-chart-line"></i> Services <i class="ri-add-line dropdown__add"></i>
+                                </div>
+
+                                <ul class="dropdown__submenu">
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-file-list-line"></i> Training & Workshops
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-cash-line"></i> Technical Support
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" class="dropdown__sublink">
+                                            <i class="ri-refund-2-line"></i> Consultancy Services
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                        </ul>
+                    </li>
+
+
+                    <li><a href="/services/" class="nav__link">Services</a></li>
+                    <!--=============== DROPDOWN 2 ===============-->
+                    <!-- <li class="dropdown__item">
+                    <div class="nav__link">
+                            Resources<i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                    <ul class="dropdown__menu">
+                          <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-user-line"></i> Case Studies
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-lock-line"></i> Blog/Articles
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__link">
+                                    <i class="ri-message-3-line"></i> Downloads
+                                </a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li><a href="/about/" class="nav__link">About</a></li>
+                    <li><a href="/contact/" class="nav__link">Contact</a></li>
+                    <a href="#" class="book-demo-btn js-open-demo">
+                        Request Demo<i class="bi bi-arrow-right-circle"></i>
+                    </a>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="{% static 'js/header.js'%}"></script>
+    <script defer src="{% static 'js/demo_form.js' %}"></script>
+</body>
+
+</html>
+
+
+<!-- 
+master copy for route
+
+    <li> <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)</a></li>
+    <li> <a href="/neplan-gas-water-heating/" class="dropdown__link">GSA FD</a> </li>
+    <li> <a href="/neplan-anywhere/" class="dropdown__link">XGSA FD  </a></li>
+    <li> <a href="/neplan-cloud/" class="dropdown__link">XGSA TD </a> </li>
+    <li> <a href="/neplan-integration-oem-sas/" class="dropdown__link">NETS</a> </li>
+    <li> <a href="/neplan-research/" class="dropdown__link">SHEILD</a> </li>
+    <li> <a href="/neplan-additional-solutions/" class="dropdown__link">SHEILD A</a> </li> -->
