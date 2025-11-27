@@ -11,7 +11,6 @@
 
   --primary:#192231; --primary-2:#7cf7e2;
   --primary-hover:#0ea5e9; --primary-active:#0284c7;
-
   --text:#0e1b2b;
 }
 
@@ -178,7 +177,7 @@ body{
   background:linear-gradient(180deg,#f7f9fc,#eff4fb);
   text-align:left; padding:.9rem 1rem; font-weight:800;
 }
-.gsa-table td,.gsa-table th{ border-bottom:1px solid var(--gsa-rule); padding:1rem; vertical-align:top; }
+.gsa-table td,.gsa-table th{ border-bottom:1px solid var(--gsa-rule); text-align:left; padding:1rem; vertical-align:top; }
 .gsa-note{ color:var(--gsa-sub); margin:.6rem 0 0; }
 
 /* ---------------------------------
@@ -210,7 +209,10 @@ body{
   overflow:visible;
   border:none; border-radius:0;
   box-shadow:none; background:transparent; padding:0;
+  box-shadow: 5px 10px 30px rgb(113, 113, 113);
+
 }
+
 
 .gsa-shot img{
   display:block;
@@ -264,3 +266,83 @@ body{
   background:#fff; color:#0b1720; border:2px solid #fff;
   border-radius:999px; padding:.85rem 1.15rem; font-weight:800; text-decoration:none;
 }
+
+
+
+/* Small label above hero title */
+.ctrl-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .78);
+  margin-bottom: 8px;
+}
+/* Extra gap between header and shared hero on GSA pages */
+@media (min-width: 768px) {
+  .section-neplan-home--gsa,
+  .section-neplan-home--gsa-fd {
+    margin-top: 16px;
+  }
+}
+/* Make shared hero buttons on GSA + GSA-FD identical to home */
+.section-neplan-home--gsa .btn-neplan-home,
+.section-neplan-home--gsa-fd .btn-neplan-home {
+  all: unset;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .9rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+
+  color: #fff;
+  border: 2px solid transparent;
+  background-image: linear-gradient(80deg, #0f766e, #155e75);
+  box-shadow: 0 10px 24px rgba(2, 8, 23, .35);
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
+}
+
+.section-neplan-home--gsa .btn-neplan-home .arrow,
+.section-neplan-home--gsa-fd .btn-neplan-home .arrow {
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.section-neplan-home--gsa .btn-neplan-home:hover,
+.section-neplan-home--gsa-fd .btn-neplan-home:hover {
+  background-image: none;
+  background-color: #0e7490;
+  border-color: #0e7490;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(14, 165, 233, .45);
+}
+
+.section-neplan-home--gsa .btn-neplan-home:active,
+.section-neplan-home--gsa-fd .btn-neplan-home:active {
+  background-image: none;
+  background-color: #134e4a;
+  border-color: #134e4a;
+  transform: translateY(0);
+}
+
+/* Shrink GSA FD hero logo (right side card) */
+.section-neplan-home--gsa-fd .device-neplan-home {
+  max-width: 260px !important;     /* control logo block width */
+  flex: 0 0 260px !important;      /* make the layout respect this width */
+  margin-right: 150px !important;  /* pull it away from the right edge */
+}
+
+.section-neplan-home--gsa-fd .device-neplan-home img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+

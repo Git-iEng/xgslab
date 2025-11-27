@@ -1,5 +1,5 @@
 /* ======= Contact Us Landing Banner ======= */
-:root{
+:root {
   --ncus-radius: 28px;
   --ncus-maxw: 1400px;     /* max inner width */
   --ncus-pad: clamp(18px, 3vw, 28px);
@@ -8,13 +8,13 @@
 }
 
 /* outer section so the banner breathes */
-.neplan-contact-us-hero{
+.neplan-contact-us-hero {
   padding: clamp(16px, 3vw, 28px);
-  background: #ffffff;                /* page bg */
+  background: #ffffff;
 }
 
-/* rounded, shadowed container with overflow hidden like the screenshot */
-.neplan-contact-us-shell{
+/* rounded, shadowed container */
+.neplan-contact-us-shell {
   position: relative;
   margin: 0 auto;
   width: min(100%, var(--ncus-maxw));
@@ -23,11 +23,11 @@
   overflow: hidden;
   box-shadow: var(--ncus-shadow);
   isolation: isolate;
-  background: #0f1a1f;                /* fallback when no image */
+  background: #0f1a1f;
 }
 
 /* background image + dark vignette */
-.neplan-contact-us-shell::before{
+.neplan-contact-us-shell::before {
   content:"";
   position: absolute; inset: 0;
   background:
@@ -38,8 +38,8 @@
   z-index: -2;
 }
 
-/* subtle teal grid lines for a tech feel (like your design) */
-.neplan-contact-us-shell::after{
+/* subtle teal grid lines */
+.neplan-contact-us-shell::after {
   content:"";
   position:absolute; inset:0;
   background:
@@ -59,7 +59,7 @@
 }
 
 /* title */
-.neplan-contact-us-title{
+.neplan-contact-us-title {
   margin: 0;
   padding: clamp(36px, 9vw, 80px) var(--ncus-pad);
   width: 100%;
@@ -74,19 +74,27 @@
 
 /* small screens: keep corners and spacing nice */
 @media (max-width: 520px){
-  :root{ --ncus-radius: 20px; }
-  .neplan-contact-us-hero{ padding: 14px; }
-}
-body{
-    margin-top: 5.5rem;
+  :root { --ncus-radius: 20px; }
+  .neplan-contact-us-hero { padding: 14px; }
 }
 
-/* ===== Call Us / Info band ===== */
-.neplan-call-us-anytime{
+body {
+  margin-top: 5.5rem; /* for sticky header spacing */
+}
+
+/* ======================================================= */
+/*  CALL / MAIL / LOCATION BAND                            */
+/*  -> aligned to same container width as "Where we operate" */
+/*  -> centred on mobile, text left-aligned                */
+/* ======================================================= */
+/* ======================================================= */
+/*  CALL / MAIL / LOCATION BAND                            */
+/* ======================================================= */
+.neplan-call-us-anytime {
   --nc-bg: #ffffff;
   --nc-ink: #0e1b2b;
   --nc-muted:#5b6472;
-  --nc-accent:#15e3c8;         /* teal tile */
+  --nc-accent:#15e3c8;
   --nc-accent-ink:#ffffff;
   --nc-radius: 14px;
   --nc-gap: clamp(18px, 3vw, 32px);
@@ -94,24 +102,27 @@ body{
   --nc-text: clamp(14px, .95vw, 16px);
 
   background: var(--nc-bg);
-  padding: clamp(18px, 4vw, 40px);
+  padding: clamp(24px, 4vw, 40px) clamp(16px, 5vw, 24px);
 }
 
-.neplan-call-us-anytime__grid{
-  max-width: 1400px;
-  margin: 0 auto;
+/* desktop / tablet – same width as other sections */
+.neplan-call-us-anytime__grid {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;                  /* centre under hero */
   display: grid;
   gap: var(--nc-gap);
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  text-align: left;                /* content stays left aligned */
 }
 
-.neplan-call-us-anytime__item{
+.neplan-call-us-anytime__item {
   background: transparent;
   padding: clamp(8px, 1.2vw, 12px) 0;
   color: var(--nc-ink);
 }
 
-.neplan-call-us-anytime__icon{
+.neplan-call-us-anytime__icon {
   width: 72px; height: 72px;
   display: grid; place-items: center;
   background: var(--nc-accent);
@@ -121,13 +132,17 @@ body{
   box-shadow: 0 8px 22px rgba(21, 227, 200, .25);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.neplan-call-us-anytime__icon svg{ width: 34px; height: 34px; }
-.neplan-call-us-anytime__item:hover .neplan-call-us-anytime__icon{
+
+.neplan-call-us-anytime__icon svg {
+  width: 34px; height: 34px;
+}
+
+.neplan-call-us-anytime__item:hover .neplan-call-us-anytime__icon {
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(21, 227, 200, .35);
 }
 
-.neplan-call-us-anytime__title{
+.neplan-call-us-anytime__title {
   margin: 0 0 10px;
   font-weight: 800;
   font-size: var(--nc-title);
@@ -135,50 +150,78 @@ body{
   color: var(--nc-ink);
 }
 
-.neplan-call-us-anytime__rule{
+.neplan-call-us-anytime__rule {
   height: 1px;
   background: linear-gradient(90deg, rgba(14,27,43,.1), rgba(14,27,43,.1));
   margin: 10px 0 14px;
 }
 
-.neplan-call-us-anytime__text{
+.neplan-call-us-anytime__text {
   margin: 0;
   font-size: var(--nc-text);
   line-height: 1.7;
   color: var(--nc-muted);
 }
-.neplan-call-us-anytime__text a{
+
+.neplan-call-us-anytime__text a {
   color: var(--nc-ink);
   text-decoration: none;
   border-bottom: 1px dashed rgba(14,27,43,.25);
 }
-.neplan-call-us-anytime__text a:hover{
+
+.neplan-call-us-anytime__text a:hover {
   border-bottom-color: transparent;
 }
 
-/* ---- Responsive ---- */
+/* -------- breakpoints -------- */
+
 @media (max-width: 1024px){
-  .neplan-call-us-anytime__grid{
+  .neplan-call-us-anytime__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* MOBILE: centre whole block on screen, keep text left */
 @media (max-width: 600px){
-  .neplan-call-us-anytime__grid{
-    grid-template-columns: 1fr;
+  .neplan-call-us-anytime {
+    padding-left: 0;
+    padding-right: 0;
   }
-  .neplan-call-us-anytime__item{
+
+  .neplan-call-us-anytime__grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;          /* narrower than viewport */
+    width: 100%;
+    margin-left: auto;         /* centre in screen */
+    margin-right: auto;
+    padding-left: 16px;        /* small inner padding */
+    padding-right: 16px;
+    justify-items: stretch;
+  }
+
+  .neplan-call-us-anytime__item {
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(14,27,43,.08);
   }
-  .neplan-call-us-anytime__item:last-child{
+
+  .neplan-call-us-anytime__item:last-child {
     border-bottom: 0;
   }
 }
-/* ===================== */
-/* neplan-contact-us-new-form */
-/* ===================== */
 
-.neplan-contact-us-new-form{
+
+/* ============================================= */
+/*  REST OF FILE – FORM + MAP + SAFETY RULES     */
+/* ============================================= */
+
+/* keep the form inside viewport */
+.neplan-contact-us-new-form,
+.neplan-contact-us-new-form * {
+  box-sizing: border-box;
+}
+
+/* section wrapper */
+.neplan-contact-us-new-form {
   --ink:#0e1b2b;
   --muted:#5b6472;
   --panel:#ffffff;
@@ -188,48 +231,58 @@ body{
   --rule:rgba(14,27,43,.10);
   --shadow:0 22px 60px rgba(2,8,23,.12);
 
-  padding: clamp(24px, 4vw, 56px) 16px;
-  background: #fff;
-}
-.ncunf-wrap{
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: clamp(24px, 4vw, 48px);
-  align-items: start;
+  background:#fff;
+  padding: clamp(30px, 5vw, 56px) clamp(16px, 4vw, 32px);
 }
 
-/* left */
-.ncunf-badge{
+/* layout: left copy + right form */
+.ncunf-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  column-gap: clamp(24px, 4vw, 48px);
+  row-gap: clamp(16px, 3vw, 32px);
+  align-items: flex-start;
+}
+
+/* left side */
+.ncunf-badge {
   display:inline-flex; align-items:center; gap:.6rem;
   padding:.4rem .9rem; border-radius:999px;
   background: #eef7f6; color:#0b675f; font-weight:800;
   text-transform: uppercase; letter-spacing:.05em;
   font-size: .8rem;
 }
-.ncunf-badge::before{
+
+.ncunf-badge::before {
   content:""; width:8px; height:8px; border-radius:50%;
   background: var(--accent-2);
 }
-.ncunf-title{
+
+.ncunf-title {
   margin:.8rem 0 .6rem; color:var(--ink);
-  font-size: clamp(36px, 6vw, 72px); line-height:1.05;
+  font-size: clamp(32px, 5.6vw, 56px);
+  line-height:1.05;
   font-weight: 900;
 }
-.ncunf-lead{
+
+.ncunf-lead {
   margin: 0 0 1rem; color: var(--muted);
   font-size: clamp(14px, 1.1vw, 17px);
   line-height: 1.8;
 }
-.ncunf-chevrons{
+
+.ncunf-chevrons {
   margin-top: clamp(20px,5vw,40px);
-  width:min(420px, 80%);
+  width:min(420px, 100%);
   height: 220px; position: relative;
   --c1:#14e1c6; --c2:#cfe6e4; --c3:#0b1e24;
 }
+
 .ncunf-chevrons::before,
-.ncunf-chevrons::after{
+.ncunf-chevrons::after {
   content:"";
   position:absolute; inset:0;
   -webkit-mask:
@@ -246,293 +299,229 @@ body{
   filter: drop-shadow(0 14px 30px rgba(2,8,23,.10));
 }
 
-/* card */
-.ncunf-card{
+/* right side: card + form */
+.ncunf-card {
   background: var(--panel);
   border: 1px solid var(--rule);
   border-radius: 18px;
   box-shadow: var(--shadow);
   padding: clamp(18px, 3.2vw, 36px);
+  width: 100%;
 }
-.ncunf-card-title{
-  margin: 0 0 .25rem; color: var(--ink);
-  font-size: clamp(22px, 2.2vw, 34px); font-weight: 900;
-}
-.ncunf-card-sub{ margin:.25rem 0 1rem; color:var(--muted); }
 
-/* form */
-.ncunf-form{ margin-top: .5rem; }
-.ncunf-row{
-  display:grid; grid-template-columns: 1fr 1fr;
+.ncunf-card-title {
+  margin: 0 0 .25rem; color: var(--ink);
+  font-size: clamp(22px, 2.2vw, 30px);
+  font-weight: 900;
+}
+
+.ncunf-card-sub {
+  margin:.25rem 0 1rem;
+  color:var(--muted);
+}
+
+.ncunf-form {
+  margin-top: .5rem;
+  width: 100%;
+}
+
+/* 2 columns on desktop */
+.ncunf-row {
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(10px, 1.6vw, 16px);
   margin-bottom: clamp(10px, 1.6vw, 16px);
 }
-.ncunf-input{
+
+.ncunf-input {
   width:100%;
   border:1px solid var(--rule);
   background:#fff;
-  padding: 14px 14px;
+  padding: 12px 14px;
   border-radius: 12px;
   font-size: 15px;
   color: var(--ink);
   outline: none;
   transition: border-color .2s ease, box-shadow .2s ease;
 }
-.ncunf-input:focus{
+
+.ncunf-input:focus {
   border-color: rgba(11,127,121,.45);
   box-shadow: 0 0 0 3px rgba(21,227,200,.15);
 }
-.ncunf-textarea{ resize: vertical; min-height: 130px; }
 
-.ncunf-remember{
+.ncunf-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.ncunf-remember {
   display:flex; align-items:center; gap:.6rem;
-  margin: 10px 0 18px; color: var(--muted); font-size: .95rem;
+  margin: 10px 0 18px;
+  color: var(--muted);
+  font-size: .95rem;
+  flex-wrap: wrap;
 }
 
-.ncunf-btn{
+.ncunf-btn {
   display:inline-flex; align-items:center; gap:.55rem;
-  padding: 14px 20px; border-radius: 14px; border:0;
-  background:#082a2a; color:#fff; font-weight:800;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border:0;
+  background:#082a2a;
+  color:#fff;
+  font-weight:800;
   box-shadow: 0 12px 30px rgba(2,8,23,.18);
-  cursor:pointer; position:relative; overflow:hidden;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
 }
-.ncunf-btn .a{ transform: translateY(1px); }
-.ncunf-btn:disabled{ opacity:.75; cursor:not-allowed; }
-.ncunf-btn.is-loading .t{ opacity:0; }
-.ncunf-btn.is-loading::after{
-  content:""; position:absolute; inset:auto auto auto auto;
-  left:50%; top:50%; width:20px; height:20px; border-radius:50%;
+
+.ncunf-btn .a { transform: translateY(1px); }
+.ncunf-btn:disabled { opacity:.75; cursor:not-allowed; }
+.ncunf-btn.is-loading .t { opacity:0; }
+
+.ncunf-btn.is-loading::after {
+  content:"";
+  position:absolute;
+  left:50%; top:50%;
+  width:20px; height:20px;
+  border-radius:50%;
   border:3px solid rgba(255,255,255,.35);
-  border-top-color:#fff; transform:translate(-50%,-50%);
+  border-top-color:#fff;
+  transform:translate(-50%,-50%);
   animation: ncunf-spin .75s linear infinite;
 }
-@keyframes ncunf-spin{ to{ transform:translate(-50%,-50%) rotate(360deg);} }
 
-/* errors */
-.ncunf-errors{
-  margin: 0 0 10px; padding: 10px 14px; border-radius: 12px;
-  background: #fdecec; color:#7a0e12; border:1px solid #f4b9bd;
+@keyframes ncunf-spin {
+  to { transform:translate(-50%,-50%) rotate(360deg); }
+}
+
+.ncunf-errors {
+  margin: 0 0 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fdecec;
+  color:#7a0e12;
+  border:1px solid #f4b9bd;
   font-weight:700;
 }
 
-/* responsive */
+/* ======= Form responsive ======= */
+
 @media (max-width: 1024px){
-  .ncunf-wrap{ grid-template-columns: 1fr; }
-  .ncunf-chevrons{ width: 60%; height: 160px; }
+  .ncunf-wrap {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .ncunf-chevrons {
+    width: 100%;
+    max-width: 360px;
+    height: 180px;
+  }
 }
-@media (max-width: 600px){
-  .ncunf-row{ grid-template-columns: 1fr; }
+
+@media (max-width: 680px){
+  .neplan-contact-us-new-form {
+    padding: 24px 0 30px;
+  }
+
+  .ncunf-wrap {
+    max-width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .ncunf-card {
+    width: calc(100vw - 40px);
+    margin: 0 auto;
+    padding: 16px 14px;
+    border-radius: 16px;
+  }
+
+  .ncunf-title {
+    font-size: clamp(26px, 7vw, 32px);
+  }
+
+  .ncunf-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ncunf-chevrons {
+    display:none;
+  }
 }
+
+/* very small screens */
+@media (max-width: 400px){
+  .ncunf-card {
+    width: calc(100vw - 32px);
+  }
+
+  .ncunf-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ============ neplan-map-location- ============ */
-.neplan-map-location-{
+.neplan-map-location- {
   padding: clamp(16px, 3vw, 28px);
   background:#f6f8fb;
-}
-.neplan-map-location- .nml-wrap{
-  position:relative;
-  max-width: 1400px;
-  margin: 0 auto;
-  border-radius: 18px;
-  overflow:hidden;
-  box-shadow: 0 14px 40px rgba(2,8,23,.16);
-  background:#fff;
-}
-
-/* Map canvas */
-#nml-map{
-  width: 100%;
-  height: clamp(360px, 46vw, 520px);
-}
-
-/* Top-left "View larger map" */
-.nml-view-link{
-  position:absolute;
-  z-index: 600;
-  left: 12px; top: 12px;
-  background: rgba(255,255,255,.9);
-  border:1px solid rgba(2,8,23,.08);
-  backdrop-filter: blur(4px);
-  color:#0e1b2b;
-  font-weight:800;
-  border-radius:12px;
-  padding:8px 12px;
-  text-decoration:none;
-  box-shadow: 0 6px 20px rgba(2,8,23,.10);
-}
-.nml-view-link:hover{ background:#fff; }
-
-/* Bottom-left basemap switch */
-.nml-basemap{
-  position:absolute;
-  z-index: 600;
-  left: 12px; bottom: 12px;
-  background: rgba(255,255,255,.9);
-  border:1px solid rgba(2,8,23,.08);
-  display:flex; gap:6px;
-  padding:6px; border-radius:12px;
-  box-shadow: 0 6px 20px rgba(2,8,23,.10);
-}
-.nml-toggle{
-  appearance: none; border:0;
-  font-weight:800; cursor:pointer;
-  border-radius: 10px; padding:8px 10px;
-  background: transparent; color:#0e1b2b;
-}
-.nml-toggle.is-active{
-  background:#0e1b2b; color:#fff;
-}
-
-/* Make Leaflet controls harmonious */
-.leaflet-control-attribution{
-  background: rgba(255,255,255,.85) !important;
-  border-radius: 12px !important;
-  padding: 0 8px !important;
-  margin: 0 6px 6px 0 !important;
-  font-size: 11px !important;
-}
-/* ============ neplan-map-location- ============ */
-.neplan-map-location-{
-  padding: clamp(16px, 3vw, 28px);
-  background:#f6f8fb;
-}
-.neplan-map-location- .nml-wrap{
-  position:relative;
-  max-width: 1400px;
-  margin: 0 auto;
-  border-radius: 18px;
-  overflow:hidden;
-  box-shadow: 0 14px 40px rgba(2,8,23,.16);
-  background:#fff;
-}
-
-/* Map canvas */
-#nml-map{
-  width: 100%;
-  height: clamp(360px, 46vw, 520px);
-}
-
-/* Top-left "View larger map" */
-.nml-view-link{
-  position:absolute;
-  z-index: 600;
-  left: 12px; top: 12px;
-  background: rgba(255,255,255,.9);
-  border:1px solid rgba(2,8,23,.08);
-  backdrop-filter: blur(4px);
-  color:#0e1b2b;
-  font-weight:800;
-  border-radius:12px;
-  padding:8px 12px;
-  text-decoration:none;
-  box-shadow: 0 6px 20px rgba(2,8,23,.10);
-}
-.nml-view-link:hover{ background:#fff; }
-
-/* Bottom-left basemap switch */
-.nml-basemap{
-  position:absolute;
-  z-index: 600;
-  left: 12px; bottom: 12px;
-  background: rgba(255,255,255,.9);
-  border:1px solid rgba(2,8,23,.08);
-  display:flex; gap:6px;
-  padding:6px; border-radius:12px;
-  box-shadow: 0 6px 20px rgba(2,8,23,.10);
-}
-.nml-toggle{
-  appearance: none; border:0;
-  font-weight:800; cursor:pointer;
-  border-radius: 10px; padding:8px 10px;
-  background: transparent; color:#0e1b2b;
-}
-.nml-toggle.is-active{
-  background:#0e1b2b; color:#fff;
-}
-
-/* Make Leaflet controls harmonious */
-.leaflet-control-attribution{
-  background: rgba(255,255,255,.85) !important;
-  border-radius: 12px !important;
-  padding: 0 8px !important;
-  margin: 0 6px 6px 0 !important;
-  font-size: 11px !important;
-}
-/* keep the map underneath sticky headers */
-.neplan-map-location .leaflet-container {
-  z-index: 0;                /* header just needs a higher z-index (e.g., 1000) */
-}
-
-/* small helper overlay that tells users how to activate the map */
-.neplan-map-location .nml-map-guard {
-  position: absolute;
-  left: 12px;
-  bottom: 12px;
-  z-index: 5;
-  background: rgba(255,255,255,.92);
-  color: #0e1b2b;
-  padding: .55rem .75rem;
-  border-radius: 10px;
-  box-shadow: 0 6px 22px rgba(2,8,23,.18);
-  font: 500 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  display: flex;
-  gap: .5rem;
-  align-items: center;
-  pointer-events: auto;
-}
-
-.neplan-map-location .nml-map-guard button {
-  border: 0;
-  background: #0f766e;        /* teal */
-  color: #fff;
-  padding: .4rem .6rem;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.neplan-map-location .nml-map-guard kbd {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  padding: 2px 6px;
-  font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-/* nice cursor while the map is locked */
-.neplan-map-location .leaflet-container.map-locked {
-  cursor: not-allowed;
-  touch-action: pan-y;        /* allow vertical page scroll on touch */
-}
-/* Keep the map below sticky headers */
-.neplan-map-location- .leaflet-container {
-  z-index: 0;                 /* header/nav should be higher (e.g. 1000) */
 }
 
 .neplan-map-location- .nml-wrap {
-  position: relative;
-}
-
-.neplan-map-location- #nml-map {
-  height: 560px;              /* adjust as needed */
+  position:relative;
+  max-width: 1400px;
+  margin: 0 auto;
   border-radius: 18px;
-  overflow: hidden;
+  overflow:hidden;
+  box-shadow: 0 14px 40px rgba(2,8,23,.16);
+  background:#fff;
 }
 
-/* “View larger map” pill */
-.neplan-map-location- .nml-view-link {
-  position: absolute;
-  top: 12px;
-  left: 56px;
-  z-index: 5;
-  background: #fff;
-  color: #0e1b2b;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 8px 26px rgba(2,8,23,.18);
-  text-decoration: none;
+/* Map canvas */
+#nml-map {
+  width: 100%;
+  height: clamp(360px, 46vw, 520px);
 }
 
-/* Activation helper */
+/* Top-left "View larger map" */
+.nml-view-link {
+  position:absolute;
+  z-index: 600;
+  left: 12px; top: 12px;
+  background: rgba(255,255,255,.9);
+  border:1px solid rgba(2,8,23,.08);
+  backdrop-filter: blur(4px);
+  color:#0e1b2b;
+  font-weight:800;
+  border-radius:12px;
+  padding:8px 12px;
+  text-decoration:none;
+  box-shadow: 0 6px 20px rgba(2,8,23,.10);
+}
+
+.nml-view-link:hover {
+  background:#fff;
+}
+
+/* Make Leaflet controls harmonious */
+.leaflet-control-attribution {
+  background: rgba(255,255,255,.85) !important;
+  border-radius: 12px !important;
+  padding: 0 8px !important;
+  margin: 0 6px 6px 0 !important;
+  font-size: 11px !important;
+}
+
+/* Keep map below sticky header */
+.neplan-map-location- .leaflet-container {
+  z-index: 0;
+}
+
+/* Cursor + helper when locked */
 .neplan-map-location- .nml-map-guard {
   position: absolute;
   left: 12px;
@@ -552,7 +541,7 @@ body{
 
 .neplan-map-location- .nml-map-guard button {
   border: 0;
-  background: #0f766e;        /* teal */
+  background: #0f766e;
   color: #fff;
   padding: .4rem .6rem;
   border-radius: 8px;
@@ -567,8 +556,37 @@ body{
   font: 600 12px/1.2 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/* Cursor while locked so users know scrolling the page is fine */
 .neplan-map-location- .leaflet-container.map-locked {
   cursor: not-allowed;
-  touch-action: pan-y;        /* allow vertical page scroll on touch */
+  touch-action: pan-y;
+}
+
+/* ---- GLOBAL SAFETY: stop any horizontal scroll ---- */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 680px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .neplan-contact-us-hero,
+  .neplan-call-us-anytime,
+  .section-meet-ieng-about,
+  .neplan-map-location- {
+    width: 100%;
+  }
+
+  .neplan-map-location- .nml-wrap {
+    border-radius: 18px;
+  }
+
+  #nml-map {
+    width: 100%;
+  }
 }

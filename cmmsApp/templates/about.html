@@ -3,68 +3,85 @@
 {% load static %}
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XGS About Us</title>
-    <!--=============== CSS ===============-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XGSLab – About</title>
 
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+  <link rel="stylesheet" href="{% static 'css/neplan-about.css' %}">
+  <link rel="stylesheet" href="{% static 'css/demoform.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/neplan-about.css' %}">
-    <!-- <link rel="stylesheet" href="{% static 'css/mobility.css' %}"> -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="{% static 'images/logo1.png' %}">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="{% static 'images/logo1.png' %}">
-    <link rel="stylesheet" href="{% static 'css/demoform.css' %}">
-<script defer src="{% static 'js/demoform.js' %}"></script>
-
-
+  <script defer src="{% static 'js/demoform.js' %}"></script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
-    {% include 'header.html' %}
+{% include 'header.html' %}
 
-    {% load static %}
-    <section class="cmms-contact-form-section" style="background-image: url('../static/images/banner/contact.png');">
-        <div class="cmms-contact-form-overlay"></div>
-        <div class="cmms-contact-form-container reveal-up">
-            <a href="#contact" style="color: white;"><span class="cmms-contact-form-badge">
-                    <span class="cmms-contact-form-dot reveal-up"></span> About us
-                </span>
-            </a>
-            <h1 class="cmms-contact-form-title reveal-up">Our Partnership with NEPLAN</h1>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+ 
+<section class="cmms-contact-form-section"
+         style="background-image: url('../static/images/banner/contact.png');">
+  <div class="cmms-contact-form-overlay"></div>
+  <div class="cmms-contact-form-container reveal-up">
+    <a href="#contact" style="color: white;">
+      <span class="cmms-contact-form-badge">
+        <span class="cmms-contact-form-dot reveal-up"></span> About XGSLab
+      </span>
+    </a>
+    <h1 class="cmms-contact-form-title reveal-up">
+      Our Partnership with XGSLab
+    </h1>
+  </div>
+</section>
 
-        </div>
-    </section>
+<section class="cmms-contact-form-wrap">
+  <div class="cmms-contact-form-inner">
 
-    <section class="cmms-contact-form-wrap">
-        <div class="cmms-contact-form-inner">
+    <a href="#contact" class="cmms-contact-form-badge2 reveal-up">
+      <p class="eyebrow-neplan-what-we-bring reveal-up">About us</p>
+    </a>
 
-            <a href="#contact" class="cmms-contact-form-badge2 reveal-up">
-                         <p class="eyebrow-neplan-what-we-bring reveal-up">About us</p>
-            </a>
+    <h2 class="title-meet-ieng-about reveal-up">
+      Regional partner for XGSLab – earthing, lightning, EMF &amp; interference.
+    </h2>
 
-            <h2 class="title-meet-ieng-about reveal-up">
-                About us – where vision meets execution!
-            </h2>
+    <p class="about-text-abou-ieng reveal-up">
+      iEngineering is your trusted local partner for <strong>XGSLab</strong> across Australia, New
+      Zealand, the Pacific and parts of Asia. We combine deep power-system and earthing expertise
+      with on-the-ground delivery, so you get the best of both worlds:
+      <strong>world-class electromagnetic simulation software backed by local support, training and
+      integration know-how.</strong>
+    </p>
 
-            
-            
-                <p class="about-text-abou-ieng reveal-up">
-                    iEngineering is your trusted local partner for NEPLAN across the region. We combine deep power-systems expertise with on-the-ground delivery so you get the best of both worlds: <strong>global-class software backed by local support, training, and integration know-how.</strong>
-                </p>
+  </div>
+</section>
 
-        </div>
-    </section>
-
+<!-- ===============================
+     Mission / Vision / Values
+     =============================== -->
 <section class="section-neplan-card-with-animation" aria-label="Highlights grid">
   <div class="container-neplan-card-with-animation">
     <div class="grid-neplan-card-with-animation" id="grid-neplan-card-with-animation">
+
       <!-- 1) IMAGE - top left -->
       <figure class="card-neplan-card-with-animation img-card-neplan-card-with-animation tri-1 from-left">
         <img src="{% static 'images/about/vision.avif' %}"
-             alt="Operational insight" loading="lazy">
+             alt="Engineers reviewing XGSLab grounding study results" loading="lazy">
       </figure>
 
       <!-- 2) CONTENT - top middle -->
@@ -72,13 +89,17 @@
         <div class="icon-neplan-card-with-animation" aria-hidden="true">👥</div>
         <h3 class="title-neplan-card-with-animation">Our Mission</h3>
         <p class="desc-neplan-card-with-animation">
-          At iEngineering Australia, our mission is to enhance efficiency, ensure quality control, and deliver customer satisfaction through innovative engineering solutions. We are committed to global standards and sustainable solutions that create long-term value for our clients and communities.</p>
+          Our mission is to help utilities, railways, industries and consultants
+          <strong>design safer, more reliable earthing and electromagnetic protection systems</strong>
+          using XGSLab. We focus on engineering accuracy, clear reporting and practical outcomes,
+          so that studies can be taken straight into design and construction.
+        </p>
       </article>
 
       <!-- 3) IMAGE - top right -->
       <figure class="card-neplan-card-with-animation img-card-neplan-card-with-animation tri-1 from-right">
         <img src="{% static 'images/about/mission.avif' %}"
-             alt="Team collaboration" loading="lazy">
+             alt="High-voltage yard and grounding mesh visualisation" loading="lazy">
       </figure>
 
       <!-- 4) CONTENT - bottom left -->
@@ -86,13 +107,17 @@
         <div class="icon-neplan-card-with-animation" aria-hidden="true">🔔</div>
         <h3 class="title-neplan-card-with-animation">Our Vision</h3>
         <p class="desc-neplan-card-with-animation">
-        Our vision is to be a global leader in engineering solutions, driving industry leadership, innovation, and customer-centric growth. We aim to inspire through global influence, foster expansion and growth, and play an inspirational role in shaping the future of engineering. </p>
+          Our vision is to be the <strong>go-to XGSLab competence centre</strong> in the region –
+          enabling our clients to move from approximate rules-of-thumb to
+          <strong>physics-based, standards-aligned simulations</strong> for grounding,
+          lightning, interference and EMF compliance across all their projects.
+        </p>
       </article>
 
       <!-- 5) IMAGE - bottom middle -->
       <figure class="card-neplan-card-with-animation img-card-neplan-card-with-animation tri-4 from-up">
         <img src="{% static 'images/about/values.avif' %}"
-             alt="Scenario planning" loading="lazy">
+             alt="Engineers collaborating on substation earthing model" loading="lazy">
       </figure>
 
       <!-- 6) CONTENT - bottom right -->
@@ -100,18 +125,26 @@
         <div class="icon-neplan-card-with-animation" aria-hidden="true">💬</div>
         <h3 class="title-neplan-card-with-animation">Our Values</h3>
         <p class="desc-neplan-card-with-animation">
-          Our values guide everything we do: integrity & ethics, a strong commitment to quality, and diversity & inclusion. Safety, reliability, and continuous improvement are the cornerstones of our success, enabling us to deliver trusted and innovative solutions worldwide.</p>
+          We value <strong>engineering integrity, safety, and transparency</strong>.
+          Every XGSLab study we deliver is traceable to international standards,
+          clearly documented and repeatable by your own engineers. We believe in
+          long-term partnerships built through knowledge-sharing, not “black-box” results.
+        </p>
       </article>
+
     </div>
   </div>
 </section>
 
+<!-- ===============================
+     What we bring – XGSLab
+     =============================== -->
 <section class="section-neplan-what-we-bring" aria-labelledby="wwb-title">
   <div class="container-neplan-what-we-bring">
     <header class="head-neplan-what-we-bring">
-      <p class="eyebrow-neplan-what-we-bring reveal-up">What we bring</p>
+      <p class="eyebrow-neplan-what-we-bring reveal-up">What we bring with XGSLab</p>
       <h2 id="wwb-title" class="title-neplan-what-we-bring reveal-up">
-        One partner for deployment, integration, training, and support
+        One partner for licensing, deployment, studies, training &amp; support
       </h2>
     </header>
 
@@ -119,11 +152,13 @@
       <li class="item-neplan-what-we-bring">
         <span class="icon-neplan-what-we-bring reveal-left" aria-hidden="true">🧩</span>
         <div class="content-neplan-what-we-bring">
-          <h3 class="item-title-neplan-what-we-bring reveal-left">Local support &amp; enablement</h3>
+          <h3 class="item-title-neplan-what-we-bring reveal-left">
+            Local consulting &amp; pre-sales
+          </h3>
           <p class="reveal-left">
-            Helpdesk, modelling guidance, and onboarding for <strong>NEPLAN 10</strong> (on-prem/intranet)
-            and <strong>NEPLAN 360</strong> (cloud).
-            <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+            Help you choose the right <strong>XGSLab modules</strong> (GSA, GSA-FD, XGSA-FD, XGSA-TD
+            and auxiliary options) for grounding, lightning, interference and EMF projects – with
+            licensing models that match your team size and workflow.
           </p>
         </div>
       </li>
@@ -131,10 +166,14 @@
       <li class="item-neplan-what-we-bring">
         <span class="icon-neplan-what-we-bring reveal-right" aria-hidden="true">🎓</span>
         <div class="content-neplan-what-we-bring">
-          <h3 class="item-title-neplan-what-we-bring reveal-right">Training &amp; workshops</h3>
+          <h3 class="item-title-neplan-what-we-bring reveal-right">
+            Training &amp; enablement
+          </h3>
           <p class="reveal-right">
-            Hands-on courses tailored to your network and team roles (planner, protection, operations).
-            <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+            Hands-on XGSLab courses built around your real projects – from basic grounding
+            (GSA) to frequency-domain (GSA-FD) and full 3D field calculations
+            (XGSA-FD / XGSA-TD). We train protection, earthing and EMF specialists to
+            build, interpret and defend their own studies.
           </p>
         </div>
       </li>
@@ -142,10 +181,14 @@
       <li class="item-neplan-what-we-bring">
         <span class="icon-neplan-what-we-bring" aria-hidden="true">🔌</span>
         <div class="content-neplan-what-we-bring reveal-left">
-          <h3 class="item-title-neplan-what-we-bring reveal-left">Implementation &amp; integration</h3>
+          <h3 class="item-title-neplan-what-we-bring reveal-left">
+            Implementation &amp; workflow integration
+          </h3>
           <p class="reveal-left">
-            Connect NEPLAN with GIS, SCADA and smart-meter/MDM systems using standard web services/APIs.
-            <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+            Establish standard templates and data flows between XGSLab and your
+            <strong>CAD/GIS tools, protection design and document management systems</strong>.
+            We help you import DXF/KML geometry, structure your projects, and standardise
+            reporting across your organisation.
           </p>
         </div>
       </li>
@@ -153,52 +196,59 @@
       <li class="item-neplan-what-we-bring">
         <span class="icon-neplan-what-we-bring reveal-right" aria-hidden="true">📦</span>
         <div class="content-neplan-what-we-bring">
-          <h3 class="item-title-neplan-what-we-bring reveal-right">Project delivery</h3>
+          <h3 class="item-title-neplan-what-we-bring reveal-right">
+            Project delivery &amp; peer review
+          </h3>
           <p class="reveal-right">
-            Studies and templates built in NEPLAN-handed over with files your engineers can reuse.
+            We execute <strong>earthing, lightning, induction and EMF studies in XGSLab</strong>
+            and hand over the full project files, so your team can review, re-run and
+            extend the work – not just receive a static PDF.
           </p>
         </div>
       </li>
     </ul>
 
     <div class="closing-neplan-what-we-bring reveal-up">
-      With <strong>iEngineering</strong> you get a single partner to deploy, integrate, train, and support NEPLAN-so your planning and operations teams are productive faster.
+      With <strong>iEngineering + XGSLab</strong> you get a single partner to
+      license, deploy, integrate and support the software – while also delivering
+      real projects and transferring know-how to your engineers.
     </div>
   </div>
 </section>
 
-
-
+<!-- ===============================
+     Our Journey
+     =============================== -->
 <section class="section-meet-ieng-about" id="team">
   <div class="container-meet-ieng-about">
     <header class="header-meet-ieng-about">
-         <p class="eyebrow-neplan-what-we-bring reveal-up">Our Journey</p>
-      <!-- <h2 class="title-meet-ieng-about reveal-up"></h2> -->
+      <p class="eyebrow-neplan-what-we-bring reveal-up">Our Journey</p>
       <p class="subtitle-meet-ieng-about reveal-up">
-        Founded in 2017, iEngineering Australia has rapidly grown into a trusted technology partner delivering innovative solutions in asset management, IoT, cloud platforms, and digital transformation. From our beginnings as a small engineering services provider, we have expanded our expertise across industries such as utilities, transport, energy, manufacturing, and public infrastructure. Today, we are proud to support organizations across Australia and the Asia-Pacific region with smart, scalable, and future-ready technology solutions.
+        Founded in 2017, iEngineering Australia has rapidly grown into a trusted technology partner
+        delivering innovative solutions in asset management, IoT, cloud platforms and digital
+        transformation. Our partnership with XGSLab builds on that foundation – extending our
+        capabilities into <strong>advanced earthing and electromagnetic simulation</strong> for
+        utilities, rail, renewables, mining and heavy industry across the Asia-Pacific region.
       </p>
     </header>
-  
-
-        </div>
-    </section>
-
-
+  </div>
+</section>
 
 <!-- ===============================
-     The NEPLAN Advantage (7 items)
+     XGSLab Advantage – 7 items
      =============================== -->
 <section class="section-neplan-advantages-seven" aria-labelledby="adv7-title">
   <div class="container-neplan-advantages-seven">
-    <p class="eyebrow-neplan-advantages-seven">The NEPLAN Advantage</p>
+    <p class="eyebrow-neplan-advantages-seven">The XGSLab Advantage</p>
     <h2 id="adv7-title" class="title-neplan-advantages-seven">
-      Modular, enterprise-grade analysis & planning for modern utilities
+      Physics-based earthing &amp; EMF platform for modern networks
     </h2>
     <p class="intro-neplan-advantages-seven">
-      NEPLAN is a modular, enterprise-grade platform used to analyse, plan, optimise, and
-      simulate power and other utility networks-available on <strong>cloud</strong>,
-      <strong>intranet</strong>, or <strong>desktop</strong> to fit your IT strategy.
-      <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+      <strong>XGSLab</strong> is a state-of-the-art software suite for the analysis of
+      <strong>grounding systems, lightning effects, electromagnetic interference and EMF</strong>.
+      It is built on advanced numerical methods (Boundary Element Method and Finite Element /
+      Finite Difference approaches) and supports <strong>complex, multilayer soils and
+      frequency-dependent behaviour</strong>.
     </p>
 
     <ol class="adv-grid-neplan-advantages-seven">
@@ -206,13 +256,15 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">1</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Modular by design</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            End-to-end grounding &amp; EMF platform
+          </h3>
         </div>
         <p class="reveal-right">
-          Pick just the calculation modules you need (e.g., Load Flow, Short-Circuit, Protection,
-          Reliability, Harmonics, Dynamics) and add more as your use cases grow.
-          Licensing is flexible-modules can be purchased individually.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          Four main modules – <strong>GSA, GSA-FD, XGSA-FD and XGSA-TD</strong> – cover low-frequency
+          grounding, frequency-domain behaviour, 3D field computation and time-domain transients.
+          Auxiliary modules extend this to soil resistivity analysis, seasonal effects, Fourier
+          analysis and more.
         </p>
       </li>
 
@@ -220,13 +272,14 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">2</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Cloud / Intranet / Desktop flexibility</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            Accurate soil &amp; conductor modelling
+          </h3>
         </div>
         <p class="reveal-right">
-          Run <strong>NEPLAN 360</strong> in the cloud (anywhere via the NEPLAN app) or keep
-          <strong>NEPLAN 10</strong> on your intranet/desktop-same analysis pedigree,
-          different deployment models.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          Model <strong>uniform, multilayer and multizone soils</strong>, cable screens, rails,
+          pipelines and overhead lines with frequency-dependent parameters. This allows realistic
+          calculation of touch/step voltages, potential rise, interference and EMF.
         </p>
       </li>
 
@@ -234,14 +287,14 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">3</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">From basic design to asset management</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            Standards-aligned design workflow
+          </h3>
         </div>
         <p class="reveal-right">
-          Start with core network studies (MV/LV/HV), then extend to operations and lifecycle decisions:
-          online MV/LV monitoring with <strong>NEPLAN Anywhere</strong>, plus
-          <strong>Asset Management</strong> and <strong>Strategic/Operational AM</strong> modules
-          for risk-based planning and maintenance.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          XGSLab helps engineers work in line with international standards such as
+          <strong>IEEE&nbsp;80, IEC&nbsp;61936-1, EN&nbsp;50522 and related guides</strong>,
+          producing outputs that can be directly used in safety and compliance documentation.
         </p>
       </li>
 
@@ -249,12 +302,14 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">4</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Multi-utility, one platform</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            Powerful visualisation &amp; reporting
+          </h3>
         </div>
         <p class="reveal-right">
-          Model electricity-and, when needed, simulate gas, water, and heating/cooling networks
-          (even simultaneously) to study cross-sector interactions.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          Generate 2D and 3D plots of potentials, fields and currents; export charts and contour
+          maps; and create clear reports for designers, safety engineers and regulators – all
+          directly from the XGSLab environment.
         </p>
       </li>
 
@@ -262,12 +317,14 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">5</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Open interfaces for your stack</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            CAD / GIS friendly
+          </h3>
         </div>
         <p class="reveal-right">
-          Use NEPLAN as a web service (SaaS/SAS) to exchange data with GIS/SCADA/MDM
-          and other enterprise apps; the NEPLAN server can run in the cloud or intranet.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          Import geometry from <strong>DXF, KML and other formats</strong>, align models with site
+          layouts and reuse templates across projects – reducing manual drafting effort and
+          improving consistency.
         </p>
       </li>
 
@@ -275,12 +332,14 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">6</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Standards &amp; libraries built-in</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            Flexible licensing for teams
+          </h3>
         </div>
         <p class="reveal-right">
-          Work to international standards (IEC/ANSI/IEEE) with rich element and protection libraries,
-          so studies are consistent and defensible.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          Choose between single-user and network licences to match your team structure. XGSLab
+          is designed for both small specialist groups and large engineering organisations
+          working across many projects.
         </p>
       </li>
 
@@ -288,34 +347,38 @@
       <li class="adv-card-neplan-advantages-seven">
         <div class="adv-top-neplan-advantages-seven">
           <span class="adv-num-neplan-advantages-seven reveal-right">7</span>
-          <h3 class="adv-head-neplan-advantages-seven reveal-right">Made for office and field</h3>
+          <h3 class="adv-head-neplan-advantages-seven reveal-right">
+            Built for real-world projects
+          </h3>
         </div>
         <p class="reveal-right">
-          A simplified, browser-based UI in <strong>NEPLAN Anywhere</strong> lets teams capture data and run
-          essentials on laptops, tablets, or phones-ideal for substation or site work.
-          <a href="https://neplan.ch" target="_blank" rel="noopener">neplan.ch</a>
+          XGSLab is used worldwide by <strong>utilities, railways, industrial plants and consulting
+          engineers</strong> on live projects – from transmission substations and HVDC links to
+          pipelines, traction systems and renewable plants.
         </p>
       </li>
     </ol>
   </div>
 </section>
+
+<!-- ===============================
+     Where we operate
+     =============================== -->
 <section class="section-meet-ieng-about" id="team">
   <div class="container-meet-ieng-about">
     <header class="header-meet-ieng-about">
-             <p class="eyebrow-neplan-what-we-bring reveal-up">Where We Operate</p>
-
+      <p class="eyebrow-neplan-what-we-bring reveal-up">Where We Operate</p>
       <p class="subtitle-meet-ieng-about reveal-up saw">
-        iEngineering Australia operates across Australia, Fiji, and India, delivering reliable technology and asset management solutions to organizations of all sizes-from local enterprises to large multinational companies.
-
-
+        iEngineering Australia operates across Australia, Fiji and India, delivering reliable
+        technology, simulation and asset-management solutions to organisations of all sizes –
+        from local utilities and industries to large multinational companies.
       </p>
     </header>
-
-
   </div>
 </section>
+
 <!-- =======================
-     NEPLAN - Locations
+     Locations – same as before
      ======================= -->
 <section class="neplan-locations-wrap">
   <div class="neplan-locations-grid">
@@ -324,9 +387,9 @@
     <article class="neplan-locations-card neplan-locations-card--au">
       <header class="neplan-locations-header">
         <span class="neplan-locations-icon" aria-hidden="true">
-          <!-- Location pin -->
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/>
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  fill="currentColor" />
           </svg>
         </span>
         <h3 class="neplan-locations-title reveal-right">Australia – Sydney</h3>
@@ -334,14 +397,14 @@
 
       <p class="neplan-locations-phone reveal-right"><strong>Phone:</strong> +61 (02) 8318 1490</p>
       <p class="neplan-locations-email reveal-right">
-        <strong class="reveal-right reveal-right">Email:</strong>
-        <a href="mailto:dnaiker@iengaust.com.au reveal-right">dnaiker@iengaust.com.au</a>
+        <strong>Email:</strong>
+        <a href="mailto:dnaiker@iengaust.com.au">dnaiker@iengaust.com.au</a>
       </p>
       <p class="neplan-locations-address reveal-right">
         Warawara Cct, Quakers Hill NSW 2763, Australia
       </p>
 
-      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener"
+      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener noreferrer"
          href="https://www.google.com/maps?ll=-33.723524,150.875902&z=5&t=m&hl=en-US&gl=US&mapclient=embed&cid=2860432314088839065">
         View map
       </a>
@@ -352,7 +415,8 @@
       <header class="neplan-locations-header">
         <span class="neplan-locations-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/>
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  fill="currentColor" />
           </svg>
         </span>
         <h3 class="neplan-locations-title reveal-right">India – Pune</h3>
@@ -361,14 +425,14 @@
       <p class="neplan-locations-phone reveal-right"><strong>Phone:</strong> +91 9168627258</p>
       <p class="neplan-locations-email reveal-right">
         <strong>Email:</strong>
-        <a href="mailto:shila@iengaust.com.au reveal-right">shila@iengaust.com.au</a>
+        <a href="mailto:shila@iengaust.com.au">shila@iengaust.com.au</a>
       </p>
       <p class="neplan-locations-address reveal-right">
-        Navale IT Zone, Office No. 501, 5th Floor, A-Wing, Near Navale Bridge, Mumbai-Bangalore Highway,
-        Narhe, Pune – 411041.
+        Navale IT Zone, Office No. 501, 5th Floor, A-Wing, Near Navale Bridge,
+        Mumbai-Bangalore Highway, Narhe, Pune – 411041.
       </p>
 
-      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener"
+      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener noreferrer"
          href="https://www.google.com/maps/place/Navale+IT+Zone+Phase2/@18.4597518,73.8199254,17z">
         View map
       </a>
@@ -379,7 +443,8 @@
       <header class="neplan-locations-header">
         <span class="neplan-locations-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" fill="currentColor"/>
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  fill="currentColor" />
           </svg>
         </span>
         <h3 class="neplan-locations-title reveal-right">Fiji – Suva</h3>
@@ -388,13 +453,13 @@
       <p class="neplan-locations-phone reveal-right"><strong>Phone:</strong> +679 9488589</p>
       <p class="neplan-locations-email reveal-right">
         <strong>Email:</strong>
-        <a href="mailto:dnaiker@iengaust.com.au reveal-right">dnaiker@iengaust.com.au</a>
+        <a href="mailto:dnaiker@iengaust.com.au">dnaiker@iengaust.com.au</a>
       </p>
       <p class="neplan-locations-address reveal-right">
         Lot 17, River Drive, Pacific Harbour, Navua, Suva, Fiji.
       </p>
 
-      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener"
+      <a class="neplan-locations-map reveal-right" target="_blank" rel="noopener noreferrer"
          href="https://www.google.com/maps/search/Lot+17,+River+Drive+Pacific+Harbour+Navua+Suva+Fiji/">
         View map
       </a>
@@ -403,69 +468,60 @@
   </div>
 </section>
 
+{% include 'footer.html' %}
 
-    {% include 'footer.html' %}
-    <script src="{% static 'js/main.js'%}"></script>
-    <script defer src="{% static 'js/mission.js'%}"></script>
-    <script defer src="{% static 'js/neplan.js'%}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script defer src="{% static 'js/mission.js' %}"></script>
+<script defer src="{% static 'js/neplan.js' %}"></script>
 
-      <script>
-        /* IntersectionObserver reveal - shows elements when they enter the viewport,
-           hides them again when they leave (works on scroll down and up). */
-        (function () {
-            const els = document.querySelectorAll('.reveal-up');
-            if (!('IntersectionObserver' in window) || !els.length) {
-                els.forEach(el => el.classList.add('is-visible-mobility'));
-                return;
-            }
+<!-- Your existing reveal / tabs / animation scripts (unchanged) -->
+<script>
+  (function () {
+    const els = document.querySelectorAll('.reveal-up');
+    if (!('IntersectionObserver' in window) || !els.length) {
+      els.forEach(el => el.classList.add('is-visible-mobility'));
+      return;
+    }
 
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible-mobility');
-                    } else {
-                        entry.target.classList.remove('is-visible-mobility');
-                    }
-                });
-            }, { threshold: 0.18 });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible-mobility');
+        } else {
+          entry.target.classList.remove('is-visible-mobility');
+        }
+      });
+    }, { threshold: 0.18 });
 
-            els.forEach(el => io.observe(el));
-        })();
-    </script>
+    els.forEach(el => io.observe(el));
+  })();
+</script>
 
-    <script>document.addEventListener('DOMContentLoaded', () => {
-  const tabs = document.querySelectorAll('.-gemini-tab');
-  const contents = document.querySelectorAll('.-gemini-content');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.-gemini-tab');
+    const contents = document.querySelectorAll('.-gemini-content');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      // Remove active class from all tabs and contents
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
 
-      // Add active class to the clicked tab
-      tab.classList.add('active');
-
-      // Find the corresponding content using the data-tab attribute
-      const tabId = tab.getAttribute('data-tab');
-      const content = document.getElementById(`${tabId}-content`);
-
-      // Add active class to the content
-      if (content) {
-        content.classList.add('active');
-      }
+        tab.classList.add('active');
+        const tabId = tab.getAttribute('data-tab');
+        const content = document.getElementById(`${tabId}-content`);
+        if (content) content.classList.add('active');
+      });
     });
-  });
 
-  // Set the default active tab and content on page load
-  const defaultTab = document.querySelector('.-gemini-tab[data-tab="mission"]');
-  const defaultContent = document.getElementById('mission-content');
-  
-  if (defaultTab && defaultContent) {
-    defaultTab.classList.add('active');
-    defaultContent.classList.add('active');
-  }
-});</script>
+    const defaultTab = document.querySelector('.-gemini-tab[data-tab="mission"]');
+    const defaultContent = document.getElementById('mission-content');
+    if (defaultTab && defaultContent) {
+      defaultTab.classList.add('active');
+      defaultContent.classList.add('active');
+    }
+  });
+</script>
 
 <script>
   (function () {
@@ -478,7 +534,6 @@
         if (e.isIntersecting) {
           e.target.classList.add('show-neplan-card-with-animation');
         } else {
-          // remove so it replays when scrolling back (LIFO feel)
           e.target.classList.remove('show-neplan-card-with-animation');
         }
       });
@@ -488,38 +543,35 @@
   })();
 </script>
 
-<script>(() => {
-  const SELECTOR = '.reveal-left, .reveal-right, .reveal-up, .reveal-down';
+<script>
+  (() => {
+    const SELECTOR = '.reveal-left, .reveal-right, .reveal-up, .reveal-down';
 
-  // Apply per-element delay from data attribute if provided
-  document.querySelectorAll(SELECTOR).forEach(el => {
-    const d = el.getAttribute('data-reveal-delay');
-    if (d) el.style.setProperty('--reveal-delay', /^\d+$/.test(d) ? `${d}ms` : d);
-  });
-
-  // Auto-stagger children inside a .reveal-group
-  document.querySelectorAll('.reveal-group[data-reveal-stagger]').forEach(group => {
-    const step = parseInt(group.dataset.revealStagger, 10) || 120; // ms
-    let i = 0;
-    group.querySelectorAll(SELECTOR).forEach(el => {
-      el.style.setProperty('--reveal-delay', `${i * step}ms`);
-      i++;
+    document.querySelectorAll(SELECTOR).forEach(el => {
+      const d = el.getAttribute('data-reveal-delay');
+      if (d) el.style.setProperty('--reveal-delay', /^\d+$/.test(d) ? `${d}ms` : d);
     });
-  });
 
-  // Observe and toggle visibility (replays when scrolling back unless .reveal-once)
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(({ target, isIntersecting }) => {
-      if (isIntersecting) target.classList.add('is-visible');
-      else if (!target.classList.contains('reveal-once'))
-        target.classList.remove('is-visible');
+    document.querySelectorAll('.reveal-group[data-reveal-stagger]').forEach(group => {
+      const step = parseInt(group.dataset.revealStagger, 10) || 120;
+      let i = 0;
+      group.querySelectorAll(SELECTOR).forEach(el => {
+        el.style.setProperty('--reveal-delay', `${i * step}ms`);
+        i++;
+      });
     });
-  }, { threshold: 0.18 });
 
-  document.querySelectorAll(SELECTOR).forEach(el => io.observe(el));
-})();</script>
-   <script defer src="{% static 'js/neplan.js'%}"></script>
-    
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (isIntersecting) target.classList.add('is-visible');
+        else if (!target.classList.contains('reveal-once'))
+          target.classList.remove('is-visible');
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll(SELECTOR).forEach(el => io.observe(el));
+  })();
+</script>
+
 </body>
-
 </html>

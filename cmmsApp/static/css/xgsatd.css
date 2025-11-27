@@ -3,8 +3,12 @@
    =========================================== */
 
 :root {
-  --td-accent: #d946ef;
-  --td-accent-grad: linear-gradient(90deg, #d946ef, #9333ea);
+  /* --td-accent: #d946ef;
+  --td-accent-grad: linear-gradient(90deg, #d946ef, #9333ea); */
+
+    --td-accent:#0f766e;
+  --td-accent-2:#155e75;
+  --td-grad: linear-gradient(90deg,#0f766e,#155e75);
 }
 
 /* HERO */
@@ -44,11 +48,78 @@
 
 /* GALLERY & SHOTS - keep square corners, full image view */
 .gsa-shot {
-  border-radius: 0;
-  box-shadow: none;
+  position:relative;
+  overflow:visible;
+  border:none; border-radius:0;
+  box-shadow:none; background:transparent; padding:0;
+  box-shadow: 5px 10px 30px rgb(113, 113, 113);
+
 }
 .gsa-shot img {
-  object-fit: contain;
+  display:block;
+  width:100%;
+  height:auto;            /* full image visible */
+  object-fit:contain;     /* never crop */
+  border-radius:0;  
 }
 
 /* other sections can inherit from gsa.css, so this file only needs override bits */
+
+
+/* Hero buttons – FIXED to match other pages */
+.section-neplan-home--xgsa-td .btn-neplan-home {
+  all: unset;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .9rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+
+  color: #fff;
+  border: 2px solid transparent;
+  background-image: var(--td-grad);   /* ✅ correct variable */
+  box-shadow: 0 10px 24px rgba(15, 23, 42, .4);
+
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
+}
+
+.section-neplan-home--xgsa-td .btn-neplan-home:hover {
+  background-image: none;
+  background-color: #0e7490;
+  border-color: #0e7490;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(14, 165, 233, .55);
+}
+
+.section-neplan-home--xgsa-td .btn-neplan-home:active {
+  background-color: #134e4a;
+  border-color: #134e4a;
+  transform: translateY(0);
+}
+
+
+/* Extra gap between header and XGSA_TD hero on desktop */
+@media (min-width: 768px){
+  .section-neplan-home--xgsa-td{
+    margin-top:16px;
+  }
+}
+
+
+/* Shrink XGSA_TD hero logo (right side card) */
+.section-neplan-home--xgsa-td .device-neplan-home {
+  max-width: 260px;     /* control logo block width */
+  margin-right: 150px;  /* pull it away from the right edge */
+  flex: 0 0 260px;      /* make flex layout respect this width */
+}
+
+.section-neplan-home--xgsa-td .device-neplan-home img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

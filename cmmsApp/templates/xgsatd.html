@@ -4,50 +4,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XGSLab – XGSA_TD (Interference & Fields · Time Domain)</title>
+  <title>XGSA TD</title>
 
   <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
-  <link rel="stylesheet" href="{% static 'css/xgsa_td.css' %}">
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/xgsatd.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
   {% include 'header.html' %}
   {% include 'request_demo_modal.html' %}
   {% load static %}
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!-- HERO -->
-  <section class="gsa-hero td-hero">
-    <div class="gsa-wrap gsa-hero__inner">
-      <div>
-        <span class="ctrl-kicker">XGSA_TD · Interference & Fields (Time-Domain)</span>
-        <h1>Transient Coupling & Field Propagation in Time Domain</h1>
-        <p>
-          XGSA_TD simulates electromagnetic field transients, coupling over time, and induced surges in infrastructure
-          systems. Evaluate impulse responses, lightning-induced transients, bonding vs routing dynamics, and shielding performance.
-        </p>
-        
+    <!-- ======================= HERO (shared XGSLab banner) ======================= -->
+  <section class="section-neplan-home section-neplan-home--xgsa-td">
+    <div class="hero-card-neplan-home">
+      <div class="inner-neplan-home">
+        <div class="content-neplan-home">
+          <span class="ctrl-kicker">
+            XGSA TD · Interference &amp; Fields (Time-Domain)
+          </span>
 
-        <div class="cta">
-          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
-          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+          <h1 class="title-neplan-home">XGSA TD</h1>
+
+          <h2 class="title-neplan-home2">
+            Transient Coupling &amp; Field Propagation in Time Domain
+          </h2>
+
+          <p class="subtitle-neplan-home">
+            XGSA TD simulates electromagnetic field transients, coupling over time, and induced
+            surges in infrastructure systems. Evaluate impulse responses, lightning-induced
+            transients, bonding vs routing dynamics, and shielding performance.
+          </p>
+
+          <div class="cta-row-neplan-home">
+            <a href="#" class="btn-neplan-home js-open-demo">
+              Request Demo <span class="arrow">→</span>
+            </a>
+            <a href="/product/" class="btn-neplan-home">
+              Explore Products <span class="arrow">→</span>
+            </a>
+          </div>
         </div>
-      </div>
 
-      <figure class="gsa-hero__art" aria-hidden="true">
-        <img src="{% static 'images/xgs/home_image.png' %}" alt="XGSA_TD visual">
-      </figure>
+        <figure class="device-neplan-home" aria-hidden="true">
+          <img src="{% static 'images/xgs/xgsatdlogo.png' %}" alt="XGSLab Logo">
+          {% comment %} <img src="{% static 'images/xgs/xgsa-td-hero.avif' %}" alt="XGSA_TD visual"> {% endcomment %}
+        </figure>
+      </div>
     </div>
   </section>
+
 
   <!-- CAPABILITIES -->
   <section class="gsa-cards">
     <div class="gsa-wrap">
       <header class="gsa-head gsa-head--rich">
         <span class="gsa-eyebrow">Time-Domain Capabilities</span>
-        <h2>What you can do with XGSA_TD</h2>
+        <h2>What you can do with XGSA TD</h2>
         <p>Simulate transients, impulse coupling, shielding response and field propagation over time.</p>
       </header>
 
@@ -129,12 +158,12 @@
           <tr>
             <th>Integration</th>
             <td>
-              Complements GSA, GSA_FD, XGSA_FD for frequency behavior, NETS for network coupling, and SHIELD for final mitigation design.
+              Complements GSA, GSA FD, XGSA FD for frequency behavior, NETS for network coupling, and SHIELD for final mitigation design.
             </td>
           </tr>
         </tbody>
       </table>
-      <p class="gsa-note">Prefer frequency or steady-state focus? Use <strong>GSA</strong> or <strong>GSA_FD</strong>. For TD coupling, use <strong>XGSA_TD</strong>.</p>
+      <p class="gsa-note">Prefer frequency or steady-state focus? Use <strong>GSA</strong> or <strong>GSA FD</strong>. For TD coupling, use <strong>XGSA_TD</strong>.</p>
     </div>
   </section>
 
@@ -145,10 +174,10 @@
         <h2>Gallery</h2>
       </header>
       <div class="gsa-gallery__grid">
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Transient voltage waveform"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Field propagation snapshot"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Coupling surge illustration"></div>
-        <div in class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Shielding layout"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/xgsatd1.png' %}" alt="Transient voltage waveform"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/xgsatd2.png' %}" alt="Field propagation snapshot"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/xgsatd3.png' %}" alt="Coupling surge illustration"></div>
+        <div in class="gsa-shot"><img src="{% static 'images/xgs/xgsatd4.png' %}" alt="Shielding layout"></div>
       </div>
     </div>
   </section>

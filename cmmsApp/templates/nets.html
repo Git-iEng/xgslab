@@ -7,10 +7,20 @@
   <title>XGSLab – NETS (Network Solver Module)</title>
 
   <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">
+
   <link rel="stylesheet" href="{% static 'css/nets.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -18,27 +28,57 @@
   {% include 'request_demo_modal.html' %}
   {% load static %}
 
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!-- HERO -->
-  <section class="gsa-hero nets-hero">
-    <div class="gsa-wrap gsa-hero__inner">
-      <div>
-        <span class="ctrl-kicker">NETS · Network Solver & EM Interference</span>
-        <h1>Multi-Conductor Network & Interference Solver</h1>
-        <p>
-          NETS solves full-meshed multi-conductor / multi-phase networks including neutral and earth path
-          interactions, enabling interference and fault current distribution analysis for cables, rails,
-          pipelines, and power systems.  
+  <!-- ======================= HERO (shared XGSLab banner) ======================= -->
+<section class="section-neplan-home section-neplan-home--nets">
+  <div class="hero-card-neplan-home">
+    <div class="inner-neplan-home">
+      <div class="content-neplan-home">
+        <span class="ctrl-kicker">
+          NETS · Network Solver &amp; EM Interference
+        </span>
+
+        <h1 class="title-neplan-home">NETS</h1>
+
+        <h2 class="title-neplan-home2">
+          Multi-Conductor Network &amp; Interference Solver
+        </h2>
+
+        <p class="subtitle-neplan-home">
+          NETS solves full-meshed multi-conductor / multi-phase networks including neutral and earth
+          path interactions, enabling interference and fault current distribution analysis for cables,
+          rails, pipelines, and power systems.
         </p>
-        <div class="cta">
-          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
-          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
+
+        <ul class="gsa-stats">
+          <li><i class="fa-solid fa-sitemap"></i> Multi-conductor networks</li>
+          <li><i class="fa-solid fa-bolt"></i> Fault current split</li>
+          <li><i class="fa-solid fa-waves-left-right"></i> EM interference paths</li>
+        </ul>
+
+        <br>
+        <div class="cta-row-neplan-home">
+          <a href="#" class="btn-neplan-home js-open-demo">
+            Request Demo <span class="arrow">→</span>
+          </a>
+          <a href="/product/" class="btn-neplan-home">
+            Explore products <span class="arrow">→</span>
+          </a>
         </div>
       </div>
-      <figure class="gsa-hero__art" aria-hidden="true">
-        <img src="{% static 'images/xgs/nets-hero.avif' %}" alt="NETS network solver visual">
+
+      <figure class="device-neplan-home" aria-hidden="true">
+        <img src="{% static 'images/xgs/netslogo.png' %}" alt="nets Logo">
+        {% comment %} <img src="{% static 'images/xgs/nets-hero.avif' %}" alt="NETS network solver visual"> {% endcomment %}
       </figure>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- CAPABILITIES CARDS -->
   <section class="gsa-cards">
@@ -123,6 +163,7 @@
     </div>
   </section>
 
+
   <!-- GALLERY -->
   <section class="gsa-gallery">
     <div class="gsa-wrap">
@@ -130,10 +171,10 @@
         <h2>Gallery</h2>
       </header>
       <div class="gsa-gallery__grid">
-        <div class="gsa-shot"><img src="{% static 'images/xgs/nets1.avif' %}" alt="Network diagram"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/nets2.avif' %}" alt="Fault distribution map"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/nets3.avif' %}" alt="EM coupling route"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/nets4.avif' %}" alt="Network solver UI"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/net5.png' %}" alt="Network diagram"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/net2.png' %}" alt="Fault distribution map"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/net3.png' %}" alt="EM coupling route"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/net4.png' %}" alt="Network solver UI"></div>
       </div>
     </div>
   </section>

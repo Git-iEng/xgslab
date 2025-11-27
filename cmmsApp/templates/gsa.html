@@ -4,45 +4,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XGSLab – GSA (Grounding System Analysis)</title>
-
-  <!-- keep shared assets exactly as-is -->
-  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+  <title>GSA</title>
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">  <!-- shared hero/banner -->
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">          <!-- GSA-specific styles -->
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <!-- Page-scoped CSS: hero + cards + table + gallery + process + cta -->
-  
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
+<!-- End Google Tag Manager -->
+ 
 </head>
 
 <body>
+ 
   {% include 'header.html' %}
   {% include 'request_demo_modal.html' %}
   {% load static %}
-
-  <!-- ======================= HERO ======================= -->
-  <section class="gsa-hero">
-    <div class="gsa-wrap gsa-hero__inner">
-      <div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- ======================= HERO (shared XGSLab banner) ======================= -->
+<section class="section-neplan-home section-neplan-home--gsa">
+  <div class="hero-card-neplan-home">
+    <div class="inner-neplan-home">
+      <div class="content-neplan-home">
         <span class="ctrl-kicker">GSA · Grounding System Analysis</span>
-        <h1>Design & Validate Safe Earthing Systems</h1>
-        <p>
+
+        <h1 class="title-neplan-home">
+          GSA
+        </h1>
+
+        <h2 class="title-neplan-home2">
+          Design &amp; Validate Safe Earthing Systems
+        </h2>
+
+        <p class="subtitle-neplan-home">
           GSA is the XGSLab module dedicated to earthing/grounding systems in low-frequency conditions.
           Model grids and electrodes, compute touch/step voltages, and verify compliance to IEEE/IEC/EN
           using multilayer soil models and realistic return paths.
         </p>
-        <div class="cta">
-          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
-          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
-        </div>
+
+        <div class="cta-row-neplan-home">
+  <a href="#" class="btn-neplan-home js-open-demo">
+    Request Demo <span class="arrow">→</span>
+  </a>
+  <a href="/product/" class="btn-neplan-home">
+    Explore products <span class="arrow">→</span>
+  </a>
+</div>
+
+
       </div>
 
-      <figure class="gsa-hero__art" aria-hidden="true">
-        <img src="{% static 'images/xgs/home_image.png' %}" alt="GSA visual">
-      </figure>
+      <!-- Optional device PNG; remove if not needed -->
+        <figure class="device-neplan-home" aria-hidden="true">
+          <img src="../static/images/xgs/gsalogo.png" alt="XGSLab Modules">
+          {% comment %} <img src="../static/images/xgs/gsalogo.png" alt="XGSLab Modules"> {% endcomment %}
+        </figure>
     </div>
-  </section>
+  </div>
+</section>
+
+
+  
 
   <!-- ============= KEY HIGHLIGHTS (3 cards) ============= -->
   <section class="gsa-cards">
@@ -125,11 +155,11 @@
           </tr>
           <tr>
             <th>Integration</th>
-            <td>CAD-friendly import/export; consistent workflow with GSA_FD, XGSA_FD/TD, NETS and SHIELD for end-to-end studies.</td>
+            <td>CAD-friendly import/export; consistent workflow with GSA FD, XGSA FD/TD, NETS and SHIELD for end-to-end studies.</td>
           </tr>
         </tbody>
       </table>
-      <p class="gsa-note">Need frequency-dependent behaviour? Use <strong>GSA_FD</strong> with the same modelling approach.</p>
+      <p class="gsa-note">Need frequency-dependent behaviour? Use <strong>GSA FD</strong> with the same modelling approach.</p>
     </div>
   </section>
 
@@ -158,8 +188,8 @@
         <p>Clear stages with reviews and deliverables.</p>
       </header>
       <ol class="gsa-steps">
-        <li class="gsa-step"><h4>01 · Inputs</h4><p>Site layout, fault data, soil tests, bonding/adjacent systems.</p></li>
-        <li class="gsa-step"><h4>02 · Model</h4><p>Grid &amp; electrode geometry, soil fitting, scenarios &amp; constraints.</p></li>
+        <li class="gsa-step"><h4>01 · Model</h4><p>Grid &amp; electrode geometry, soil fitting, scenarios &amp; constraints.</p></li>
+        <li class="gsa-step"><h4>02 · Inputs</h4><p>Site layout, fault data, soil tests, bonding/adjacent systems.</p></li>
         <li class="gsa-step"><h4>03 · Results</h4><p>GPR, touch/step, current distribution, transfer potentials.</p></li>
         <li class="gsa-step"><h4>04 · Mitigation</h4><p>Surface layers, bonds, gradient control &amp; compliance report.</p></li>
       </ol>

@@ -11,6 +11,7 @@
 .gsa-hero.nets-hero {
   background: #0a1c20 url('../images/xgs/nets-hero.avif') center/cover no-repeat;
 }
+
 .gsa-hero.nets-hero::before {
   content: "";
   position: absolute;
@@ -40,3 +41,69 @@
 }
 
 /* Other styles largely inherited from gsa.css */
+/* ✅ HERO BUTTONS – NETS (same style as other pages) */
+.section-neplan-home--nets .btn-neplan-home {
+  /* wipe weird inherited styles */
+  all: unset;
+
+  /* rebuild button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .9rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+
+  color: #fff;
+  border: 2px solid transparent;
+  background: var(--nets-accent-grad) !important; /* 🌈 green gradient */
+  box-shadow: 0 10px 24px rgba(2, 8, 23, .35);
+
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
+}
+
+.section-neplan-home--nets .btn-neplan-home .arrow {
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.section-neplan-home--nets .btn-neplan-home:hover {
+  background-image: none;
+  background-color: #0e9f6e;
+  border-color: #0e9f6e;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(34, 197, 94, .45);
+}
+
+.section-neplan-home--nets .btn-neplan-home:active {
+  background-image: none;
+  background-color: #047857;
+  border-color: #047857;
+  transform: translateY(0);
+}
+
+
+
+
+/* Extra gap between header and NETS hero */
+@media (min-width: 768px){
+  .section-neplan-home--nets{
+    margin-top:16px;
+  }
+}
+/* Shrink NETS hero logo (right side card) */
+.section-neplan-home--nets .device-neplan-home {
+  max-width: 260px;     /* control logo block width */
+  margin-right: 150px;  /* pull it away from the right edge */
+  flex: 0 0 260px;      /* make the flex/grid respect this width */
+}
+
+.section-neplan-home--nets .device-neplan-home img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+

@@ -4,14 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XGSLab – SHIELD_A (Automated Lightning Protection)</title>
+  <title>SHIELD A</title>
 
   <!-- keep shared assets and theme -->
   <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
-  <link rel="stylesheet" href="{% static 'css/shielda.css' %}">
+  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">
+  <link rel="stylesheet" href="{% static 'css/shield-a.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -19,28 +27,51 @@
   {% include 'request_demo_modal.html' %}
   {% load static %}
 
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <!-- ================= HERO ================= -->
-  <section class="gsa-hero shielda-hero">
-    <div class="gsa-wrap gsa-hero__inner">
-      <div>
-        <span class="ctrl-kicker">SHIELD A · Lightning Protection Automation</span>
-        <h1>Auto-Design of Lightning Protection Systems</h1>
-        <p>
-          SHIELD A automates the placement and sizing of air-terminations and down-conductors to achieve
-          IEC/EN 62305 coverage. Define constraints and targets—SHIELD A searches feasible solutions,
-          validates protected volumes, and delivers build-ready layouts with reports and visuals.
-        </p>
-        <div class="cta">
-          <a href="#" class="gsa-btn gsa-btn--primary js-open-demo">Request a Demo</a>
-          <a href="/product/" class="gsa-btn gsa-btn--ghost">Explore Products</a>
-        </div>
-      </div>
+    <!-- ======================= HERO (shared XGSLab banner) ======================= -->
+  <section class="section-neplan-home section-neplan-home--shielda">
+    <div class="hero-card-neplan-home">
+      <div class="inner-neplan-home">
+        <div class="content-neplan-home">
+          <span class="ctrl-kicker">
+            SHIELD A · Lightning Protection Automation
+          </span>
 
-      <figure class="gsa-hero__art" aria-hidden="true">
-        <img src="{% static 'images/xgs/shielda-hero.avif' %}" alt="SHIELD_A automated lightning protection visualization">
-      </figure>
+          <h1 class="title-neplan-home">SHIELD A</h1>
+
+          <h2 class="title-neplan-home2">
+            Auto-Design of Lightning Protection Systems
+          </h2>
+
+          <p class="subtitle-neplan-home">
+            SHIELD A automates the placement and sizing of air-terminations and down-conductors
+            to achieve IEC/EN 62305 coverage. Define constraints and targets—SHIELD A searches
+            feasible solutions, validates protected volumes, and delivers build-ready layouts
+            with reports and visuals.
+          </p>
+
+          <div class="cta-row-neplan-home">
+            <a href="#" class="btn-neplan-home js-open-demo">
+              Request Demo <span class="arrow">→</span>
+            </a>
+            <a href="/product/" class="btn-neplan-home">
+              Explore Products <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="device-neplan-home" aria-hidden="true">
+          <img src="{% static 'images/xgs/sheildalogo.png' %}" alt="XGSLab Logo">
+          {% comment %} <img src="{% static 'images/xgs/shielda-hero.avif' %}" alt="SHIELD A automated lightning protection visualization"> {% endcomment %}
+        </figure>
+      </div>
     </div>
   </section>
+
 
   <!-- =============== CAPABILITIES =============== -->
   <section class="gsa-cards">
@@ -131,7 +162,7 @@
   </section>
 
   <!-- =============== GALLERY =============== -->
-  <section class="gsa-gallery">
+  {% comment %} <section class="gsa-gallery">
     <div class="gsa-wrap">
       <header class="gsa-head gsa-gallery-head">
         <h2>Gallery</h2>
@@ -143,7 +174,7 @@
         <div class="gsa-shot"><img src="{% static 'images/xgs/shielda4.avif' %}" alt="Layout and BOM summary"></div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
 
   <!-- =============== PROCESS =============== -->
   <section class="gsa-process">

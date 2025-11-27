@@ -186,14 +186,9 @@ body{
 }
 .gsa-table thead th{
   background:linear-gradient(180deg,#f7f9fc,#eff4fb);
-  text-align:left; 
-  padding:.9rem 1rem; 
-  font-weight:800;
+  text-align:left; padding:.9rem 1rem; font-weight:800;
 }
-.gsa-table td,.gsa-table th{ border-bottom:1px solid var(--gsa-rule); 
-  padding:1rem; 
-  text-align:left; 
-  vertical-align:top; }
+.gsa-table td,.gsa-table th{ border-bottom:1px solid var(--gsa-rule); padding:1rem; vertical-align:top; }
 .gsa-note{ color:var(--gsa-sub); margin:.6rem 0 0; }
 
 /* --------------------------------- GALLERY (2×2 web/tablet, 1×4 mobile) ---------------------------------- */
@@ -289,7 +284,7 @@ body{
 body{
   background:#f3f5f8;
   font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  padding-top:5.5rem; /* reserve header space */
+  padding-top:3.5rem; /* reserve header space */
 }
 /* === FORCE GSA HERO BUTTONS TO MATCH HOME EXACTLY === */
 .section-neplan-home--gsa .btn-neplan-home {
@@ -342,16 +337,99 @@ body{
   }
 }
 
-
-/* Shrink GSA hero logo image (right side card) */
-.section-neplan-home--gsa .device-neplan-home {
-  /* optional: limit the whole block width */
-  max-width: 260px;          /* adjust as you like: 220–280px works well */
-  margin-right: 150px;
+/* Pills under title on XGSA FD banner */
+.gxsa-stats{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:14px 0 6px;
+  padding:0;
+  list-style:none;
+}
+.gxsa-stats li{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  padding:.35rem .8rem;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.85rem;
+  color:#fff;
+  border:1.5px solid rgba(255,255,255,.45);
+  background:rgba(15,23,42,.75);
+}
+.gxsa-stats i{
+  font-size:.95rem;
+  opacity:.9;
 }
 
-.section-neplan-home--gsa .device-neplan-home img {
-  width: 100%;               /* fit inside the smaller block */
+/* Hero buttons – make GSA, GSA FD & XGSA FD banners match homepage */
+.section-neplan-home--gsa .btn-neplan-home,
+.section-neplan-home--gsa-fd .btn-neplan-home,
+.section-neplan-home--xgsa-fd .btn-neplan-home {
+  all: unset;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  padding:.9rem 1.25rem;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  cursor:pointer;
+
+  color:#fff;
+  border:2px solid transparent;
+  background-image:linear-gradient(80deg,#0f766e,#155e75);
+  box-shadow:0 10px 24px rgba(2,8,23,.35);
+  transition:transform .25s, box-shadow .25s, background .25s, border-color .25s;
+}
+
+.section-neplan-home--gsa .btn-neplan-home .arrow,
+.section-neplan-home--gsa-fd .btn-neplan-home .arrow,
+.section-neplan-home--xgsa-fd .btn-neplan-home .arrow{
+  font-size:1.05em;
+  line-height:1;
+}
+
+.section-neplan-home--gsa .btn-neplan-home:hover,
+.section-neplan-home--gsa-fd .btn-neplan-home:hover,
+.section-neplan-home--xgsa-fd .btn-neplan-home:hover{
+  background-image:none;
+  background-color:#0e7490;
+  border-color:#0e7490;
+  transform:translateY(-2px);
+  box-shadow:0 16px 36px rgba(14,165,233,.45);
+}
+
+.section-neplan-home--gsa .btn-neplan-home:active,
+.section-neplan-home--gsa-fd .btn-neplan-home:active,
+.section-neplan-home--xgsa-fd .btn-neplan-home:active{
+  background-image:none;
+  background-color:#134e4a;
+  border-color:#134e4a;
+  transform:translateY(0);
+}
+
+/* Extra gap between header and all XGSLab banners on desktop */
+@media (min-width: 768px){
+  .section-neplan-home--gsa,
+  .section-neplan-home--gsa-fd,
+  .section-neplan-home--xgsa-fd{
+    margin-top:16px;
+  }
+}
+
+
+/* Shrink XGSA FD hero logo (right side card) */
+.section-neplan-home--xgsa-fd .device-neplan-home {
+  max-width: 260px !important;     /* controls size of logo block */
+  margin-right: 150px !important;  /* move away from right edge */
+  flex: 0 0 260px !important;      /* make flexbox respect this width */
+}
+
+.section-neplan-home--xgsa-fd .device-neplan-home img {
+  width: 100% !important;
   height: auto;
   object-fit: contain;
 }
