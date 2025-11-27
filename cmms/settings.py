@@ -138,8 +138,17 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 CONTACT_RECIPIENTS = [
     "mayur@iengaust.com.au",
    "diksha@iengaust.com.au",
+   "test@ieng.tech",
+   "kushankur@iengaust.com.au",
+   "amar@iengaust.com.au",
+   "tushar@iengaust.com.au",
 ]
-CONTACT_RECIPIENTS = ["mayur@iengaust.com.au","diksha@iengaust.com.au"]
+CONTACT_RECIPIENTS = ["mayur@iengaust.com.au",
+   "diksha@iengaust.com.au",
+   "test@ieng.tech",
+   "kushankur@iengaust.com.au",
+   "amar@iengaust.com.au",
+   "tushar@iengaust.com.au",]
 DEMO_RECIPIENTS = CONTACT_RECIPIENTS
 
 # CONTACT_EMAIL = 'diksha@iengaust.com.au'
@@ -151,3 +160,5 @@ EMAIL_TIMEOUT = 15
 
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
+
+CSRF_TRUSTED_ORIGINS = ["https://xgslabs.ieng.tech"]
