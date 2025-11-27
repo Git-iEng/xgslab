@@ -161,4 +161,4 @@ EMAIL_TIMEOUT = 15
 # CSRF_COOKIE_SECURE = True
 # SESSION_COOKIE_SECURE = True
 
-CSRF_TRUSTED_ORIGINS = ["https://xgslabs.ieng.tech"]
+CSRF_TRUSTED_ORIGINS = ["https://xgslab.ieng.tech"]
