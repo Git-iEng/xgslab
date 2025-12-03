@@ -48,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </h1>
   </div>
 </section>
-
+{% comment %} 
 <section class="cmms-contact-form-wrap">
   <div class="cmms-contact-form-inner">
 
@@ -69,12 +69,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
 
   </div>
+</section> {% endcomment %}
+
+<!-- MISSION / VISION / VALUES SECTION -->
+ <br>
+<section class="mv-section">
+  <div class="mv-container">
+    
+    <h2 class="mv-heading">Our Mission, Vision & Values</h2>
+    <p class="mv-subtitle">
+      Discover what drives us as a team and how we create value for our partners.
+    </p>
+
+    <!-- Tabs -->
+    <div class="mv-tabs">
+      <button class="mv-tab active" data-target="mv-mission">Mission</button>
+      <button class="mv-tab" data-target="mv-vision">Vision</button>
+      <button class="mv-tab" data-target="mv-values">Values</button>
+    </div>
+
+    <!-- Content wrapper -->
+    <div class="mv-content-wrapper">
+
+      <!-- Mission -->
+      <div class="mv-content active" id="mv-mission">
+        <div class="mv-text">
+          <h3>Our Mission</h3>
+          <p>
+            To deliver reliable engineering and digital solutions that improve asset
+            performance, reduce downtime, and make complex infrastructure easier to manage.
+          </p>
+          <p>
+            We partner closely with our clients to understand their real-world
+            challenges and provide practical, scalable solutions that create long-term value.
+          </p>
+        </div>
+        <div class="mv-image">
+          <img src="../static/images/mission.avif" alt="Mission image">
+        </div>
+      </div>
+
+      <!-- Vision -->
+      <div class="mv-content" id="mv-vision">
+        <div class="mv-text">
+          <h3>Our Vision</h3>
+          <p>
+            To be the trusted engineering and technology partner for utilities,
+            industries, and infrastructure projects across the region.
+          </p>
+          <p>
+            We aim to combine domain expertise with modern digital tools to build
+            safer, smarter, and more sustainable systems for the future.
+          </p>
+        </div>
+        <div class="mv-image">
+          <img src="../static/images/vision.avif" alt="Vision image">
+        </div>
+      </div>
+
+      <!-- Values -->
+      <div class="mv-content" id="mv-values">
+        <div class="mv-text">
+          <h3>Our Values</h3>
+          <p>
+            We believe in honesty, accountability, and engineering excellence.
+          </p>
+          <p>
+            Our teams operate with a focus on safety, collaboration, and continuous
+            improvement — ensuring every project is delivered with care and precision.
+          </p>
+        </div>
+        <div class="mv-image">
+          <img src="../static/images/values.avif" alt="Values image">
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+
 
 <!-- ===============================
      Mission / Vision / Values
      =============================== -->
-<section class="section-neplan-card-with-animation" aria-label="Highlights grid">
+{% comment %} <section class="section-neplan-card-with-animation" aria-label="Highlights grid">
   <div class="container-neplan-card-with-animation">
     <div class="grid-neplan-card-with-animation" id="grid-neplan-card-with-animation">
 
@@ -134,12 +212,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 
 <!-- ===============================
      What we bring – XGSLab
      =============================== -->
-<section class="section-neplan-what-we-bring" aria-labelledby="wwb-title">
+{% comment %} <section class="section-neplan-what-we-bring" aria-labelledby="wwb-title">
   <div class="container-neplan-what-we-bring">
     <header class="head-neplan-what-we-bring">
       <p class="eyebrow-neplan-what-we-bring reveal-up">What we bring with XGSLab</p>
@@ -359,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </li>
     </ol>
   </div>
-</section>
+</section> {% endcomment %}
 
 <!-- ===============================
      Where we operate
@@ -572,6 +650,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.querySelectorAll(SELECTOR).forEach(el => io.observe(el));
   })();
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.mv-tab');
+    const panels = document.querySelectorAll('.mv-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+
+        // Deactivate all
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        // Activate clicked tab + panel
+        tab.classList.add('active');
+        if (targetPanel) targetPanel.classList.add('active');
+      });
+    });
+  });
+</script>
+
 
 </body>
 </html>

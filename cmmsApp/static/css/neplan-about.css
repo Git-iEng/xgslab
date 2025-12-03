@@ -1513,3 +1513,134 @@
 }
 
 /* Mobile (1 column): no change needed; it’s naturally centered */
+
+
+
+/* ====== MISSION / VISION / VALUES SECTION ====== */
+.mv-section {
+  background-color: #ffffff;
+  padding: 40px 16px;
+}
+
+.mv-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Headings */
+.mv-heading {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 800;
+  color: #0d2847;
+  margin: 0 0 8px;
+}
+
+.mv-subtitle {
+  margin: 0 0 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6a7a89;
+}
+
+/* Tabs */
+.mv-tabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  margin-bottom: 24px;
+}
+
+.mv-tab {
+  border: none;
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.mv-tab.active {
+  background: #0f766e;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Content wrapper */
+.mv-content-wrapper {
+  margin-top: 10px;
+}
+
+/* Each panel */
+.mv-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  gap: 30px;
+  align-items: center;
+}
+
+/* Active panel */
+.mv-content.active {
+  display: flex;
+  flex-direction: column; /* mobile default */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Text + image columns */
+.mv-text,
+.mv-image {
+  flex: 1;
+}
+
+/* Text block */
+.mv-text h3 {
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 800;
+  color: #0d2847;
+  margin: 0 0 10px;
+}
+
+.mv-text p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6a7a89;
+}
+
+/* Image block */
+.mv-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mv-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ====== RESPONSIVE LAYOUT ====== */
+@media (min-width: 768px) {
+  .mv-content.active {
+    flex-direction: row;      /* text + image side by side on desktop */
+    text-align: left;         /* nicer for reading */
+  }
+
+  .mv-text {
+    text-align: left;
+  }
+}
