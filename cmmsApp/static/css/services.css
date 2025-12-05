@@ -1,6 +1,9 @@
 /* =======================================
    Unify all service buttons with global style
    ======================================= */
+body {
+  margin-top: 5.5rem;   /* for fixed header on desktop/tablet */
+}
 
 /* Main hero buttons */
 .btn,
@@ -175,6 +178,14 @@
 @media (max-width: 640px){
   .cta-buttons{ flex-direction: column; align-items: center; }
   .btn{ width: min(100%, 22rem); }
+  body{
+    margin-top: 0;      /* let the hero slide up behind the header */
+  }
+
+  /* just to be safe, ensure no extra margin on the first section */
+  .neplan-electricity-slide{
+    margin-top: 0;
+  }
 }
 
 /* Content blocks */
@@ -191,8 +202,19 @@
 
 .neplan-services .nsv-block__media{ position: relative; }
 .neplan-services .nsv-block__media img{
-  width: 100%; height: 420px; object-fit: cover;
-  border-radius: var(--radius); box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 100%;
+  height: auto;                 /* let height scale naturally */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: block;
+  object-fit: contain;        
+}
+@media (min-width: 901px) {
+  .neplan-services .nsv-block__media img {
+    height: 420px;
+    object-fit: cover;
+  }
 }
 .neplan-services .nsv-badge{
   position: absolute; top: 12px; left: 12px;
@@ -244,8 +266,6 @@
 .neplan-services [data-reveal="right"]{ transform: translateX(40px); }
 .neplan-services [data-reveal="up"]{ transform: translateY(30px); }
 
-/* Layout */
-body{ margin-top: 5.5rem; }
 
 /* Responsive tweaks */
 @media (max-width: 900px){ :root{ --hero-maxw: 900px; } .nsv-sub{ max-width: 60ch; } }
@@ -265,4 +285,32 @@ body{ margin-top: 5.5rem; }
 .nsv-cta--center{ 
   justify-content:center; 
   padding-top:20px; 
+}
+
+
+/* === MOBILE: remove the gap between header and banner on /product/ === */
+@media (max-width: 640px) {
+
+  /* no body offset under fixed header */
+  body {
+    margin-top: 0 !important;
+  }
+
+  /* kill any bottom spacing on the nav/header */
+  header,
+  .site-header,
+  .navbar,
+  .main-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* ensure the hero/banner starts right under the header */
+  .neplan-electricity-slide,
+  .product-hero,
+  .product-banner,
+  section.hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 }

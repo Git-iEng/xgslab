@@ -51,79 +51,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <li><a href="#" class="nav__link">Services</a></li> -->
                     <!--=============== DROPDOWN 1 ===============-->
                     <li class="dropdown__item">
-                        <a href="/product/" class="nav__link">
-                            Products<i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                        </a>
+    <!-- Click text = go to /product/ -->
+    <a href="/product/" class="nav__link">
+        Products
 
-                        <ul class="dropdown__menu">
-                            <li>
-                                <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)
-                                    <!-- <i class="ri-pie-chart-line"></i> -->
-                                </a>
-                            </li>
+    <!-- Click arrow = ONLY open/close submenu -->
+    <button type="button"
+            class="dropdown__toggle"
+            aria-label="Toggle Products submenu"
+            aria-expanded="false">
+        <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+    </button>
+</a>
+    <ul class="dropdown__menu">
+        <li>
+            <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)</a>
+        </li>
+        <li>
+            <a href="/gsafd/" class="dropdown__link">GSA FD (Grounding System Analysis in the Frequency Domain)</a>
+        </li>
+        <li>
+            <a href="/xgsafd/" class="dropdown__link">XGSA FD (System Analysis in the Frequency Domain)</a>
+        </li>
+        <li>
+            <a href="/xgsatd/" class="dropdown__link">XGSA TD (System Analysis in the Time Domain)</a>
+        </li>
+        <li>
+            <a href="/nets/" class="dropdown__link">NETS (Network Solver)</a>
+        </li>
+        <li>
+            <a href="/sheild/" class="dropdown__link">SHEILD (Lightning Shielding)</a>
+        </li>
+        <li>
+            <a href="/sheilda/" class="dropdown__link">SHEILD A (Lightning Shielding Advanced)</a>
+        </li>
+    </ul>
+</li>
 
-                            <li>
-                                <a href="/gsafd/" class="dropdown__link">GSA FD (Grounding System Analysis in the
-                                    Frequency Domain)
-                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/xgsafd/" class="dropdown__link">XGSA FD (System Analysis in the Frequency Domain)
-                                    <!-- <i class="ri-pie-chart-line"></i> -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/xgsatd/" class="dropdown__link">XGSA TD (System Analysis in the Time Domain)
-                                    <!-- <i class="ri-pie-chart-line"></i> -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/nets/" class="dropdown__link">NETS (Network Solver)
-                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sheild/" class="dropdown__link">SHEILD (Lightning Shielding)
-                                    <!-- <i class="ri-pie-chart-line"></i> -->
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/sheilda/" class="dropdown__link">SHEILD A (Lightning Shielding Advanced)
-                                    <!-- <i class="ri-arrow-up-down-line"></i>  -->
-                                </a>
-                            </li>
-
-
-                            <!--=============== DROPDOWN SUBMENU ===============-->
-                            <!-- <li class="dropdown__subitem">
-                                <div class="dropdown__link">
-                                    <i class="ri-bar-chart-line"></i> Services <i class="ri-add-line dropdown__add"></i>
-                                </div>
-
-                                <ul class="dropdown__submenu">
-                                    <li>
-                                        <a href="#" class="dropdown__sublink">
-                                            <i class="ri-file-list-line"></i> Training & Workshops
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="dropdown__sublink">
-                                            <i class="ri-cash-line"></i> Technical Support
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" class="dropdown__sublink">
-                                            <i class="ri-refund-2-line"></i> Consultancy Services
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li> -->
-                        </ul>
-                    </li>
 
 
                     <li><a href="/services/" class="nav__link">Services</a></li>
@@ -174,12 +138,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <!-- 
-master copy for route
-
+    master copy for route
     <li> <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)</a></li>
     <li> <a href="/neplan-gas-water-heating/" class="dropdown__link">GSA FD</a> </li>
     <li> <a href="/neplan-anywhere/" class="dropdown__link">XGSA FD  </a></li>
     <li> <a href="/neplan-cloud/" class="dropdown__link">XGSA TD </a> </li>
     <li> <a href="/neplan-integration-oem-sas/" class="dropdown__link">NETS</a> </li>
     <li> <a href="/neplan-research/" class="dropdown__link">SHEILD</a> </li>
-    <li> <a href="/neplan-additional-solutions/" class="dropdown__link">SHEILD A</a> </li> -->
+    <li> <a href="/neplan-additional-solutions/" class="dropdown__link">SHEILD A</a> </li> 
+    
+-->

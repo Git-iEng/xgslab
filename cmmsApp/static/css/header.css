@@ -535,3 +535,42 @@ This section is important for the desktop view, as it overrides the mobile style
     transition: top .3s;
   }
 }
+
+
+@media (max-width: 768px) {
+  .dropdown__menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .dropdown__item.dropdown__item--active > .dropdown__menu {
+    max-height: 500px; /* enough for all items */
+  }
+}
+/* Arrow button next to "Products" */
+.dropdown__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0 0 4px;
+  display: none;             /* hidden by default (desktop) */
+  align-items: center;
+}
+
+/* mobile behaviour */
+@media (max-width: 768px) {
+  .dropdown__toggle {
+    display: inline-flex;    /* show arrow on mobile */
+  }
+
+  .dropdown__menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .dropdown__item.is-open > .dropdown__menu {
+    max-height: 500px;       /* big enough for all items */
+  }
+}
