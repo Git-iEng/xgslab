@@ -535,42 +535,475 @@ This section is important for the desktop view, as it overrides the mobile style
     transition: top .3s;
   }
 }
+/* =========================
+   MOBILE DROPDOWN FIX
+   Opens dropdown when li has class "active"
+   ========================= */
 
+/* Make dropdown work in mobile (no hover) */
+@media screen and (max-width: 1118px) {
 
-@media (max-width: 768px) {
+  /* Keep dropdown menu inside the flow so it shows under Products */
   .dropdown__menu {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.25s ease;
+    transition: max-height .35s ease;
+    background: #ffffff;
   }
 
-  .dropdown__item.dropdown__item--active > .dropdown__menu {
-    max-height: 500px; /* enough for all items */
+  /* Show dropdown when toggled */
+  .dropdown__item.active > .dropdown__menu {
+    max-height: 1200px; /* big enough to show all links */
+  }
+
+  /* Rotate arrow when open */
+  .dropdown__item.active .dropdown__arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Improve dropdown link look on white background */
+  .dropdown__link {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 12px 18px !important;
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .dropdown__link:hover {
+    background: rgba(0,0,0,0.04) !important;
+  }
+
+  /* Make sure the dropdown container isn't forcing white weirdly */
+  .dropdown__item {
+    background: transparent !important;
   }
 }
-/* Arrow button next to "Products" */
-.dropdown__toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 0 0 4px;
-  display: none;             /* hidden by default (desktop) */
-  align-items: center;
+/* Make Products row align properly */
+.dropdown__trigger{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
 }
 
-/* mobile behaviour */
-@media (max-width: 768px) {
+.dropdown__label{
+  color: var(--white-color);
+  text-decoration:none;
+  flex:1;
+}
+
+/* Arrow button */
+.dropdown__toggle{
+  border:0;
+  background:transparent;
+  padding: 1.25rem 1.5rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+}
+
+/* CLICK OPEN (works everywhere) */
+.dropdown__item.active > .dropdown__menu{
+  max-height: 1200px;
+}
+
+/* Rotate arrow when active */
+.dropdown__item.active .dropdown__arrow{
+  transform: rotate(180deg);
+}
+
+/* Mobile dropdown should be inside flow */
+@media screen and (max-width: 1118px){
+  .dropdown__menu{
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    background: #fff !important;
+  }
+
+  .dropdown__link{
+    color:#000 !important;
+    background:#fff !important;
+  }
+}
+/* =========================
+   MOBILE DROPDOWN ALIGN FIX
+   ========================= */
+@media screen and (max-width: 1118px) {
+
+  /* Make the Products row and arrow align properly */
+  .dropdown__trigger {
+    width: 100%;
+  }
+
+  /* Force dropdown to stay inside the mobile menu */
+  .dropdown__item {
+    position: static !important;
+    background: transparent !important;
+  }
+
+  .dropdown__menu {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border-radius: 12px;
+    box-shadow: none !important; /* remove floating shadow */
+    background: #ffffff !important;
+
+    overflow: hidden;
+  }
+
+  /* Make dropdown items readable and not cut */
+  .dropdown__menu li {
+    width: 100%;
+  }
+
+  .dropdown__link {
+    width: 100%;
+    display: block;
+    padding: 12px 16px !important;
+    color: #000 !important;
+    background: #fff !important;
+    white-space: normal;       /* allow wrapping */
+    word-break: break-word;    /* prevent overflow */
+    border-top: 1px solid rgba(0,0,0,0.06);
+  }
+
+  .dropdown__link:hover {
+    background: rgba(0,0,0,0.04) !important;
+  }
+}
+
+/* =========================
+   DESKTOP NAV SPACING FIX
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  /* Reduce big gaps between nav items */
+  .nav__list {
+    column-gap: 3.6rem !important; /* change value if you want tighter */
+    align-items: center;
+  }
+
+  /* Ensure Products wrapper doesn't create extra width */
+  .dropdown__trigger {
+    width: auto !important;
+    gap: .35rem;
+  }
+
+  /* Make Products link behave like other nav links */
+  .dropdown__label {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Arrow button should not add large padding on desktop */
   .dropdown__toggle {
-    display: inline-flex;    /* show arrow on mobile */
-  }
-
-  .dropdown__menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease;
-  }
-
-  .dropdown__item.is-open > .dropdown__menu {
-    max-height: 500px;       /* big enough for all items */
+    padding: 0 !important;
+    margin-left: .25rem;
   }
 }
+/* Mobile accordion dropdown (open when .active, close when not) */
+@media screen and (max-width: 1118px) {
+
+  .dropdown__menu{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+  }
+
+  .dropdown__item.active > .dropdown__menu{
+    max-height: 1200px; /* enough to show all items */
+  }
+
+  .dropdown__arrow{
+    transition: transform .25s ease;
+  }
+
+  .dropdown__item.active .dropdown__arrow{
+    transform: rotate(180deg);
+  }
+}
+@media screen and (max-width: 1118px) {
+
+  /* Make the Products row stay above the dropdown list */
+  .dropdown__trigger {
+    position: relative;
+    z-index: 5;
+  }
+
+  /* Ensure arrow button is always clickable */
+  .dropdown__toggle {
+    position: relative;
+    z-index: 6;
+    pointer-events: auto;
+  }
+
+  /* Keep dropdown list below the trigger (so it doesn't cover arrow) */
+  .dropdown__menu {
+    position: relative !important;
+    z-index: 1;
+    margin-top: 6px;   /* pushes list down */
+  }
+}
+
+/* =========================
+   DESKTOP DROPDOWN GAP FIX
+   Make dropdown sit right under "Products"
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  /* Make parent anchor point */
+  .dropdown__item {
+    position: relative;
+  }
+
+  /* Place dropdown directly under Products */
+  .dropdown__menu {
+    top: calc(100% + 10px) !important;  /* small gap under nav */
+    left: 0 !important;
+    transform: none !important;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, top .2s ease;
+
+    /* optional: consistent dropdown look */
+    background: #fff !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    border-radius: 10px;
+    min-width: 280px;
+  }
+
+  /* Show dropdown on hover OR when active */
+  .dropdown__item:hover > .dropdown__menu,
+  .dropdown__item.active > .dropdown__menu {
+    opacity: 1;
+    pointer-events: auto;
+    top: calc(100% + 6px) !important;
+  }
+}
+/* =========================
+   DESKTOP DROPDOWN GAP FIX
+   Make dropdown sit right under "Products"
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  /* Make parent anchor point */
+  .dropdown__item {
+    position: relative;
+  }
+
+  /* Place dropdown directly under Products */
+  .dropdown__menu {
+    top: calc(100% + 25px) !important;  /* small gap under nav */
+    left: 0 !important;
+    transform: none !important;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, top .2s ease;
+
+    /* optional: consistent dropdown look */
+    background: #fff !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    border-radius: 10px;
+    min-width: 280px;
+  }
+
+  /* Show dropdown on hover OR when active */
+  .dropdown__item:hover > .dropdown__menu,
+  .dropdown__item.active > .dropdown__menu {
+    opacity: 1;
+    pointer-events: auto;
+    top: calc(100% + 16px) !important;
+  }
+}
+/* =========================
+   DESKTOP: EASY HOVER + CLICK DROPDOWN
+   Prevent menu closing when moving mouse to submenu
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  .dropdown__item{
+    position: relative;
+  }
+
+  /* Dropdown box */
+  .dropdown__menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);         /* a little space */
+    transform: none !important;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease, top .2s ease;
+
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    border-radius: 10px;
+    min-width: 280px;
+    z-index: 9999;
+  }
+
+  /* IMPORTANT: "hover bridge" (invisible area) so hover doesn't break */
+  .dropdown__menu::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -12px;          /* must match gap */
+    height: 12px;        /* bridge height */
+    background: transparent;
+  }
+
+  /* Keep menu open if hovering Products OR hovering menu itself */
+  .dropdown__item:hover > .dropdown__menu,
+  .dropdown__menu:hover{
+    opacity: 1;
+    pointer-events: auto;
+    top: calc(100% + 6px);
+  }
+
+  /* Optional: nicer clickable rows */
+  .dropdown__link{
+    color: #000 !important;
+    background: #fff !important;
+    padding: 10px 14px !important;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .dropdown__link:hover{
+    background: rgba(0,0,0,0.06) !important;
+  }
+}
+/* =========================
+   FINAL DESKTOP DROPDOWN FIX (NO BLINK)
+   Put this at the VERY END of header.css
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  /* anchor */
+  .dropdown__item{
+    position: relative !important;
+  }
+
+  /* dropdown hidden by default */
+  .dropdown__item > .dropdown__menu{
+    position: absolute !important;
+    left: 0 !important;
+    top: 100% !important;              /* NO GAP = no blink */
+    transform: none !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    background: #fff !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.18) !important;
+    border-radius: 10px !important;
+    min-width: 280px !important;
+    padding: 8px 0 !important;
+    /* z-index: 99999 !important; */
+  }
+
+  /* show when hovering li OR hovering the menu itself */
+  .dropdown__item:hover > .dropdown__menu,
+  .dropdown__item > .dropdown__menu:hover{
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* make submenu links clickable + full width */
+  .dropdown__item > .dropdown__menu .dropdown__link{
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 14px !important;
+    background: #fff !important;
+    color: #000 !important;
+    white-space: nowrap;
+  }
+
+  .dropdown__item > .dropdown__menu .dropdown__link:hover{
+    background: rgba(0,0,0,0.06) !important;
+  }
+}
+/* =========================
+   DESKTOP DROPDOWN - STOP BLINKING (OVERRIDE max-height)
+   Put at END of file
+   ========================= */
+@media screen and (min-width: 1118px) {
+
+  /* Desktop dropdown must NOT use max-height animation */
+  .dropdown__menu,
+  .dropdown__submenu{
+    max-height: none !important;
+    overflow: visible !important;
+    transition: none !important;
+  }
+
+  .dropdown__item{
+    position: relative !important;
+  }
+
+  /* Hidden state */
+  .dropdown__item > .dropdown__menu{
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    transform: none !important;
+
+    display: block !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+
+    background: #fff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18) !important;
+    padding: 8px 0 !important;
+    min-width: 280px !important;
+    /* z-index: 99999 !important; */
+  }
+
+  /* Show on hover of li OR hover of menu (critical) */
+  .dropdown__item:hover > .dropdown__menu,
+  .dropdown__item > .dropdown__menu:hover{
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Make each link clickable and full width */
+  .dropdown__item > .dropdown__menu .dropdown__link{
+    display: block !important;
+    width: 100% !important;
+    padding: 10px 14px !important;
+    background: #fff !important;
+    color: #000 !important;
+    white-space: nowrap;
+  }
+
+  .dropdown__item > .dropdown__menu .dropdown__link:hover{
+    background: rgba(0,0,0,0.06) !important;
+  }
+}
+/* .header { z-index: 999999 !important; } */

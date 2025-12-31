@@ -13,21 +13,11 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
 
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
-<!-- End Google Tag Manager -->
+
 </head>
 
 <body>
     {% include 'request_demo_modal.html' %}
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!--=============== HEADER ===============-->
 
     <header class="header">
@@ -51,24 +41,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- <li><a href="#" class="nav__link">Services</a></li> -->
                     <!--=============== DROPDOWN 1 ===============-->
                     <li class="dropdown__item">
-    <!-- Click text = go to /product/ -->
-    <a href="/product/" class="nav__link">
-        Products
+                        <div class="nav__link dropdown__trigger">
+                            <a href="/product/" class="dropdown__label">Products</a>
+                            <button type="button" class="dropdown__toggle" aria-label="Open Products menu"
+                                aria-expanded="false">
+                                <i class="ri-arrow-down-s-line dropdown__arrow" aria-hidden="true"></i>
+                            </button>
+                        </div>
 
-    <!-- Click arrow = ONLY open/close submenu -->
-    <button type="button"
-            class="dropdown__toggle"
-            aria-label="Toggle Products submenu"
-            aria-expanded="false">
-        <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-    </button>
-</a>
-    <ul class="dropdown__menu">
-        <li>
+                        <ul class="dropdown__menu">
+                             <li>
             <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)</a>
         </li>
         <li>
-            <a href="/gsafd/" class="dropdown__link">GSA FD (Grounding System Analysis in the Frequency Domain)</a>
+            <a href="/gsafd/" class="dropdown__link">GSA FD (GSA in the Frequency Domain)</a>
         </li>
         <li>
             <a href="/xgsafd/" class="dropdown__link">XGSA FD (System Analysis in the Frequency Domain)</a>
@@ -85,9 +71,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>
             <a href="/sheilda/" class="dropdown__link">SHEILD A (Lightning Shielding Advanced)</a>
         </li>
-    </ul>
-</li>
-
+                        </ul>
+                    </li>
 
 
                     <li><a href="/services/" class="nav__link">Services</a></li>
@@ -135,16 +120,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 
 </html>
-
-
-<!-- 
-    master copy for route
-    <li> <a href="/gsa/" class="dropdown__link">GSA (Grounding System Analysis)</a></li>
-    <li> <a href="/neplan-gas-water-heating/" class="dropdown__link">GSA FD</a> </li>
-    <li> <a href="/neplan-anywhere/" class="dropdown__link">XGSA FD  </a></li>
-    <li> <a href="/neplan-cloud/" class="dropdown__link">XGSA TD </a> </li>
-    <li> <a href="/neplan-integration-oem-sas/" class="dropdown__link">NETS</a> </li>
-    <li> <a href="/neplan-research/" class="dropdown__link">SHEILD</a> </li>
-    <li> <a href="/neplan-additional-solutions/" class="dropdown__link">SHEILD A</a> </li> 
-    
--->
