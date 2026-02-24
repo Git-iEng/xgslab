@@ -6,7 +6,7 @@ app_name = 'cmmsApp'
 from .views import request_demo_view
 
 urlpatterns = [
-      path("request-demo/", views.request_demo_view, name="request_demo"),
+    path("request-demo/", views.request_demo_view, name="request_demo"),
     # path("contact-thanks/", views.thanks_view, name="contact_thanks"),  # if you add a separate thanks view for demo
     path('', views.home, name='home'),
 
@@ -31,7 +31,6 @@ urlpatterns = [
 
     path('gsafd/', views.gsafd, name='gsafd'),
 
-    path('product/neplan-electricity/', views.neplan_electricity, name='neplan-electricity'),
     path('product/gsafd/', views.gsafd, name='gsafd'),
     path("contact/country-list/", views.country_list, name="country_list"),
     path('xgsafd/', views.xgsafd, name='xgsafd'),
@@ -41,10 +40,10 @@ urlpatterns = [
     path('nets/', views.nets, name='nets'),
     path('xgsatd/', views.xgsatd, name='xgsatd'),
     path('sheild/', views.sheild, name='sheild'),
-
+    path("sitemap.xml", views.sitemap, name="sitemap"),
 
     path('product/xgsafd/', views.xgsafd, name='xgsafd'),
-    path('neplan-asset-management/', views.neplan_asset_management, name='neplan_asset_management'),
+
 
     path('product/sheilda/', views.sheilda, name='sheilda'),
     # contact section

@@ -1,131 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GSA</title>
-  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">  <!-- shared hero/banner -->
-  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">          <!-- GSA-specific styles -->
+
+  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TKQV8LKX');</script>
-<!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="{% static 'css/xgslab-home.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TKQV8LKX');</script>
+  <!-- End Google Tag Manager -->
  
+
 </head>
 
 <body>
- 
+
   {% include 'header.html' %}
   {% include 'request_demo_modal.html' %}
   {% load static %}
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+
+  <!-- End Google Tag Manager (noscript) -->
   <!-- ======================= HERO (shared XGSLab banner) ======================= -->
-<section class="section-neplan-home section-neplan-home--gsa">
-  <div class="hero-card-neplan-home">
-    <div class="inner-neplan-home">
-      <div class="content-neplan-home">
-        <span class="ctrl-kicker">GSA · Grounding System Analysis</span>
 
-        <h1 class="title-neplan-home">
-          GSA
-        </h1>
+  <section class="section-xgslab-home section-xgslab-home--nets">
+  <div class="hero-card-xgslab-home">
+    <div class="inner-xgslab-home">
+      <div class="content-xgslab-home">
+        <span class="ctrl-kicker">
+          GSA · Grounding System Analysis
+        </span>
 
-        <h2 class="title-neplan-home2">
-          Design &amp; Validate Safe Earthing Systems
+        <h1 class="title-xgslab-home">GSA</h1>
+
+        <h2 class="title-xgslab-home2">
+         Design &amp; Validate Safe Earthing Systems
         </h2>
 
-        <p class="subtitle-neplan-home">
-          GSA is the XGSLab module dedicated to earthing/grounding systems in low-frequency conditions.
-          Model grids and electrodes, compute touch/step voltages, and verify compliance to IEEE/IEC/EN
-          using multilayer soil models and realistic return paths.
+        <p class="subtitle-xgslab-home">
+            GSA is the XGSLab module dedicated to earthing/grounding systems in low-frequency conditions.
+            Model grids and electrodes, compute touch/step voltages, and verify compliance to IEEE/IEC/EN
+            using multilayer soil models and realistic return paths.
         </p>
 
-        <div class="cta-row-neplan-home">
-  <a href="#" class="btn-neplan-home js-open-demo">
-    Request Demo <span class="arrow">→</span>
-  </a>
-  <a href="/product/" class="btn-neplan-home">
-    Explore products <span class="arrow">→</span>
-  </a>
-</div>
+     
 
-
+        <br>
+        <div class="cta-row-xgslab-home">
+          <a href="#" class="btn-xgslab-home js-open-demo">
+            Request Demo <span class="arrow">→</span>
+          </a>
+          <a href="/product/" class="btn-xgslab-home">
+            Explore products <span class="arrow">→</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Optional device PNG; remove if not needed -->
-        <figure class="device-neplan-home" aria-hidden="true">
-          <img src="../static/images/xgs/gsalogo.png" alt="XGSLab Modules">
-          {% comment %} <img src="../static/images/xgs/gsalogo.png" alt="XGSLab Modules"> {% endcomment %}
-        </figure>
+      <figure class="device-xgslab-home" aria-hidden="true">
+        <img src="{% static 'images/xgs/gsalogo.png' %}" alt="nets Logo">
+        {% comment %} <img src="{% static 'images/xgs/gsalogo.png' %}" alt="NETS network solver visual"> {% endcomment %}
+      </figure>
     </div>
   </div>
 </section>
 
 
-  
+
 
   <!-- ============= KEY HIGHLIGHTS (3 cards) ============= -->
   <section class="gsa-cards">
-  <div class="gsa-wrap">
-    <header class="gsa-head gsa-head--rich">
-      <span class="gsa-eyebrow">Capabilities</span>
-      <h2>What you can do with GSA</h2>
-      <p>Fast, defendable grounding studies for substations, plants, renewables and rail.</p>
-    </header>
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-head--rich">
+        <span class="gsa-eyebrow">Capabilities</span>
+        <h2>What you can do with GSA</h2>
+        <p>Fast, defendable grounding studies for substations, plants, renewables and rail.</p>
+      </header>
 
-    <div class="gsa-grid gsa-grid--enhanced">
-      <!-- 01 -->
-      <article class="gsa-card gsa-card--lift">
-        <div class="gsa-card__icon" aria-hidden="true">
+      <div class="gsa-grid gsa-grid--enhanced">
+        <!-- 01 -->
+        <article class="gsa-card gsa-card--lift">
+          <!-- <div class="gsa-card__icon" aria-hidden="true">
           <i class="fa-solid fa-bolt"></i>
-        </div>
-        <h3 class="gsa-card__title">Grid &amp; Electrode Modelling</h3>
-        <ul class="gsa-ul gsa-ul--checks">
-          <li>Buried meshes, rods, rings, foundations &amp; earth plates</li>
-          <li>Touch/step voltages, GPR, current distribution</li>
-          <li>Bonding, transfer potentials &amp; interface checks</li>
-        </ul>
-      </article>
+        </div> -->
+          <h3 class="gsa-card__title">Grid &amp; Electrode Modelling</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>Buried meshes, rods, rings, foundations &amp; earth plates</li>
+            <li>Touch/step voltages, GPR, current distribution</li>
+            <li>Bonding, transfer potentials &amp; interface checks</li>
+          </ul>
+        </article>
 
-      <!-- 02 -->
-      <article class="gsa-card gsa-card--lift">
-        <div class="gsa-card__icon" aria-hidden="true">
+        <!-- 02 -->
+        <article class="gsa-card gsa-card--lift">
+          <!-- <div class="gsa-card__icon" aria-hidden="true">
           <i class="fa-solid fa-layer-group"></i>
-        </div>
-        <h3 class="gsa-card__title">Multilayer Soil &amp; Measurements</h3>
-        <ul class="gsa-ul gsa-ul--checks">
-          <li>SRA/SSA tools to fit 1–n layer soil models</li>
-          <li>Seasonal/resistivity variations and what-if cases</li>
-          <li>Improved accuracy for safety criteria</li>
-        </ul>
-      </article>
+        </div> -->
+          <h3 class="gsa-card__title">Multilayer Soil &amp; Measurements</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>SRA/SSA tools to fit 1–n layer soil models</li>
+            <li>Seasonal/resistivity variations and what-if cases</li>
+            <li>Improved accuracy for safety criteria</li>
+          </ul>
+        </article>
 
-      <!-- 03 -->
-      <article class="gsa-card gsa-card--lift">
-        <div class="gsa-card__icon" aria-hidden="true">
+        <!-- 03 -->
+        <article class="gsa-card gsa-card--lift">
+          <!-- <div class="gsa-card__icon" aria-hidden="true">
           <i class="fa-solid fa-clipboard-check"></i>
-        </div>
-        <h3 class="gsa-card__title">Standards &amp; Reporting</h3>
-        <ul class="gsa-ul gsa-ul--checks">
-          <li>IEEE Std 80, IEC/EN 50522, IEC 60479 checks</li>
-          <li>Mitigation (surface layers, gradient control)</li>
-          <li>Engineering-grade plots &amp; compliance summaries</li>
-        </ul>
-      </article>
-    </div>
+        </div> -->
+          <h3 class="gsa-card__title">Standards &amp; Reporting</h3>
+          <ul class="gsa-ul gsa-ul--checks">
+            <li>IEEE Std 80, IEC/EN 50522, IEC 60479 checks</li>
+            <li>Mitigation (surface layers, gradient control)</li>
+            <li>Engineering-grade plots &amp; compliance summaries</li>
+          </ul>
+        </article>
+      </div>
 
-  </div>
-</section>
+    </div>
+  </section>
 
 
   <!-- ================== SPEC / SCOPE TABLE ================== -->
@@ -134,50 +140,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 id="gsa-scope" class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
       <table class="gsa-table">
         <thead>
-          <tr><th>Area</th><th>Details</th></tr>
+          <tr>
+            <th>Area</th>
+            <th>Details</th>
+          </tr>
         </thead>
         <tbody>
           <tr>
             <th>Geometry</th>
-            <td>Arbitrary meshes, interconnected grids, rods, plates, foundations, rings, shields, and connections to structures or third-party systems.</td>
+            <td>Arbitrary meshes, interconnected grids, rods, plates, foundations, rings, shields, and connections to
+              structures or third-party systems.</td>
           </tr>
           <tr>
             <th>Soil Model</th>
-            <td>Uniform or multilayer soils derived from Wenner/Schlumberger tests; seasonal/resistivity scenarios; automated curve fitting.</td>
+            <td>Uniform or multilayer soils derived from Wenner/Schlumberger tests; seasonal/resistivity scenarios;
+              automated curve fitting.</td>
           </tr>
           <tr>
             <th>Results</th>
-            <td>GPR, touch/step voltages, current density, conductor currents, surface potential maps, dangerous points and transfer potentials.</td>
+            <td>GPR, touch/step voltages, current density, conductor currents, surface potential maps, dangerous points
+              and transfer potentials.</td>
           </tr>
           <tr>
             <th>Compliance</th>
-            <td>Safety evaluation against IEEE Std 80 / IEC-EN 50522 / IEC 60479 with mitigation aids (surface layer, additional bonds, gradient control).</td>
+            <td>Safety evaluation against IEEE Std 80 / IEC-EN 50522 / IEC 60479 with mitigation aids (surface layer,
+              additional bonds, gradient control).</td>
           </tr>
           <tr>
             <th>Integration</th>
-            <td>CAD-friendly import/export; consistent workflow with GSA FD, XGSA FD/TD, NETS and SHIELD for end-to-end studies.</td>
+            <td>CAD-friendly import/export; consistent workflow with GSA FD, XGSA FD/TD, NETS and SHIELD for end-to-end
+              studies.</td>
           </tr>
         </tbody>
       </table>
-      <p class="gsa-note">Need frequency-dependent behaviour? Use <strong>GSA FD</strong> with the same modelling approach.</p>
+      <p class="gsa-note">Need frequency-dependent behaviour? Use <strong>GSA FD</strong> with the same modelling
+        approach.</p>
     </div>
   </section>
 
   <!-- ======================= GALLERY (2×2) ======================= -->
   <section class="gsa-gallery">
-  <div class="gsa-wrap">
-    <header class="gsa-head gsa-gallery-head">
-      <h2> Gallery</h2>
-    </header>
-    <br>
-    <div class="gsa-gallery__grid">
-      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Gallery 1"></div>
-      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa2.avif' %}" alt="Gallery 2"></div>
-      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa3.avif' %}" alt="Gallery 3"></div>
-      <div class="gsa-shot"><img src="{% static 'images/xgs/gsa4.avif' %}" alt="Gallery 4"></div>
+    <div class="gsa-wrap">
+      <header class="gsa-head gsa-gallery-head">
+        <h2> Gallery</h2>
+      </header>
+      <br>
+      <div class="gsa-gallery__grid">
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa1.avif' %}" alt="Gallery 1"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa2.avif' %}" alt="Gallery 2"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa3.avif' %}" alt="Gallery 3"></div>
+        <div class="gsa-shot"><img src="{% static 'images/xgs/gsa4.avif' %}" alt="Gallery 4"></div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- ===================== PROCESS STEPS ===================== -->
@@ -188,10 +203,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Clear stages with reviews and deliverables.</p>
       </header>
       <ol class="gsa-steps">
-        <li class="gsa-step"><h4>01 · Model</h4><p>Grid &amp; electrode geometry, soil fitting, scenarios &amp; constraints.</p></li>
-        <li class="gsa-step"><h4>02 · Inputs</h4><p>Site layout, fault data, soil tests, bonding/adjacent systems.</p></li>
-        <li class="gsa-step"><h4>03 · Results</h4><p>GPR, touch/step, current distribution, transfer potentials.</p></li>
-        <li class="gsa-step"><h4>04 · Mitigation</h4><p>Surface layers, bonds, gradient control &amp; compliance report.</p></li>
+        <li class="gsa-step">
+          <h4>01 · Model</h4>
+          <p>Grid &amp; electrode geometry, soil fitting, scenarios &amp; constraints.</p>
+        </li>
+        <li class="gsa-step">
+          <h4>02 · Inputs</h4>
+          <p>Site layout, fault data, soil tests, bonding/adjacent systems.</p>
+        </li>
+        <li class="gsa-step">
+          <h4>03 · Results</h4>
+          <p>GPR, touch/step, current distribution, transfer potentials.</p>
+        </li>
+        <li class="gsa-step">
+          <h4>04 · Mitigation</h4>
+          <p>Surface layers, bonds, gradient control &amp; compliance report.</p>
+        </li>
       </ol>
     </div>
   </section>
@@ -201,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="gsa-wrap gsa-cta__inner">
       <div>
         <h3>Planning a grounding study?</h3>
-        <p>Send us your layout and soil measurements — we’ll help you validate safety and compliance with GSA.</p>
+        <p>Send us your layout and soil measurements we’ll help you validate safety and compliance with GSA.</p>
       </div>
       <a href="#" class="js-open-demo">Request a Demo</a>
     </div>
@@ -214,6 +241,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script defer src="{% static 'js/demo_form.js' %}"></script>
   <script defer src="{% static 'js/main.js' %}"></script>
-  <script defer src="{% static 'js/neplan.js' %}"></script>
+  <script defer src="{% static 'js/xgslab.js' %}"></script>
 </body>
+
 </html>

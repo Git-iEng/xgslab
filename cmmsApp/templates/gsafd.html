@@ -8,9 +8,10 @@
 
   <!-- shared assets (unchanged) -->
   <!-- shared assets -->
-  <link rel="stylesheet" href="{% static 'css/neplan-home.css' %}">
-  <link rel="stylesheet" href="{% static 'css/gsa.css' %}">
+
+
   <link rel="stylesheet" href="{% static 'css/gsafd.css' %}">
+  <link rel="stylesheet" href="{% static 'css/xgslab-home.css' %}">
   <link rel="stylesheet" href="{% static 'css/footer.css' %}">
   <link rel="icon" href="{% static 'images/logo1.png' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -19,14 +20,14 @@
   <!-- page-scoped tweaks for the FD page only -->
   <style>
     /* Give GSA FD its own hero look (keeps the same layout & spacing) */
-    .gsa-hero.gsa-hero--fd{
-      background: #07131b url("{% static 'images/xgs/gsa-fd-hero.avif' %}") center/cover no-repeat;
+    .gsafd-hero.gsafd-hero--fd{
+      background: #07131b url("{% static 'images/xgs/gsafd-fd-hero.avif' %}") center/cover no-repeat;
     }
-    .gsa-hero.gsa-hero--fd::before{
+    .gsafd-hero.gsafd-hero--fd::before{
       background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.35));
     }
     /* Slightly different icon accent on this page */
-    .gsa-card__icon--fd{
+    .gsafd-card__icon--fd{
       color:#0e7490; /* cyan/teal */
       background:linear-gradient(180deg,#f1fbfd,#e9f7fb);
       border-color:rgba(14,116,144,.28);
@@ -48,71 +49,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKQV8LKX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <!-- ======================= HERO ======================= -->
-    <!-- ======================= HERO (shared XGSLab banner) ======================= -->
-  <section class="section-neplan-home section-neplan-home--gsa-fd">
-    <div class="hero-card-neplan-home">
-      <div class="inner-neplan-home">
-        <div class="content-neplan-home">
-          <span class="ctrl-kicker">GSA FD · Frequency-Dependent Grounding</span>
 
-          <h1 class="title-neplan-home">
-            GSA FD
-          </h1>
+  <section class="section-xgslab-home section-xgslab-home--nets">
+  <div class="hero-card-xgslab-home">
+    <div class="inner-xgslab-home">
+      <div class="content-xgslab-home">
+        <span class="ctrl-kicker">
+          GSA FD · Frequency-Dependent Grounding
+        </span>
 
-          <h2 class="title-neplan-home2">
-            Model Wideband Earthing &amp; Induced Effects
-          </h2>
+        <h1 class="title-xgslab-home">GSA FD</h1>
 
-          <p class="subtitle-neplan-home">
+        <h2 class="title-xgslab-home2">
+        Model Wideband Earthing &amp; Induced Effects
+        </h2>
+
+        <p class="subtitle-xgslab-home">
             GSA FD extends GSA with frequency-dependent behaviour of conductors and soil.
             Evaluate grid impedance versus frequency, induced voltages on adjacent systems,
             and screening/bonding effectiveness under harmonics and fast transients.
-          </p>
+        </p>
 
-          {% comment %} <ul class="gxsa-stats">
-            <li> Wideband analysis</li>
-            <li> Coupling &amp; interference</li>
-            <li> Screening &amp; bonding checks</li>
-          </ul> {% endcomment %}
-          <br>
-          <div class="cta-row-neplan-home">
-            <a href="#" class="btn-neplan-home js-open-demo">
-              Request Demo <span class="arrow">→</span>
-            </a>
-            <a href="/product/" class="btn-neplan-home">
-              Explore products <span class="arrow">→</span>
-            </a>
-          </div>
+     
+
+        <br>
+        <div class="cta-row-xgslab-home">
+          <a href="#" class="btn-xgslab-home js-open-demo">
+            Request Demo <span class="arrow">→</span>
+          </a>
+          <a href="/product/" class="btn-xgslab-home">
+            Explore products <span class="arrow">→</span>
+          </a>
         </div>
-
-        <figure class="device-neplan-home" aria-hidden="true">
-          <img src="{% static 'images/xgs/gsafdlogo.png' %}" alt="XGSLab Logo">
-          {% comment %} <img src="../static/images/xgs/home_image.png" alt="GSA FD visual"> {% endcomment %}
-        </figure>
       </div>
+
+      <figure class="device-xgslab-home" aria-hidden="true">
+        <img src="{% static 'images/xgs/gsafdlogo.png' %}" alt="nets Logo">
+        {% comment %} <img src="{% static 'images/xgs/gsafdlogo.png' %}" alt="NETS network solver visual"> {% endcomment %}
+      </figure>
     </div>
-  </section>
-
-
+  </div>
+</section>
   <!-- ============= KEY HIGHLIGHTS (3 cards) ============= -->
-  <section class="gsa-cards">
-    <div class="gsa-wrap">
-      <header class="gsa-head gsa-head--rich">
-        <span class="gsa-eyebrow">Frequency-Dependent Capabilities</span>
+  <section class="gsafd-cards">
+    <div class="gsafd-wrap">
+      <header class="gsafd-head gsafd-head--rich">
+        <span class="gsafd-eyebrow">Frequency-Dependent Capabilities</span>
         <h2>What you can do with GSA FD</h2>
         <p>Accurate wideband earthing analysis with realistic coupling to nearby infrastructures.</p>
       </header>
 
-      <div class="gsa-grid gsa-grid--enhanced">
+      <div class="gsafd-grid gsafd-grid--enhanced">
         <!-- 01 -->
-        <article class="gsa-card gsa-card--lift">
-          <div class="gsa-card__icon gsa-card__icon--fd" aria-hidden="true">
+        <article class="gsafd-card gsafd-card--lift">
+          <div class="gsafd-card__icon gsafd-card__icon--fd" aria-hidden="true">
             <i class="fa-solid fa-wave-square"></i>
           </div>
-          <h3 class="gsa-card__title">Frequency-Dependent Modelling</h3>
-          <ul class="gsa-ul gsa-ul--checks">
+          <h3 class="gsafd-card__title">Frequency-Dependent Modelling</h3>
+          <ul class="gsafd-ul gsafd-ul--checks">
             <li>Grid/electrode impedance <em>Z(f)</em> with ground return effects</li>
             <li>Skin &amp; proximity effects on conductors and cable screens</li>
             <li>Realistic terminations, bonds and routing</li>
@@ -120,12 +114,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
 
         <!-- 02 -->
-        <article class="gsa-card gsa-card--lift">
-          <div class="gsa-card__icon gsa-card__icon--fd" aria-hidden="true">
+        <article class="gsafd-card gsafd-card--lift">
+          <div class="gsafd-card__icon gsafd-card__icon--fd" aria-hidden="true">
             <i class="fa-solid fa-diagram-project"></i>
           </div>
-          <h3 class="gsa-card__title">Coupling &amp; Interference</h3>
-          <ul class="gsa-ul gsa-ul--checks">
+          <h3 class="gsafd-card__title">Coupling &amp; Interference</h3>
+          <ul class="gsafd-ul gsafd-ul--checks">
             <li>Induced voltages/currents in rails, pipelines and cables</li>
             <li>Transfer potentials &amp; screening effectiveness</li>
             <li>Harmonic scenarios &amp; fast transient studies</li>
@@ -133,12 +127,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
 
         <!-- 03 -->
-        <article class="gsa-card gsa-card--lift">
-          <div class="gsa-card__icon gsa-card__icon--fd" aria-hidden="true">
+        <article class="gsafd-card gsafd-card--lift">
+          <div class="gsafd-card__icon gsafd-card__icon--fd" aria-hidden="true">
             <i class="fa-solid fa-clipboard-check"></i>
           </div>
-          <h3 class="gsa-card__title">Standards &amp; Workflow</h3>
-          <ul class="gsa-ul gsa-ul--checks">
+          <h3 class="gsafd-card__title">Standards &amp; Workflow</h3>
+          <ul class="gsafd-ul gsafd-ul--checks">
             <li>Safety evaluations aligned with IEEE/IEC practice</li>
             <li>Mitigation: bonds, screens, surface layers, routing</li>
             <li>Reports with plots of Z(f), GPR(f) &amp; induced quantities</li>
@@ -146,17 +140,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </article>
       </div>
 
-      <div class="gsa-cards__cta">
-        <a href="/contact/" class="gsa-btn gsa-btn--ghost">Discuss Your FD Study</a>
+      <div class="gsafd-cards__cta">
+        <a href="/contact/" class="gsafd-btn gsafd-btn--ghost">Discuss Your FD Study</a>
       </div>
     </div>
   </section>
 
   <!-- ================== SPEC / SCOPE TABLE ================== -->
-  <section class="gsa-spec" aria-labelledby="gsa-fd-scope">
-    <div class="gsa-wrap">
-      <h2 id="gsa-fd-scope" class="gsa-head" style="text-align:left;">Scope & Technical Coverage</h2>
-      <table class="gsa-table">
+  <section class="gsafd-spec" aria-labelledby="gsafd-fd-scope">
+    <div class="gsafd-wrap">
+      <h2 id="gsafd-fd-scope" class="gsafd-head" style="text-align:left;">Scope & Technical Coverage</h2>
+      <table class="gsafd-table">
         <thead>
           <tr><th>Area</th><th>Details</th></tr>
         </thead>
@@ -197,42 +191,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </tr>
         </tbody>
       </table>
-      <p class="gsa-note">Need low-frequency only? Use <strong>GSA</strong>. For time-domain coupling, see <strong>XGSATD</strong>.</p>
+      <p class="gsafd-note">Need low-frequency only? Use <strong>GSA</strong>. For time-domain coupling, see <strong>XGSATD</strong>.</p>
     </div>
   </section>
 
   <!-- ======================= GALLERY (2×2) ======================= -->
-  <section class="gsa-gallery">
-    <div class="gsa-wrap">
-      <header class="gsa-head gsa-gallery-head">
+  <section class="gsafd-gallery">
+    <div class="gsafd-wrap">
+      <header class="gsafd-head gsafd-gallery-head">
         <h2>Gallery</h2>
       </header>
-      <div class="gsa-gallery__grid">
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsafd1.png' %}" alt="Impedance vs frequency plot"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsafd2.png' %}" alt="Induced voltage along pipeline"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsafd3.png' %}" alt="GPR map under harmonic scenario"></div>
-        <div class="gsa-shot"><img src="{% static 'images/xgs/gsafd4.png' %}" alt="Bonding/screening layout study"></div>
+      <div class="gsafd-gallery__grid">
+        <div class="gsafd-shot"><img src="{% static 'images/xgs/gsafd1.png' %}" alt="Impedance vs frequency plot"></div>
+        <div class="gsafd-shot"><img src="{% static 'images/xgs/gsafd2.png' %}" alt="Induced voltage along pipeline"></div>
+        <div class="gsafd-shot"><img src="{% static 'images/xgs/gsafd3.png' %}" alt="GPR map under harmonic scenario"></div>
+        <div class="gsafd-shot"><img src="{% static 'images/xgs/gsafd4.png' %}" alt="Bonding/screening layout study"></div>
       </div>
     </div>
   </section>
 
   <!-- ===================== PROCESS + FAQ ===================== -->
-  <section class="gsa-process" aria-labelledby="gsa-fd-process">
-    <div class="gsa-wrap">
-      <header class="gsa-head">
-        <h2 id="gsa-fd-process">Typical FD Study Workflow</h2>
+  <section class="gsafd-process" aria-labelledby="gsafd-fd-process">
+    <div class="gsafd-wrap">
+      <header class="gsafd-head">
+        <h2 id="gsafd-fd-process">Typical FD Study Workflow</h2>
         <p>Define spectra and bonds, evaluate Z(f)/GPR(f), and verify coupling limits.</p>
       </header>
-      <ol class="gsa-steps">
-        <li class="gsa-step"><h4>01 · Model</h4><p>Frequency-dependent parameters, coupling paths, screening strategies.</p></li>
-        <li class="gsa-step"><h4>02 · Inputs</h4><p>Geometry, soil, bonds/terminations, operating scenarios, harmonic content.</p></li>
-        <li class="gsa-step"><h4>03 · Results</h4><p>Impedance &amp; GPR vs frequency, induced V/I, transfer potentials.</p></li>
-        <li class="gsa-step"><h4>04 · Mitigation</h4><p>Bonding/screen optimization, routing changes, surface layers and controls.</p></li>
+      <ol class="gsafd-steps">
+        <li class="gsafd-step"><h4>01 · Model</h4><p>Frequency-dependent parameters, coupling paths, screening strategies.</p></li>
+        <li class="gsafd-step"><h4>02 · Inputs</h4><p>Geometry, soil, bonds/terminations, operating scenarios, harmonic content.</p></li>
+        <li class="gsafd-step"><h4>03 · Results</h4><p>Impedance &amp; GPR vs frequency, induced V/I, transfer potentials.</p></li>
+        <li class="gsafd-step"><h4>04 · Mitigation</h4><p>Bonding/screen optimization, routing changes, surface layers and controls.</p></li>
       </ol>
       <br>
       <br>
 
-      <div class="gsa-faq">
+      <div class="gsafd-faq">
         <details>
           <summary>When should I choose GSA FD over GSA?</summary>
           <p>Use GSA FD when harmonics, wideband behaviour, or induced effects on nearby assets are important. For steady-state low-frequency only, GSA is typically sufficient.</p>
@@ -246,11 +240,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- ========================= CTA ========================= -->
-  <section class="gsa-cta">
-    <div class="gsa-wrap gsa-cta__inner">
+  <section class="gsafd-cta">
+    <div class="gsafd-wrap gsafd-cta__inner">
       <div>
         <h3>Ready to evaluate frequency-dependent grounding?</h3>
-        <p>Share your layout, bonds and spectra—our team will help you verify coupling risks and optimize mitigation.</p>
+        <p>Share your layout, bonds and spectra our team will help you verify coupling risks and optimize mitigation.</p>
       </div>
       <a href="#" class="js-open-demo">Request a Demo</a>
     </div>
@@ -263,6 +257,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script defer src="{% static 'js/demo_form.js' %}"></script>
   <script defer src="{% static 'js/main.js' %}"></script>
-  <script defer src="{% static 'js/neplan.js' %}"></script>
+  <script defer src="{% static 'js/xgslab.js' %}"></script>
 </body>
 </html>
