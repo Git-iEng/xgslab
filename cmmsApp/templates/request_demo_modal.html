@@ -1,4 +1,24 @@
 {% load static %}
+<style>
+.form-captcha{
+  width: 100%;
+  margin: 15px 0 20px;
+}
+
+.form-captcha .g-recaptcha{
+  background: #fff;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px){
+  .form-captcha .g-recaptcha{
+    transform: scale(0.92);
+    transform-origin: left top;
+  }
+}
+</style>
+
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -71,6 +91,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Your privacy is important to us. We’ll only use your information to arrange the demo and to communicate about XGSlab Software.
       </p>
 
+
+      <div class="form-captcha">
+    <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
+</div>
+
       <div class="modal__footer">
   <button class="btn-submit" id="submitBtn" type="submit" form="demoForm">
     <span class="btn-label">Submit</span>
@@ -84,3 +109,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 <div id="cmmsToastRoot" class="xgslab-toast-wrap" aria-live="polite" aria-atomic="true"></div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

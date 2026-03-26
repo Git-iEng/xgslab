@@ -1,6 +1,37 @@
 {% load static %}
 
 
+<style>.form-captcha{
+    grid-column: 1 / -1;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.form-captcha .g-recaptcha{
+    display: inline-block;
+    transform-origin: left top;
+}
+
+@media (max-width: 480px){
+    .form-captcha .g-recaptcha{
+        transform: scale(0.92);
+    }
+}
+
+@media (max-width: 400px){
+    .form-captcha .g-recaptcha{
+        transform: scale(0.85);
+    }
+}
+
+@media (max-width: 360px){
+    .form-captcha .g-recaptcha{
+        transform: scale(0.78);
+    }
+}
+</style>
+
 <section class="consult-block" {% if form_only %}data-form-only="1" {% endif %}>
     <div class="consult-block__inner">
 
@@ -62,6 +93,10 @@
 
                 <textarea name="message" rows="2" placeholder="Your Message (optional)"></textarea>
 
+                <div class="form-captcha">
+    <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
+</div>
+
                 <button id="consult-submit" class="consult-send" type="submit">
                     <span class="label">Send Message</span>
                     <span class="spinner" aria-hidden="true"></span>
@@ -75,6 +110,7 @@
    Uses a tiny JSON endpoint provided below. Remove if you prefer only server-side logic.  -->
 <!-- Global top-of-page toast -->
 <div id="global-toast" class="global-toast" role="status" aria-live="polite"></div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
 (function(){
   const toastEl = document.getElementById('global-toast');
@@ -242,3 +278,21 @@
 })();
 </script>
 
+<script>
+function scaleRecaptcha() {
+    const captcha = document.querySelector('.g-recaptcha');
+    const container = document.querySelector('.form-captcha');
+    if (!captcha || !container) return;
+
+    const parentWidth = container.offsetWidth;
+    const defaultWidth = 304;
+    const scale = Math.min(1, parentWidth / defaultWidth);
+
+    captcha.style.transform = `scale(${scale})`;
+    captcha.style.transformOrigin = 'left top';
+    container.style.height = `${78 * scale}px`;
+}
+
+window.addEventListener('load', scaleRecaptcha);
+window.addEventListener('resize', scaleRecaptcha);
+</script>

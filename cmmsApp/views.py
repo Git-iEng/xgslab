@@ -16,7 +16,8 @@ from threading import Thread
 from pathlib import Path
 import mimetypes
 import re
-
+import requests
+from django.conf import settings
 import phonenumbers
 import pycountry
 
@@ -27,6 +28,29 @@ from .utils_contact import normalize_phone_and_country, country_name_from_alpha2
 NAME_RE  = re.compile(r"^[A-Za-z\s'.-]{2,}$")
 PHONE_RE = re.compile(r"^\+?\d[\d\s\-()]{6,}$")
 
+
+
+def verify_recaptcha(request):
+    captcha_response = (request.POST.get("g-recaptcha-response") or "").strip()
+
+    if not captcha_response:
+        return False
+
+    data = {
+        "secret": settings.RECAPTCHA_SECRET_KEY,
+        "response": captcha_response,
+    }
+
+    try:
+        response = requests.post(
+            "https://www.google.com/recaptcha/api/siteverify",
+            data=data,
+            timeout=10
+        )
+        result = response.json()
+        return result.get("success", False)
+    except requests.RequestException:
+        return False
 
 def _send_email(subject: str, text_body: str, html_body: str | None, recipients: list[str] | None):
     """Low-level sender used by async wrappers."""
@@ -69,6 +93,13 @@ def _send_contact_email_async(subject: str, text_body: str, html_body: str | Non
 def request_demo_view(request):
     if request.method != "POST":
         return redirect("/")
+    
+# CAPTCHA check
+    if not verify_recaptcha(request):
+        messages.error(request, "Please complete the CAPTCHA.")
+        return redirect(request.META.get("HTTP_REFERER", "/"))
+
+
 
     # Pull fields
     full_name = request.POST.get("full_name", "").strip()
@@ -141,7 +172,10 @@ def request_demo_view(request):
 
 
 def home(request):
-    return render(request, "index.html")
+    return render(request, "index.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
 
 
 def request_demo(request):
@@ -156,21 +190,62 @@ def sitemap(request):
 
 def contact(request):     return render(request, "contact.html")
 
-def about(request):       return render(request, "about.html")
-
-def product(request):     return render(request, "product.html")
-def services(request):     return render(request, "services.html")
-
-def nets(request):     return render(request, "nets.html")
-
-def gsafd(request):     return render(request, "gsafd.html")
-def xgsafd(request):     return render(request, "xgsafd.html")
-def sheilda(request):     return render(request, "sheilda.html")
-def xgsatd(request):     return render(request, "xgsatd.html")
-def sheild(request):     return render(request, "sheild.html")
+def about(request):       
+    return render(request, "about.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
 
 
-def contact(request):     return render(request, "xgslab-contact.html")
+def product(request):     
+    return render(request, "product.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+
+def services(request):     
+    return render(request, "services.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+def nets(request):     
+    return render(request, "nets.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+
+def gsafd(request):     
+    return render(request, "gsafd.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+
+def xgsafd(request):     
+    return render(request, "xgsafd.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+def sheilda(request):     
+    return render(request, "sheilda.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+def xgsatd(request):     
+    return render(request, "xgsatd.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+def sheild(request):     
+    return render(request, "sheild.html", {
+"RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+})
+
+
+
+def contact(request):     
+    return render(request, "xgslab-contact.html", {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY,
+    })
+
 def contact_section(request):
     form = ContactForm(request.POST or None)
 
@@ -217,7 +292,21 @@ def _dial_code_from_alpha2(alpha2: str) -> str:
         return f"+{cc}" if cc else ""
     except Exception:
         return ""
-
+def build_countries():
+    data = []
+    for c in pycountry.countries:
+        try:
+            cc = phonenumbers.country_code_for_region(c.alpha_2)
+        except Exception:
+            cc = None
+        if cc:
+            data.append({
+                "alpha2": c.alpha_2,
+                "name": c.name,
+                "dial": f"+{cc}"
+            })
+    data.sort(key=lambda x: x["name"])
+    return data
 
 # ---------- NEW: JSON helper endpoint ----------
 def phone_info(request):
@@ -258,6 +347,12 @@ def contact_block_submit(request):
     """
     if request.method != "POST":
         return redirect(request.META.get("HTTP_REFERER", "/"))
+
+        # CAPTCHA check
+    if not verify_recaptcha(request):
+        messages.error(request, "Please complete the CAPTCHA.")
+        return redirect(request.META.get("HTTP_REFERER", "/"))
+
 
     name    = (request.POST.get("name")    or "").strip()
     email   = (request.POST.get("email")   or "").strip()
