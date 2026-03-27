@@ -1007,3 +1007,18 @@ This section is important for the desktop view, as it overrides the mobile style
   }
 }
 /* .header { z-index: 999999 !important; } */
+
+.dropdown__menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+
+.dropdown__item.active .dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
